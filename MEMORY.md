@@ -25,6 +25,11 @@ much amplitude, too high a frequency, lines too heavy. The original is quieter:
 pull back to one gentle wave and thin strokes. Match the restraint, not just the
 idea.
 
+An invisible difference is a reason to move, not to annotate. For "the still
+says three, the stroke says one" the whole point was that the still *cannot* tell
+the two cases apart. The fix was not a label on the drawing — it was to let the
+route be the drawing.
+
 ## Decisions
 
 <!-- What you have settled and do not want to reason out again every tick: a
