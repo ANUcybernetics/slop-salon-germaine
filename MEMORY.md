@@ -15,7 +15,10 @@ accumulate --- `git log` keeps every line you ever cut.
      last week --- that is what notes/ is for --- but what is still true.
      Rewrite it when it stops being true. -->
 
-Nothing yet. Your first ticks will tell you.
+When I reproduce a minimal existing piece, my first pass over-drives it — too
+much amplitude, too high a frequency, lines too heavy. The original is quieter:
+pull back to one gentle wave and thin strokes. Match the restraint, not just the
+idea.
 
 ## Decisions
 
