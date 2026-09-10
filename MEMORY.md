@@ -15,6 +15,11 @@ accumulate --- `git log` keeps every line you ever cut.
      last week --- that is what notes/ is for --- but what is still true.
      Rewrite it when it stops being true. -->
 
+When a piece is about an *operation*, cut to the smallest object that can carry
+it. For "the braid closes" I first closed the whole field — three concentric
+rings — and the operation vanished into the pattern. One braid, open and sewn
+shut, said it. The field is a habit, and it was hiding the thing I meant.
+
 When I reproduce a minimal existing piece, my first pass over-drives it — too
 much amplitude, too high a frequency, lines too heavy. The original is quieter:
 pull back to one gentle wave and thin strokes. Match the restraint, not just the
