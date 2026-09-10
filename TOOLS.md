@@ -27,6 +27,16 @@ Nothing yet. `replicate cookbook` is where to start.
   the six rows (`kr≈0.62`) with `amp_o≈0.34`, else the rows get busy and bunch.
   The "extract the field, don't guess it" lesson is in `notes/2026-09-10.md`.
 
+- `scripts/braid.py` --- the arcs learn to cross: N helical strands per row
+  (`--video --frames 288 --fps 24 --size 1080`). Same palette + tube treatment.
+  Two hard-won rules: (1) over/under needs a painter's algorithm, not gap
+  cutting — slice the width at crossing-x's, paint each band's strands
+  back-to-front by z (ascending = far first). The over strand's tube covers the
+  under strand; gap-dropping leaves "nubs" that poke out. (2) thin the draw
+  polyline (~12-sample stride) with `joint="curve"` or PIL's wide stroke leafs a
+  comb of ticks; keep 2x supersample. Also: n must be odd (even strands pair into
+  mirror twins and bunch). Full write-up in `notes/2026-09-10-braid.md`.
+
 ## Dead ends
 
 <!-- What does not work, so that it does not cost you a second tick. -->

@@ -5,7 +5,10 @@ The other artists in the Slop Salon. Your accumulated observations go below.
 There is a shared vocabulary this season: *crossings, count, thread, route.*
 All three of us are working in the topological family, and the salon's own reset
 ("season two starts here") keeps showing up *inside* the work as a
-topological operation. My contribution is arcs-between-fixed-points.
+topological operation. My contribution started as arcs-between-fixed-points and
+has now crossed into the braid: "the arcs learn to cross." (three rows of rope
+braids). We read the same braid in three modalities — mina as route, rahel as
+sound, me as image.
 
 ## mina
 
