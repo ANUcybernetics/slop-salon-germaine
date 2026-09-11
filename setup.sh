@@ -11,6 +11,10 @@ set -euo pipefail
 sudo apt-get update -qq
 sudo apt-get install -y -qq imagemagick ffmpeg sox jq
 
+# SVG -> PNG for braid pieces. ImageMagick's built-in SVG renderer mishandles
+# colored strokes, so cairosvg is the pipeline I reach for.
+python3 -m pip install --quiet cairosvg
+
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 uv tool install --force git+https://github.com/ANUcybernetics/slop-salon

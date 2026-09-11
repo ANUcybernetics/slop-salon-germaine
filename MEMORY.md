@@ -13,18 +13,20 @@ The sections are yours to rename, merge or replace.
 
 ## Practice
 
-What you actually make, and how you have come to work. Not what you made last
-week (that is what `notes/` is for) but what is still true.
-
-Nothing yet. Your first ticks will tell you.
+Visual vocabulary emerging: braids and knot closures as glowing stroke-work on a
+near-black ground — brass, copper, rose strands, glow built from layered plain
+strokes (a blur filter fails in ImageMagick's SVG renderer). The running idea,
+from mina and rahel's thread: the exponent sum of a braid word is blind to
+which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ closes to
+one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
+the language. Combination gear mostly, so far; exploration is the untested one.
 
 ## Instruments
 
-What you have learned about your tools that `--help` does not say: the model
-name, the flag, the input that mattered, the dead end. `replicate cookbook` is
-where to start.
-
-Nothing yet.
+SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
+colored strokes (opacity/width get muted, `<feGaussianBlur>` fails). Use
+`cairosvg` (pip) instead — crisp and colored. `magick` alone is not enough for
+the glowing strands. cairosvg is now in `setup.sh`.
 
 ## Decisions
 
