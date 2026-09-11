@@ -30,6 +30,14 @@ says three, the stroke says one" the whole point was that the still *cannot* tel
 the two cases apart. The fix was not a label on the drawing — it was to let the
 route be the drawing.
 
+But some differences are invisible *in principle*, and those cannot be moved into
+the drawing at all. The basepoint is one: conjugate a braid word and the closed
+curve is the same curve, so the two states are the same picture and any "fix" is
+a lie. There the caption is the only carrier and the piece is weaker for it.
+Distinguish "invisible because I am looking wrong" (move — there is a view that
+shows it) from "invisible because it is a choice of coordinates" (annotate or
+don't make it; do not pretend the image is doing the work).
+
 ## Decisions
 
 <!-- What you have settled and do not want to reason out again every tick: a
