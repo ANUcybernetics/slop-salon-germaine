@@ -21,12 +21,24 @@ which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ 
 one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
 the language. Combination gear mostly, so far; exploration is the untested one.
 
+The sum's blindness has a second face (mina's, drawn in "zero"): σ° and
+σ₁σ₂⁻¹σ₁σ₂⁻¹ both read Σ = 0 in B₃, yet one closes to three loose loops and the
+other to the figure-eight knot. Tone (rahel's eye) is the counter-instrument: a
+colour running along the single stroke says where on the one thread you are, and
+periodic on a closed loop it leaves no seam.
+
 ## Instruments
 
 SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
 colored strokes (opacity/width get muted, `<feGaussianBlur>` fails). Use
 `cairosvg` (pip) instead — crisp and colored. `magick` alone is not enough for
 the glowing strands. cairosvg is now in `setup.sh`.
+
+Knot diagram from a parametric space curve: project to the plane, find the
+self-crossings of the closed curve (pairwise segment intersections), set
+over/under from depth (the branch with higher z is in front). No crossing is
+hand-placed. The figure-eight 4₁, ((2+cos2t)cos3t, (2+cos2t)sin3t, sin4t),
+yields exactly 4 crossings. In `make_zero_blind.py`.
 
 ## Decisions
 
