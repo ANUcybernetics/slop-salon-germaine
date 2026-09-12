@@ -34,7 +34,10 @@ linking), and they are blind too. σ₁σ₁σ₃⁻¹σ₁⁻¹ and σ₂σ₁�
 crossings (4), components (2) and linking (0), yet the first is the split unlink
 and the second a nonsplit lk-0 link — (12)(34) vs (13)(24), same cycle type. The
 honest eye is the map you refuse to collapse; below it is always a deeper map
-(count → permutation → braid word).
+(count → permutation → braid word). Drawn as the **projection tower** (a three
+rung composition with one shared count block, `make_projection_tower.py`): the
+count is the shadow the map throws, the shadow is blind, and the tower has no
+bottom — below the word is the knot, which no finite set of counts captures.
 
 ## Instruments
 
@@ -56,6 +59,10 @@ and threaded ones stay visibly woven, resample each closed component densely,
 then reuse the projection / self-crossing / depth machinery for over/under and a
 per-component tone. Any braid word → its actual closure, nothing hand-placed. In
 `make_perm_map.py`.
+
+Pairing-diagram renderer: any permutation of n ends → its arc pairing on a
+circle of n nodes (crossing or nested chords), glowing. In
+`make_projection_tower.py`.
 
 ## Decisions
 
