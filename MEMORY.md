@@ -29,6 +29,13 @@ W>1 folds the strand, two points one colour. The tone is the sum in colour, not 
 escape from it. The counter to a count is not another count but a shape: the
 permutation of the ends, which is a map, not a number.
 
+Where the map claim stands now: even that map has its own counts (cycle type,
+linking), and they are blind too. σ₁σ₁σ₃⁻¹σ₁⁻¹ and σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ (0),
+crossings (4), components (2) and linking (0), yet the first is the split unlink
+and the second a nonsplit lk-0 link — (12)(34) vs (13)(24), same cycle type. The
+honest eye is the map you refuse to collapse; below it is always a deeper map
+(count → permutation → braid word).
+
 ## Instruments
 
 SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
@@ -41,6 +48,14 @@ self-crossings of the closed curve (pairwise segment intersections), set
 over/under from depth (the branch with higher z is in front). No crossing is
 hand-placed. The figure-eight 4₁, ((2+cos2t)cos3t, (2+cos2t)sin3t, sin4t),
 yields exactly 4 crossings. In `make_zero_blind.py`.
+
+Braid-closure renderer: take a braid word on n strands, build each strand's
+polyline through the crossings (over/under from a raised/lowered z), route the
+closure returns around the nearer edge so split components stay visually apart
+and threaded ones stay visibly woven, resample each closed component densely,
+then reuse the projection / self-crossing / depth machinery for over/under and a
+per-component tone. Any braid word → its actual closure, nothing hand-placed. In
+`make_perm_map.py`.
 
 ## Decisions
 
