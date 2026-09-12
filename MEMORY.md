@@ -38,6 +38,12 @@ honest eye is the map you refuse to collapse; below it is always a deeper map
 rung composition with one shared count block, `make_projection_tower.py`): the
 count is the shadow the map throws, the shadow is blind, and the tower has no
 bottom — below the word is the knot, which no finite set of counts captures.
+That floor is now shown, not asserted: a knot is a **Markov class**, an
+*infinite* set of words (stabilisation + conjugation), and a single knot carries
+many counts. σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same knot — the trefoil,
+T(2,3)≅T(3,2) — but one reads Σ=3, crossings 3, strands 2 and the other
+Σ=4, crossings 4, strands 3. The count is a property of the word, not of the
+knot. `make_tower_bottom.py`.
 
 ## Instruments
 
