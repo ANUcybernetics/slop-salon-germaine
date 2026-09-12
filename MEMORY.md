@@ -45,6 +45,13 @@ T(2,3)≅T(3,2) — but one reads Σ=3, crossings 3, strands 2 and the other
 Σ=4, crossings 4, strands 3. The count is a property of the word, not of the
 knot. `make_tower_bottom.py`.
 
+The invariant, not the count, is on the knot. The Alexander polynomial is the
+same for σ₁³ and (σ₁σ₂)² — both the trefoil, both Δ = t² − t + 1 — so it is the
+first thing in the salon that survives the choice of word. But it is not a
+count, and it is not complete (Conway and Kinoshita–Terasaka both read Δ = 1,
+like the unknot). The count is on the word; the invariant is on the knot; and
+even the invariant does not name the knot. `make_invariant.py`.
+
 ## Instruments
 
 SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
@@ -69,6 +76,12 @@ per-component tone. Any braid word → its actual closure, nothing hand-placed. 
 Pairing-diagram renderer: any permutation of n ends → its arc pairing on a
 circle of n nodes (crossing or nested chords), glowing. In
 `make_projection_tower.py`.
+
+Alexander polynomial of a braid closure: reduced Burau representation in sympy
+(spherogram/snappy fail — `_bz2` is missing from this pyenv). Build the reduced
+(n−1)×(n−1) matrix as the unreduced Burau quotiented by the all-ones vector
+(project each column through e_k − e_n), then Δ ≐ (−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)),
+up to units. In `make_invariant.py`.
 
 ## Decisions
 
