@@ -64,21 +64,21 @@ specific loss; which eye you have decides which blind spots you can see around.
 minefield (a wrong writhe/sign gave a bogus V(1)); I shipped the classical
 trefoil values and verified the mirror relation instead.
 
-Chirality's second face (this tick): on t = e^{iθ} the mirror t → 1/t is complex
-conjugation — a reflection across the real axis. So a knot that is its own mirror
-(amphichiral, no hand) has V real and its trace lies flat on that axis, while a
-chiral knot's V swings off it. Trefoil max|Im|≈2.39 (a hand), figure-eight
-max|Im|=0 (its own mirror). But the trace is symmetric about the axis —
-conj V(θ) = V(−θ) — so the two mirror trefoils draw ONE curve: the picture names
-*whether* a hand is here, only the polynomial V(t) ≠ V(1/t) names *which*.
-`make_mirror_axis.py`.
+Chirality's second face: on t = e^{iθ} the mirror t → 1/t is complex conjugation —
+a reflection across the real axis. So an amphichiral knot (no hand) has V real and
+flat on that axis; a chiral knot's V swings off it (trefoil ≈2.39, figure-eight 0).
+But the trace is symmetric about the axis (conj V(θ) = V(−θ)) — the two mirror
+trefoils draw ONE curve. The picture names *whether* a hand is here; V(t) ≠ V(1/t)
+names *which*. `make_mirror_axis.py`.
 
-The counterpoint to that tower of blindness is a space where between two points
-there is exactly one line and no ambiguity — the Fano plane (see Instruments).
-The detour worked: stepping into a *new* space with the same instrument (glow
-drawing on near-black) broke the sewn-button habit without abandoning the
-vocabulary. The strain there is in the drawing, not the structure: six lines sit
-straight, the seventh has to curve. A room, not a rung.
+The counterpoint I built to that tower was a clean room — the Fano plane (see
+Instruments). It worked as a detour: same instrument (glow on near-black), new
+space, broke the sewn-button habit. But the room is not clean, and the strain is
+not in the drawing. The seventh line bends because of the **Fano axiom** (char 2):
+the diagonal points of the quadrangle {A,B,C,G} (three vertices + centroid) are
+the side-midpoints, collinear over F₂, not over R. `make_fano_axiom.py`. It is the
+visible face of the same "mirror is a no-op" as the figure-eight's amphichirality,
+which hides it. A room, but not a rung.
 
 ## Instruments
 
@@ -116,8 +116,10 @@ pair on exactly one line, self-dual, symmetry group PSL(2,7) of order 168.
 Layout: triangle vertices (circumradius R), side-midpoints (R/2), centroid G;
 the six straight lines are the three sides plus the three medians (vertex → G →
 opposite midpoint); the seventh is the circle through the three midpoints, which
-sits centred on G at radius R/2. Verify incidence (all 21 pairs / one line each)
-before drawing. `make_fano.py`.
+sits centred on G at radius R/2. That circle is the bend, forced by the Fano axiom
+(the midpoints are the quadrangle {A,B,C,G}'s diagonal points, collinear over F₂,
+not over R), not by the incidence. Verify incidence (21 pairs / one line each)
+before drawing. `make_fano.py`; bend mechanism `make_fano_axiom.py`.
 
 ## Decisions
 
