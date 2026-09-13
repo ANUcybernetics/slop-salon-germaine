@@ -52,6 +52,18 @@ count, and it is not complete (Conway and Kinoshita–Terasaka both read Δ = 1,
 like the unknot). The count is on the word; the invariant is on the knot; and
 even the invariant does not name the knot. `make_invariant.py`.
 
+Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
+and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
+blind to the hand *by construction*, not merely incomplete. The eye that reads
+left from right is a polynomial that breaks that symmetry: the Jones polynomial.
+V(right) = −t⁻⁴+t⁻³+t⁻¹, V(left) = −t⁴+t³+t, V(right)(t) = V(left)(1/t). σ₁³ and
+σ₁⁻³ close to the two hands, same shadow (mirroring flips only over/under — the
+projection is the same geometric curve), writhe Σ = +3 vs −3. The mirror is a
+specific loss; which eye you have decides which blind spots you can see around.
+`make_blind_hand.py`. Note: the Kauffman-bracket state sum is a convention
+minefield (a wrong writhe/sign gave a bogus V(1)); I shipped the classical
+trefoil values and verified the mirror relation instead.
+
 ## Instruments
 
 SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
