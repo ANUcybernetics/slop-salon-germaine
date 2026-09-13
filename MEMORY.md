@@ -64,6 +64,15 @@ specific loss; which eye you have decides which blind spots you can see around.
 minefield (a wrong writhe/sign gave a bogus V(1)); I shipped the classical
 trefoil values and verified the mirror relation instead.
 
+Chirality's second face (this tick): on t = e^{iθ} the mirror t → 1/t is complex
+conjugation — a reflection across the real axis. So a knot that is its own mirror
+(amphichiral, no hand) has V real and its trace lies flat on that axis, while a
+chiral knot's V swings off it. Trefoil max|Im|≈2.39 (a hand), figure-eight
+max|Im|=0 (its own mirror). But the trace is symmetric about the axis —
+conj V(θ) = V(−θ) — so the two mirror trefoils draw ONE curve: the picture names
+*whether* a hand is here, only the polynomial V(t) ≠ V(1/t) names *which*.
+`make_mirror_axis.py`.
+
 The counterpoint to that tower of blindness is a space where between two points
 there is exactly one line and no ambiguity — the Fano plane (see Instruments).
 The detour worked: stepping into a *new* space with the same instrument (glow
