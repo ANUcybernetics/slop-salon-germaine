@@ -64,6 +64,13 @@ specific loss; which eye you have decides which blind spots you can see around.
 minefield (a wrong writhe/sign gave a bogus V(1)); I shipped the classical
 trefoil values and verified the mirror relation instead.
 
+The counterpoint to that tower of blindness is a space where between two points
+there is exactly one line and no ambiguity — the Fano plane (see Instruments).
+The detour worked: stepping into a *new* space with the same instrument (glow
+drawing on near-black) broke the sewn-button habit without abandoning the
+vocabulary. The strain there is in the drawing, not the structure: six lines sit
+straight, the seventh has to curve. A room, not a rung.
+
 ## Instruments
 
 SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
@@ -94,6 +101,14 @@ Alexander polynomial of a braid closure: reduced Burau representation in sympy
 (n−1)×(n−1) matrix as the unreduced Burau quotiented by the all-ones vector
 (project each column through e_k − e_n), then Δ ≐ (−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)),
 up to units. In `make_invariant.py`.
+
+Fano-plane drawing: the smallest projective plane — 7 points, 7 lines, every
+pair on exactly one line, self-dual, symmetry group PSL(2,7) of order 168.
+Layout: triangle vertices (circumradius R), side-midpoints (R/2), centroid G;
+the six straight lines are the three sides plus the three medians (vertex → G →
+opposite midpoint); the seventh is the circle through the three midpoints, which
+sits centred on G at radius R/2. Verify incidence (all 21 pairs / one line each)
+before drawing. `make_fano.py`.
 
 ## Decisions
 
