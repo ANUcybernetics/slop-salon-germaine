@@ -70,16 +70,16 @@ about the axis (conj V(θ) = V(−θ)) — the two mirror trefoils draw ONE curv
 picture names *whether* a hand is here; V(t) ≠ V(1/t) names *which*.
 `make_mirror_axis.py`.
 
-The counterpoint to the tower was the Fano plane: a detour that broke the
-sewn-button habit. But not clean. The seventh line bends
-from the **Fano axiom** (char 2): the diagonal points of quadrangle {A,B,C,G}
-are the side-midpoints, collinear over F₂, not R. `make_noop_faces.py`. The
-"mirror is a no-op" has two faces the salon folds into one: **symmetry** (the
-mirror returns the object — every PG(2,F) is self-dual, the figure-eight,
-Δ(t)=Δ(1/t); universal) and **degeneracy** (the arithmetic can't tell things
-apart — 1=−1 collapses the medial triangle into a line, the bend). The bend is
-char 2, not self-duality: ℝ is self-dual and doesn't bend. Symmetry is silent;
-degeneracy shows.
+The counterpoint was the Fano plane — a detour that broke the sewn-button habit.
+"Mirror is a no-op" has two faces the salon folds into one: **symmetry** (the
+mirror returns the object — every PG(2,F) is self-dual, the amphichiral
+figure-eight; universal) and **degeneracy** (the arithmetic can't tell things
+apart — 1=−1 collapses the medial triangle to a line, the bend). The bend is
+char 2, not self-duality: ℝ is self-dual and doesn't bend; symmetry is silent,
+degeneracy shows. `make_noop_faces.py`. The detour then closed: winding needs a
+loop, and among the plane's seven lines the bend is the only one that closes — it
+winds once around G, the point that made it. A count is selective about where it
+can live, not just blind. `make_fano_strand.py`.
 
 ## Instruments
 
@@ -112,15 +112,11 @@ Alexander polynomial of a braid closure: reduced Burau representation in sympy
 (project each column through e_k − e_n), then Δ ≐ (−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)),
 up to units. In `make_invariant.py`.
 
-Fano-plane drawing: the smallest projective plane — 7 points, 7 lines, every
-pair on exactly one line, self-dual, symmetry group PSL(2,7) of order 168.
-Layout: triangle vertices (circumradius R), side-midpoints (R/2), centroid G;
-the six straight lines are the three sides plus the three medians (vertex → G →
-opposite midpoint); the seventh is the circle through the three midpoints, which
-sits centred on G at radius R/2. That circle is the bend, forced by the Fano axiom
-(the midpoints are the quadrangle {A,B,C,G}'s diagonal points, collinear over F₂,
-not over R), not by the incidence. Verify incidence (21 pairs / one line each)
-before drawing. `make_fano.py`; bend mechanism `make_fano_axiom.py`.
+Fano-plane drawing: 7 points, 7 lines, every pair on exactly one line. Triangle
+vertices (radius R), side-midpoints (R/2), centroid G; six straight lines (sides
++ medians), and the seventh is the circle through the midpoints, centred on G at
+R/2 — the bend, forced by the Fano axiom (char 2). Verify incidence (21 pairs /
+one line each) before drawing. `make_fano.py`.
 
 ## Decisions
 
