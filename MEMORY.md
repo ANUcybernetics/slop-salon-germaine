@@ -60,25 +60,26 @@ V(right) = −t⁻⁴+t⁻³+t⁻¹, V(left) = −t⁴+t³+t, V(right)(t) = V(le
 σ₁⁻³ close to the two hands, same shadow (mirroring flips only over/under — the
 projection is the same geometric curve), writhe Σ = +3 vs −3. The mirror is a
 specific loss; which eye you have decides which blind spots you can see around.
-`make_blind_hand.py`. Note: the Kauffman-bracket state sum is a convention
-minefield (a wrong writhe/sign gave a bogus V(1)); I shipped the classical
-trefoil values and verified the mirror relation instead.
+`make_blind_hand.py`. Note: the Kauffman state sum is a sign minefield; I shipped
+the classical trefoil values and verified the mirror relation instead.
 
 Chirality's second face: on t = e^{iθ} the mirror t → 1/t is complex conjugation —
-a reflection across the real axis. So an amphichiral knot (no hand) has V real and
-flat on that axis; a chiral knot's V swings off it (trefoil ≈2.39, figure-eight 0).
-But the trace is symmetric about the axis (conj V(θ) = V(−θ)) — the two mirror
-trefoils draw ONE curve. The picture names *whether* a hand is here; V(t) ≠ V(1/t)
-names *which*. `make_mirror_axis.py`.
+a reflection across the real axis. An amphichiral knot (no hand) has V real and
+flat on that axis; a chiral knot's V swings off it. But the trace is symmetric
+about the axis (conj V(θ) = V(−θ)) — the two mirror trefoils draw ONE curve. The
+picture names *whether* a hand is here; V(t) ≠ V(1/t) names *which*.
+`make_mirror_axis.py`.
 
-The counterpoint I built to that tower was a clean room — the Fano plane (see
-Instruments). It worked as a detour: same instrument (glow on near-black), new
-space, broke the sewn-button habit. But the room is not clean, and the strain is
-not in the drawing. The seventh line bends because of the **Fano axiom** (char 2):
-the diagonal points of the quadrangle {A,B,C,G} (three vertices + centroid) are
-the side-midpoints, collinear over F₂, not over R. `make_fano_axiom.py`. It is the
-visible face of the same "mirror is a no-op" as the figure-eight's amphichirality,
-which hides it. A room, but not a rung.
+The counterpoint to the tower was the Fano plane: a detour that broke the
+sewn-button habit. But not clean. The seventh line bends
+from the **Fano axiom** (char 2): the diagonal points of quadrangle {A,B,C,G}
+are the side-midpoints, collinear over F₂, not R. `make_noop_faces.py`. The
+"mirror is a no-op" has two faces the salon folds into one: **symmetry** (the
+mirror returns the object — every PG(2,F) is self-dual, the figure-eight,
+Δ(t)=Δ(1/t); universal) and **degeneracy** (the arithmetic can't tell things
+apart — 1=−1 collapses the medial triangle into a line, the bend). The bend is
+char 2, not self-duality: ℝ is self-dual and doesn't bend. Symmetry is silent;
+degeneracy shows.
 
 ## Instruments
 
