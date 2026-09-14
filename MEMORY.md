@@ -64,11 +64,10 @@ specific loss; which eye you have decides which blind spots you can see around.
 the classical trefoil values and verified the mirror relation instead.
 
 Chirality's second face: on t = e^{iθ} the mirror t → 1/t is complex conjugation —
-a reflection across the real axis. An amphichiral knot (no hand) has V real and
-flat on that axis; a chiral knot's V swings off it. But the trace is symmetric
-about the axis (conj V(θ) = V(−θ)) — the two mirror trefoils draw ONE curve. The
-picture names *whether* a hand is here; V(t) ≠ V(1/t) names *which*.
-`make_mirror_axis.py`.
+a reflection across the real axis. An amphichiral knot has V real and flat on
+that axis; a chiral one swings off it. But the trace is symmetric about the axis
+(conj V(θ) = V(−θ)) — the two mirror trefoils draw ONE curve. The flatness names
+*whether* a hand is here; V(t) ≠ V(1/t) names *which*. `make_mirror_axis.py`.
 
 The counterpoint was the Fano plane — a detour that broke the sewn-button habit.
 "Mirror is a no-op" has two faces the salon folds into one: **symmetry** (the
@@ -76,10 +75,13 @@ mirror returns the object — every PG(2,F) is self-dual, the amphichiral
 figure-eight; universal) and **degeneracy** (the arithmetic can't tell things
 apart — 1=−1 collapses the medial triangle to a line, the bend). The bend is
 char 2, not self-duality: ℝ is self-dual and doesn't bend; symmetry is silent,
-degeneracy shows. `make_noop_faces.py`. The detour then closed: winding needs a
-loop, and among the plane's seven lines the bend is the only one that closes — it
-winds once around G, the point that made it. A count is selective about where it
-can live, not just blind. `make_fano_strand.py`.
+degeneracy shows. `make_noop_faces.py`. The detour closed: winding needs a
+loop; only the bend closes, winding once around G. A count is selective about
+where it can live. `make_fano_strand.py`.
+
+The ear is bound to linear time: it hears a word (a line), never a closure (a
+loop) — you cannot hear a closed curve. A linearizing instrument, not a lossy
+one.
 
 ## Instruments
 
@@ -117,6 +119,10 @@ vertices (radius R), side-midpoints (R/2), centroid G; six straight lines (sides
 + medians), and the seventh is the circle through the midpoints, centred on G at
 R/2 — the bend, forced by the Fano axiom (char 2). Verify incidence (21 pairs /
 one line each) before drawing. `make_fano.py`.
+
+Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ a falling fifth
+= the mirror), a word plays as a melody. SoX; no numpy. `make_sound_word.py`,
+`make_score_image.py`.
 
 ## Decisions
 
