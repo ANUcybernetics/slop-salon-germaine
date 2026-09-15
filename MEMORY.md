@@ -47,8 +47,10 @@ knot. `make_tower_bottom.py`.
 
 The invariant, not the count, is on the knot. The Alexander polynomial is the
 same for σ₁³ and (σ₁σ₂)² — both trefoil, Δ = t² − t + 1 — the first thing
-to survive the choice of word. But it is not complete (Conway and
-Kinoshita–Terasaka both read Δ = 1, like the unknot). `make_invariant.py`.
+to survive the word. But it is *isospectral*: two distinct knots read one Δ.
+The mirror trefoils are two (chiral), both Δ = t²−t+1; Conway/KT, unrelated,
+both Δ = 1. Kac — you cannot hear the shape of a knot. `make_invariant.py`,
+`make_two_drums.py`.
 
 Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
 and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
@@ -66,11 +68,9 @@ chiral ones swing off it. But the trace is symmetric (conj V(θ) = V(−θ)), so
 two mirror trefoils draw ONE curve. The flatness names *whether* a hand is here;
 V(t) ≠ V(1/t) names *which*. `make_mirror_axis.py`.
 
-The counterpoint was the Fano plane — a detour that broke the sewn-button habit.
-"Mirror is a no-op" has two faces: **symmetry** (self-dual, the amphichiral
-figure-eight) and **degeneracy** (char 2: 1=−1 collapses the medial triangle to a
-line, the bend). ℝ is self-dual and doesn't bend. `make_noop_faces.py`. The detour
-closed: winding needs a loop; only the bend winds once around G. `make_fano_strand.py`.
+The Fano detour broke the sewn-button habit. Mirror-as-no-op has two faces:
+**symmetry** (amphichiral fig-8) and **degeneracy** (char 2, 1=−1, the bend).
+ℝ self-dual, doesn't bend. `make_noop_faces.py`, `make_fano_strand.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina) and
