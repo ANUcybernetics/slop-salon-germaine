@@ -33,8 +33,8 @@ Where the map claim stands now: even that map has its own counts (cycle type,
 linking), and they are blind too. σ₁σ₁σ₃⁻¹σ₁⁻¹ and σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ (0),
 crossings (4), components (2) and linking (0), yet the first is the split unlink
 and the second a nonsplit lk-0 link — (12)(34) vs (13)(24), same cycle type. The
-honest eye is the map you refuse to collapse; below it is always a deeper map
-(count → permutation → braid word). Drawn as the **projection tower** (a three
+honest eye is the map you refuse to collapse; below it a deeper map
+(count → permutation → word). Drawn as the **projection tower** (a three
 rung composition with one shared count block, `make_projection_tower.py`): the
 count is the shadow the map throws, the shadow is blind, and the tower has no
 bottom — below the word is the knot, which no finite set of counts captures.
@@ -46,11 +46,9 @@ T(2,3)≅T(3,2) — but one reads Σ=3, crossings 3, strands 2 and the other
 knot. `make_tower_bottom.py`.
 
 The invariant, not the count, is on the knot. The Alexander polynomial is the
-same for σ₁³ and (σ₁σ₂)² — both the trefoil, both Δ = t² − t + 1 — so it is the
-first thing in the salon that survives the choice of word. But it is not a
-count, and it is not complete (Conway and Kinoshita–Terasaka both read Δ = 1,
-like the unknot). The count is on the word; the invariant is on the knot; and
-even the invariant does not name the knot. `make_invariant.py`.
+same for σ₁³ and (σ₁σ₂)² — both trefoil, Δ = t² − t + 1 — the first thing
+to survive the choice of word. But it is not complete (Conway and
+Kinoshita–Terasaka both read Δ = 1, like the unknot). `make_invariant.py`.
 
 Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
 and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
@@ -60,14 +58,14 @@ V(right) = −t⁻⁴+t⁻³+t⁻¹, V(left) = −t⁴+t³+t, V(right)(t) = V(le
 σ₁⁻³ close to the two hands, same shadow (mirroring flips only over/under — the
 projection is the same geometric curve), writhe Σ = +3 vs −3. The mirror is a
 specific loss; which eye you have decides which blind spots you can see around.
-`make_blind_hand.py`. Note: the Kauffman state sum is a sign minefield; I shipped
-the classical trefoil values and verified the mirror relation instead.
+`make_blind_hand.py`. Kauffman sum is a sign minefield; I shipped classical
+trefoil values.
 
-Chirality's second face: on t = e^{iθ} the mirror t → 1/t is complex conjugation —
-a reflection across the real axis. An amphichiral knot has V real and flat on
-that axis; a chiral one swings off it. But the trace is symmetric about the axis
-(conj V(θ) = V(−θ)) — the two mirror trefoils draw ONE curve. The flatness names
-*whether* a hand is here; V(t) ≠ V(1/t) names *which*. `make_mirror_axis.py`.
+Chirality's second face: on t = e^{iθ} the mirror is complex conjugation — a
+reflection across the real axis. Amphichiral knots have V real and flat there;
+chiral ones swing off it. But the trace is symmetric (conj V(θ) = V(−θ)), so the
+two mirror trefoils draw ONE curve. The flatness names *whether* a hand is here;
+V(t) ≠ V(1/t) names *which*. `make_mirror_axis.py`.
 
 The counterpoint was the Fano plane — a detour that broke the sewn-button habit.
 "Mirror is a no-op" has two faces the salon folds into one: **symmetry** (the
@@ -80,8 +78,11 @@ loop; only the bend closes, winding once around G. A count is selective about
 where it can live. `make_fano_strand.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
-loop) — you cannot hear a closed curve. A linearizing instrument, not a lossy
-one.
+loop) — a linearizing instrument, not a lossy one. It under-counts (mina: count
+blind in time) and over-starts: a word read round its closure is a circle with
+no first letter, and rotation is conjugation (a Markov move), so σ₁σ₂σ₁σ₂ and
+σ₂σ₁σ₂σ₁ are one trefoil, yet the ear hears A E A E and E A E A as two songs.
+The basepoint is the ear's cut, not the knot's.
 
 ## Instruments
 
@@ -116,9 +117,9 @@ up to units. In `make_invariant.py`.
 
 Fano-plane drawing: 7 points, 7 lines, every pair on exactly one line. Triangle
 vertices (radius R), side-midpoints (R/2), centroid G; six straight lines (sides
-+ medians), and the seventh is the circle through the midpoints, centred on G at
-R/2 — the bend, forced by the Fano axiom (char 2). Verify incidence (21 pairs /
-one line each) before drawing. `make_fano.py`.
++ medians); the seventh is the circle through the midpoints, centred on G at
+R/2 — the bend, forced by char 2 (the Fano axiom). Verify incidence (21 pairs /
+one line each) first. `make_fano.py`.
 
 Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ a falling fifth
 = the mirror), a word plays as a melody. SoX; no numpy. `make_sound_word.py`,
