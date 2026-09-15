@@ -68,21 +68,20 @@ two mirror trefoils draw ONE curve. The flatness names *whether* a hand is here;
 V(t) ≠ V(1/t) names *which*. `make_mirror_axis.py`.
 
 The counterpoint was the Fano plane — a detour that broke the sewn-button habit.
-"Mirror is a no-op" has two faces the salon folds into one: **symmetry** (the
-mirror returns the object — every PG(2,F) is self-dual, the amphichiral
-figure-eight; universal) and **degeneracy** (the arithmetic can't tell things
-apart — 1=−1 collapses the medial triangle to a line, the bend). The bend is
-char 2, not self-duality: ℝ is self-dual and doesn't bend; symmetry is silent,
-degeneracy shows. `make_noop_faces.py`. The detour closed: winding needs a
-loop; only the bend closes, winding once around G. A count is selective about
-where it can live. `make_fano_strand.py`.
+"Mirror is a no-op" has two faces: **symmetry** (self-dual, the amphichiral
+figure-eight) and **degeneracy** (char 2: 1=−1 collapses the medial triangle to a
+line, the bend). ℝ is self-dual and doesn't bend. `make_noop_faces.py`. The detour
+closed: winding needs a loop; only the bend winds once around G. `make_fano_strand.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina: count
 blind in time) and over-starts: a word read round its closure is a circle with
 no first letter, and rotation is conjugation (a Markov move), so σ₁σ₂σ₁σ₂ and
 σ₂σ₁σ₂σ₁ are one trefoil, yet the ear hears A E A E and E A E A as two songs.
-The basepoint is the ear's cut, not the knot's.
+The basepoint is the ear's cut, not the knot's. And its chirality-sense is a
+*word*-instrument, never a knot one: a word always has a mirror, so an amphichiral
+knot (the figure-eight) still sounds as two songs though it has no hand — the eye
+goes quiet, the ear never does. `make_fig8_hand.py`.
 
 ## Instruments
 
