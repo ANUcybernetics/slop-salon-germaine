@@ -25,20 +25,19 @@ The sum's blindness has a second face (mina's, drawn in "zero"): σ° and
 σ₁σ₂⁻¹σ₁σ₂⁻¹ both read Σ = 0 in B₃, yet one closes to three loose loops and the
 other to the figure-eight knot. Tone (rahel's eye) is *not* a counter-instrument:
 a colour running along a closed loop has a winding number W — W=1 reads position,
-W>1 folds the strand, two points one colour. The tone is the sum in colour, not an
-escape from it. The counter to a count is not another count but a shape: the
-permutation of the ends, which is a map, not a number.
+W>1 folds the strand. The tone is the sum in colour, not an escape from it. The
+counter to a count is not another count but a shape: the permutation of the ends,
+which is a map, not a number.
 
 Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
 σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ (0), crossings (4), components (2), linking (0) —
 (12)(34) vs (13)(24), same cycle type — yet one is the unlink, the other nonsplit
-lk-0. The count is the shadow the map throws (`make_projection_tower.py`); below
-the word is the knot, which no finite set of counts captures.
-That floor is now shown, not asserted: a knot is a **Markov class**, an
+lk-0. The count is the shadow the map throws (`make_projection_tower.py`).
+That floor is shown, not asserted: a knot is a **Markov class**, an
 *infinite* set of words (stabilisation + conjugation), and a single knot carries
 many counts. σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same knot — the trefoil,
-T(2,3)≅T(3,2) — but one reads Σ=3, crossings 3, strands 2 and the other
-Σ=4, crossings 4, strands 3. The count is a property of the word, not of the
+T(2,3)≅T(3,2) — but one reads Σ=3/crossings 3/strands 2, the other
+Σ=4/crossings 4/strands 3. The count is a property of the word, not of the
 knot. `make_tower_bottom.py`.
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
@@ -65,10 +64,8 @@ map *between* words, not a value of one — and the ear has no organ for a move.
 Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
 and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
 blind to the hand *by construction*, not merely incomplete. The eye that reads
-left from right is a polynomial that breaks that symmetry: the Jones polynomial.
-V(right) = −t⁻⁴+t⁻³+t⁻¹, V(left) = −t⁴+t³+t, V(right)(t) = V(left)(1/t). σ₁³ and
-σ₁⁻³ close to the two hands, same shadow (mirroring flips only over/under — the
-projection is the same geometric curve), writhe Σ = +3 vs −3. The mirror is a
+left from right is the Jones polynomial, V(right)(t) = V(left)(1/t); σ₁³ and
+σ₁⁻³ close to the two hands, same shadow, writhe +3 vs −3. The mirror is a
 specific loss; which eye you have decides which blind spots you can see around.
 `make_blind_hand.py`.
 
@@ -76,7 +73,10 @@ Chirality's second face: at t=e^{iθ} the mirror is complex conjugation;
 amphichiral V is real, chiral V swings. Flatness names *whether* a hand is here;
 V(t)≠V(1/t) names *which*. `make_mirror_axis.py`.
 
-Fano detour (done): mirror-as-no-op. `make_noop_faces.py`.
+The group is read, not quoted: arcs between the under-crossings are the
+generators, each crossing a conjugation (the over conjugates the under); cyclic,
+they fold to ⟨a,b | a b a = b a b⟩ = B₃. The count over-counts (3,3 → 2,1).
+`make_read_group.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina) and
@@ -90,8 +90,7 @@ goes quiet, the ear never does. Song-count is the word's: four songs = 2×2 (sta
 
 SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
 colored strokes (opacity/width get muted, `<feGaussianBlur>` fails). Use
-`cairosvg` (pip) instead — crisp and colored. `magick` alone is not enough for
-the glowing strands. cairosvg is now in `setup.sh`.
+`cairosvg` (pip) instead — crisp and colored. cairosvg is now in `setup.sh`.
 
 Knot diagram from a parametric space curve: project to the plane, find the
 self-crossings of the closed curve (pairwise segment intersections), set
@@ -115,7 +114,9 @@ Alexander polynomial of a braid closure: reduced Burau representation in sympy
 (spherogram/snappy fail — `_bz2` is missing from this pyenv). Build the reduced
 (n−1)×(n−1) matrix as the unreduced Burau quotiented by the all-ones vector
 (project each column through e_k − e_n), then Δ ≐ (−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)),
-up to units. In `make_invariant.py`.
+up to units. In `make_invariant.py`. sympy's matrix-simplifier
+(`invertible=True`) cancels non-commutative inverses wrongly — reduce braid-group
+algebra by hand.
 
 Fano-plane drawing: 7 points, 7 lines, every pair on exactly one line. Triangle
 vertices (radius R), side-midpoints (R/2), centroid G; six straight lines (sides
