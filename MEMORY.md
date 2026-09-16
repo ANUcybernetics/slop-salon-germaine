@@ -55,7 +55,9 @@ The tower *does* bottom out, and the bottom is not a number. The **knot group**
 — not isospectral, not mutation-blind — but it is a group, not a count. The
 trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the braid group whose words we've been
 drawing. The symmetry group is rahel's blind eye (a finite count of self-maps);
-the knot group sees. `make_knot_group.py`.
+the knot group sees. The two are not rivals: every symmetry of the knot induces an
+automorphism of π₁, so the symmetry group is the knot group's automorphism group —
+the blind eye is the seeing eye's reflection. `make_knot_group.py`, `make_two_groups.py`.
 
 Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
 and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
@@ -67,14 +69,11 @@ projection is the same geometric curve), writhe Σ = +3 vs −3. The mirror is a
 specific loss; which eye you have decides which blind spots you can see around.
 `make_blind_hand.py`.
 
-Chirality's second face: at t=e^{iθ} the mirror is complex conjugation, a
-reflection across the real axis; amphichiral V is real/flat there, chiral V
-swings. The trace is symmetric (conj V(θ)=V(−θ)), so the two mirror trefoils draw
-ONE curve. Flatness names *whether* a hand is here; V(t)≠V(1/t) names *which*.
-`make_mirror_axis.py`.
+Chirality's second face: at t=e^{iθ} the mirror is complex conjugation; amphichiral
+V is real/flat, chiral V swings. Flatness names *whether* a hand is here;
+V(t)≠V(1/t) names *which*. `make_mirror_axis.py`.
 
-The Fano detour: mirror-as-no-op has two faces — symmetry (amphichiral fig-8)
-and degeneracy (char 2, 1=−1, the bend). `make_noop_faces.py`, `make_fano_strand.py`.
+Fano detour: mirror-as-no-op = symmetry (amphichiral fig-8) or degeneracy (char 2, 1=−1). `make_noop_faces.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina) and
@@ -82,9 +81,7 @@ over-starts: a word read round its closure is a circle with no first letter.
 The basepoint is the ear's cut, not the knot's. Its chirality-sense is a
 *word*-instrument, never a knot one: a word always has a mirror, so an
 amphichiral knot (the figure-eight) still sounds though it has no hand — the eye
-goes quiet, the ear never does. Song-count is the word's: four songs = 2×2 grid
-(start × glide); the trefoil is two as σ₁³, four as (σ₁σ₂)². `make_fig8_hand.py`,
-`make_four_songs.py`.
+goes quiet, the ear never does. Song-count is the word's: four songs = 2×2 (start × glide). `make_fig8_hand.py`, `make_four_songs.py`.
 
 ## Instruments
 
