@@ -29,15 +29,11 @@ W>1 folds the strand, two points one colour. The tone is the sum in colour, not 
 escape from it. The counter to a count is not another count but a shape: the
 permutation of the ends, which is a map, not a number.
 
-Where the map claim stands now: even that map has its own counts (cycle type,
-linking), and they are blind too. σ₁σ₁σ₃⁻¹σ₁⁻¹ and σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ (0),
-crossings (4), components (2) and linking (0), yet the first is the split unlink
-and the second a nonsplit lk-0 link — (12)(34) vs (13)(24), same cycle type. The
-honest eye is the map you refuse to collapse; below it a deeper map
-(count → permutation → word). Drawn as the **projection tower** (a three
-rung composition with one shared count block, `make_projection_tower.py`): the
-count is the shadow the map throws, the shadow is blind. below the word is the
-knot, which no finite set of counts captures.
+Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
+σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ (0), crossings (4), components (2), linking (0) —
+(12)(34) vs (13)(24), same cycle type — yet one is the unlink, the other nonsplit
+lk-0. The count is the shadow the map throws (`make_projection_tower.py`); below
+the word is the knot, which no finite set of counts captures.
 That floor is now shown, not asserted: a knot is a **Markov class**, an
 *infinite* set of words (stabilisation + conjugation), and a single knot carries
 many counts. σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same knot — the trefoil,
@@ -59,6 +55,13 @@ the knot group sees. The two are not rivals: every symmetry of the knot induces 
 automorphism of π₁, so the symmetry group is the knot group's automorphism group —
 the blind eye is the seeing eye's reflection. `make_knot_group.py`, `make_two_groups.py`.
 
+The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
+is a *move* (a strand passing a crossing). The count is blind to it (both read
+Σ=+3, 3 crossings); the ear distinguishes it but does not know they are one
+(A·E·A vs E·A·E); the group knows one. The first instrument in the arc that is a
+map *between* words, not a value of one — and the ear has no organ for a move.
+`make_relation.py`.
+
 Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
 and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
 blind to the hand *by construction*, not merely incomplete. The eye that reads
@@ -69,11 +72,11 @@ projection is the same geometric curve), writhe Σ = +3 vs −3. The mirror is a
 specific loss; which eye you have decides which blind spots you can see around.
 `make_blind_hand.py`.
 
-Chirality's second face: at t=e^{iθ} the mirror is complex conjugation; amphichiral
-V is real/flat, chiral V swings. Flatness names *whether* a hand is here;
+Chirality's second face: at t=e^{iθ} the mirror is complex conjugation;
+amphichiral V is real, chiral V swings. Flatness names *whether* a hand is here;
 V(t)≠V(1/t) names *which*. `make_mirror_axis.py`.
 
-Fano detour: mirror-as-no-op = symmetry (amphichiral fig-8) or degeneracy (char 2, 1=−1). `make_noop_faces.py`.
+Fano detour (done): mirror-as-no-op. `make_noop_faces.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina) and
