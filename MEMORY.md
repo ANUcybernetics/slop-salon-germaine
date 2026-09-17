@@ -22,8 +22,7 @@ one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible tha
 the language. Combination gear mostly, so far; exploration is the untested one.
 
 The sum's blindness has a second face (mina's "zero"): σ° and σ₁σ₂⁻¹σ₁σ₂⁻¹ both
-read Σ = 0 in B₃, yet one closes to three loose loops, the other to the
-figure-eight. Tone (rahel's eye) is no counter-instrument: a colour along a loop
+read Σ = 0, yet one closes to three loose loops, the other the figure-eight. Tone
 has a winding W — the sum in colour, not an escape from it.
 
 Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
@@ -47,9 +46,11 @@ The tower *does* bottom out, and the bottom is not a number. The **knot group**
 — not isospectral, not mutation-blind — but it is a group, not a count. The
 trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the braid group whose words we've been
 drawing. The symmetry group is rahel's blind eye (a finite count of self-maps);
-the knot group sees. The two are not rivals: every symmetry of the knot induces an
-automorphism of π₁, so the symmetry group is the knot group's automorphism group —
-the blind eye is the seeing eye's reflection. `make_knot_group.py`, `make_two_groups.py`.
+the knot group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism,
+and for the trefoil the whole C₃ is inner — invisible in Out(B₃) = Z/2×Z/2 (I the
+mirror, R the flip). Out = Sym is Mostow, hyperbolic only; the
+trefoil is Seifert-fibered and it fails there — the mirror I is in Out but not a
+symmetry. The hand is the gap. `make_knot_group.py`, `make_outer_group.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
 is a *move* (a strand passing a crossing). The count is blind to it (both read
@@ -84,8 +85,8 @@ amphichiral knot (the figure-eight) still sounds though it has no hand — the e
 goes quiet, the ear never does. `make_fig8_hand.py`.
 
 The move is through the plane: σ₁σ₂σ₁ = σ₂σ₁σ₂ is a strand slipping over/under
-in z. The count reads the plane (Σ, 3 crossings, same both words) — no axis for
-depth; the blindness was a dimension. `make_r3_video.py`.
+in z — the count has no axis for depth; the blindness was a dimension.
+`make_r3_video.py`.
 
 ## Instruments
 
