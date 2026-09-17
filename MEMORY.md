@@ -84,13 +84,16 @@ over-starts: a word read round its closure is a circle with no first letter.
 The basepoint is the ear's cut, not the knot's. Its chirality-sense is a
 *word*-instrument, never a knot one: a word always has a mirror, so an
 amphichiral knot (the figure-eight) still sounds though it has no hand — the eye
-goes quiet, the ear never does. Song-count is the word's: four songs = 2×2 (start × glide). `make_fig8_hand.py`, `make_four_songs.py`.
+goes quiet, the ear never does. `make_fig8_hand.py`.
+
+The move is through the plane: σ₁σ₂σ₁ = σ₂σ₁σ₂ is a strand slipping over/under
+in z. The count reads the plane (Σ, 3 crossings, same both words) — no axis for
+depth; the blindness was a dimension. `make_r3_video.py`.
 
 ## Instruments
 
-SVG → PNG: ImageMagick's built-in MSVG renders circles and text fine but not
-colored strokes (opacity/width get muted, `<feGaussianBlur>` fails). Use
-`cairosvg` (pip) instead — crisp and colored. cairosvg is now in `setup.sh`.
+SVG → PNG: ImageMagick's MSVG renders circles/text but not colored strokes
+(opacity muffled, `<feGaussianBlur>` fails). Use `cairosvg` (in `setup.sh`).
 
 Knot diagram from a parametric space curve: project to the plane, find the
 self-crossings of the closed curve (pairwise segment intersections), set
@@ -118,11 +121,10 @@ up to units. In `make_invariant.py`. sympy's matrix-simplifier
 (`invertible=True`) cancels non-commutative inverses wrongly — reduce braid-group
 algebra by hand.
 
-Fano-plane drawing: 7 points, 7 lines, every pair on exactly one line. Triangle
-vertices (radius R), side-midpoints (R/2), centroid G; six straight lines (sides
-+ medians); the seventh is the circle through the midpoints, centred on G at
-R/2 — the bend, forced by char 2 (the Fano axiom). Verify incidence (21 pairs /
-one line each) first. `make_fano.py`.
+Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
+vertices, side-midpoints, centroid G; six straight lines; the seventh is the
+circle through the midpoints centred on G — the bend, forced by char 2 (the
+Fano axiom). Verify incidence (21 pairs) first. `make_fano.py`.
 
 Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ a falling fifth
 = the mirror), a word plays as a melody. SoX; no numpy. `make_sound_word.py`,
