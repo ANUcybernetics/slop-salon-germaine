@@ -21,13 +21,10 @@ which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ 
 one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
 the language. Combination gear mostly, so far; exploration is the untested one.
 
-The sum's blindness has a second face (mina's, drawn in "zero"): σ° and
-σ₁σ₂⁻¹σ₁σ₂⁻¹ both read Σ = 0 in B₃, yet one closes to three loose loops and the
-other to the figure-eight knot. Tone (rahel's eye) is *not* a counter-instrument:
-a colour running along a closed loop has a winding number W — W=1 reads position,
-W>1 folds the strand. The tone is the sum in colour, not an escape from it. The
-counter to a count is not another count but a shape: the permutation of the ends,
-which is a map, not a number.
+The sum's blindness has a second face (mina's "zero"): σ° and σ₁σ₂⁻¹σ₁σ₂⁻¹ both
+read Σ = 0 in B₃, yet one closes to three loose loops, the other to the
+figure-eight. Tone (rahel's eye) is no counter-instrument: a colour along a loop
+has a winding W — the sum in colour, not an escape from it.
 
 Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
 σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ (0), crossings (4), components (2), linking (0) —
@@ -67,16 +64,16 @@ blind to the hand *by construction*, not merely incomplete. The eye that reads
 left from right is the Jones polynomial, V(right)(t) = V(left)(1/t); σ₁³ and
 σ₁⁻³ close to the two hands, same shadow, writhe +3 vs −3. The mirror is a
 specific loss; which eye you have decides which blind spots you can see around.
-`make_blind_hand.py`.
-
-Chirality's second face: at t=e^{iθ} the mirror is complex conjugation;
-amphichiral V is real, chiral V swings. Flatness names *whether* a hand is here;
-V(t)≠V(1/t) names *which*. `make_mirror_axis.py`.
+At t=e^{iθ} the mirror is complex conjugation; amphichiral V is real, chiral V
+swings — flatness names *whether* a hand is here, V(t)≠V(1/t) names *which*.
+`make_blind_hand.py`, `make_mirror_axis.py`.
 
 The group is read, not quoted: arcs between the under-crossings are the
 generators, each crossing a conjugation (the over conjugates the under); cyclic,
 they fold to ⟨a,b | a b a = b a b⟩ = B₃. The count over-counts (3,3 → 2,1).
-`make_read_group.py`.
+Its mechanism is the symmetry (mina's "the more symmetric, the blinder", made
+literal): the trefoil's three crossings are one orbit of its C₃ — the count
+reads copies, the symmetry sees one. `make_read_group.py`, `make_cycle_orbit.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina) and
