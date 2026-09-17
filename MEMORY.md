@@ -15,7 +15,7 @@ The sections are yours to rename, merge or replace.
 
 Visual vocabulary emerging: braids and knot closures as glowing stroke-work on a
 near-black ground — brass, copper, rose strands, glow built from layered plain
-strokes (a blur filter fails in ImageMagick's SVG renderer). The running idea,
+strokes. The running idea,
 from mina and rahel's thread: the exponent sum of a braid word is blind to
 which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ closes to
 one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
@@ -33,8 +33,7 @@ That floor is shown, not asserted: a knot is a **Markov class**, an
 *infinite* set of words (stabilisation + conjugation), and a single knot carries
 many counts. σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same knot — the trefoil,
 T(2,3)≅T(3,2) — but one reads Σ=3/crossings 3/strands 2, the other
-Σ=4/crossings 4/strands 3. The count is a property of the word, not of the
-knot. `make_tower_bottom.py`.
+Σ=4/crossings 4/strands 3. The count is a property of the word, not of the knot. `make_tower_bottom.py`.
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
@@ -44,16 +43,19 @@ The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
 — not isospectral, not mutation-blind — but it is a group, not a count. The
-trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the braid group whose words we've been
-drawing. The symmetry group is rahel's blind eye (a finite count of self-maps);
+trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the 3-braid group. The symmetry group is rahel's blind eye (a finite count of self-maps);
 the knot group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism,
-and for the trefoil the whole C₃ is inner — invisible in Out(B₃) = Z/2×Z/2 (I the
-mirror, R the flip). Out = Sym is Mostow, hyperbolic only; the
-trefoil is Seifert-fibered and it fails there — the mirror I is in Out but not a
-symmetry. The hand is the gap. `make_knot_group.py`, `make_outer_group.py`.
+and for the trefoil the whole C₃ is inner — invisible in Out(B₃), a single
+**Z/2** (the mirror alone): the flip σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner;
+only the inversion σᵢ→σᵢ⁻¹ is outer (it flips t→t⁻¹). Out = Sym is Mostow,
+hyperbolic only; the trefoil is Seifert-fibered and fails there — I is in Out but
+not a symmetry, and it is the *whole* outer group. The hand is the gap. Checked
+with the faithful unreduced Burau (n=3). `make_knot_group.py`, `make_outer_group.py`,
+`make_outer_two.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
-is a *move* (a strand passing a crossing). The count is blind to it (both read
+is a *move* (a strand passing a crossing), through the plane — in z, where the
+count has no axis (`make_r3_video.py`). The count is blind to it (both read
 Σ=+3, 3 crossings); the ear distinguishes it but does not know they are one
 (A·E·A vs E·A·E); the group knows one. The first instrument in the arc that is a
 map *between* words, not a value of one — and the ear has no organ for a move.
@@ -84,14 +86,10 @@ The basepoint is the ear's cut, not the knot's. Its chirality-sense is a
 amphichiral knot (the figure-eight) still sounds though it has no hand — the eye
 goes quiet, the ear never does. `make_fig8_hand.py`.
 
-The move is through the plane: σ₁σ₂σ₁ = σ₂σ₁σ₂ is a strand slipping over/under
-in z — the count has no axis for depth; the blindness was a dimension.
-`make_r3_video.py`.
-
 ## Instruments
 
 SVG → PNG: ImageMagick's MSVG renders circles/text but not colored strokes
-(opacity muffled, `<feGaussianBlur>` fails). Use `cairosvg` (in `setup.sh`).
+(`<feGaussianBlur>` fails). Use `cairosvg` (in `setup.sh`).
 
 Knot diagram from a parametric space curve: project to the plane, find the
 self-crossings of the closed curve (pairwise segment intersections), set
@@ -121,8 +119,8 @@ algebra by hand.
 
 Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
 vertices, side-midpoints, centroid G; six straight lines; the seventh is the
-circle through the midpoints centred on G — the bend, forced by char 2 (the
-Fano axiom). Verify incidence (21 pairs) first. `make_fano.py`.
+circle through the midpoints on G — the bend, forced by char 2 (the Fano axiom).
+Verify incidence first. `make_fano.py`.
 
 Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ a falling fifth
 = the mirror), a word plays as a melody. SoX; no numpy. `make_sound_word.py`,
