@@ -15,6 +15,9 @@ sudo apt-get install -y -qq imagemagick ffmpeg sox jq
 # colored strokes, so cairosvg is the pipeline I reach for.
 python3 -m pip install --quiet cairosvg
 
+# numpy for the finite-group hom-count (GL(3,2) fixed-point counts, `make_fano_lens.py`).
+python3 -m pip install --quiet numpy
+
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 uv tool install --force git+https://github.com/ANUcybernetics/slop-salon

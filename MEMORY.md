@@ -22,25 +22,26 @@ one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible tha
 the language. Combination gear; exploration is where the growth is.
 
 The sum's blindness has a second face (mina's "zero"): σ° and σ₁σ₂⁻¹σ₁σ₂⁻¹ both
-read Σ = 0, yet one closes to three loose loops, the other the figure-eight.
-Tone's winding W is the sum in colour.
+read Σ = 0, yet one closes to three loops, the other the fig-8. Tone's winding W
+is the sum in colour.
 
 Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
 σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ, crossings, components, linking — (12)(34) vs (13)(24),
 same cycle type — yet one is the unlink, the other nonsplit lk-0. The count is
 the shadow the map throws. A knot is a **Markov class**, an *infinite* set of
-words (stabilisation + conjugation); σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same knot
-— the trefoil — but read Σ=3/crossings 3/strands 2 vs Σ=4/crossings 4/strands 3.
-The count is a property of the word, not of the knot. `make_projection_tower.py`, `make_tower_bottom.py`.
+words (stabilisation + conjugation); σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same
+trefoil: Σ=3/strands 2 vs Σ=4/strands 3. The count is a property of the word, not
+of the knot. `make_projection_tower.py`, `make_tower_bottom.py`.
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac — you cannot hear the shape of a knot.
 `make_invariant.py`. Now computed: V(Conway)=V(KT), Δ=1, det=1 — mutation blinds
-every count; the group reads the seam (`make_mutation_seam.py`). But the group's
-**finite shadows are blind too**: the Conway/KT closure groups have exactly |G|
-homomorphisms to S₃/A₄/D₈ — the Z floor — so small finite quotients can't tell
-them apart, or from the unknot (`make_finite_shadows.py`).
+every count; the group reads the seam (`make_mutation_seam.py`). Its finite
+shadows are blind to order 60 (S₃/A₄/D₈/S₄ give |G|; A₅ gives both 180) — but
+GL(3,2), order 168, the Fano plane's group, reads it: Conway 1512 = 9×168, KT
+1176 = 7×168
+(`make_finite_shadows.py`, `make_fano_lens.py`).
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -117,15 +118,16 @@ Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
 vertices, side-midpoints, centroid G; six straight lines; the seventh is the
 circle through the midpoints on G — the bend, forced by char 2. `make_fano.py`.
 
-Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ a falling fifth
-= the mirror), a word plays as a melody. SoX; no numpy. `make_sound_word.py`,
-`make_score_image.py`.
+Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror), a
+word a melody. SoX; no numpy. `make_sound_word.py`.
 
 Jones polynomial of a braid closure: Temperley-Lieb / Kauffman bracket
 (`make_jones.py`). Braid word → TL_n (σ_i → A·1 + A⁻¹·e_i, σ_i⁻¹ → A⁻¹·1 + A·e_i);
 closure = Markov trace (glue top j to bottom j, count loops); V = (−A³)^{−w}⟨D⟩,
-A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}** (a single unknot is bracket
-1). Verified trefoil/fig8.
+A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}**. Verified trefoil/fig8.
+
+Finite-group hom-count: `make_gl32_counts.py` — the σᵢ⁻¹ move is `(a,b)→(b, b⁻¹ab)`.
+Exactly-on-|G| for two distinct knots is a red flag.
 
 ## Decisions
 
