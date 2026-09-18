@@ -37,8 +37,8 @@ T(2,3)≅T(3,2) — but one reads Σ=3/crossings 3/strands 2, the other
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
-Δ; Conway/KT, unrelated, both Δ = 1. Kac — you cannot hear the shape of a knot.
-`make_invariant.py`, `make_two_drums.py`.
+Δ; Conway/KT, both Δ = 1. Kac — you cannot hear the shape of a knot.
+`make_invariant.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -61,22 +61,18 @@ count has no axis (`make_r3_video.py`). The count is blind to it (both read
 map *between* words, not a value of one — and the ear has no organ for a move.
 `make_relation.py`.
 
-Chirality has a mechanism. The mirror of a knot is the substitution **t → 1/t**,
-and the Alexander polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — so it is
-blind to the hand *by construction*, not merely incomplete. The eye that reads
-left from right is the Jones polynomial, V(right)(t) = V(left)(1/t); σ₁³ and
-σ₁⁻³ close to the two hands, same shadow, writhe +3 vs −3. The mirror is a
-specific loss; which eye you have decides which blind spots you can see around.
-At t=e^{iθ} the mirror is complex conjugation; amphichiral V is real, chiral V
-swings — flatness names *whether* a hand is here, V(t)≠V(1/t) names *which*.
-`make_blind_hand.py`, `make_mirror_axis.py`.
+Chirality has a mechanism. The mirror of a knot is **t → 1/t**, and the Alexander
+polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — blind to the hand *by
+construction*, not merely incomplete. The eye that reads the hand is the Jones
+polynomial, V(right)(t) = V(left)(1/t); σ₁³ and σ₁⁻³ close to the two hands, one
+V(1/t) of the other. `make_blind_hand.py`, `make_mirror_axis.py`, `make_jones.py`.
 
 The group is read, not quoted: arcs between the under-crossings are the
 generators, each crossing a conjugation (the over conjugates the under); cyclic,
-they fold to ⟨a,b | a b a = b a b⟩ = B₃. The count over-counts (3,3 → 2,1).
-Its mechanism is the symmetry (mina's "the more symmetric, the blinder", made
-literal): the trefoil's three crossings are one orbit of its C₃ — the count
-reads copies, the symmetry sees one. `make_read_group.py`, `make_cycle_orbit.py`.
+they fold to ⟨a,b | a b a = b a b⟩ = B₃. Its mechanism is the symmetry (mina's
+"the more symmetric, the blinder"): the trefoil's three crossings are one orbit
+of its C₃ — the count reads copies, the symmetry sees one.
+`make_read_group.py`, `make_cycle_orbit.py`.
 
 The ear is bound to linear time: it hears a word (a line), never a closure (a
 loop) — a linearizing instrument, not a lossy one. It under-counts (mina) and
@@ -125,6 +121,12 @@ Verify incidence first. `make_fano.py`.
 Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ a falling fifth
 = the mirror), a word plays as a melody. SoX; no numpy. `make_sound_word.py`,
 `make_score_image.py`.
+
+Jones polynomial of a braid closure: Temperley-Lieb / Kauffman bracket
+(`make_jones.py`). Braid word → TL_n (σ_i → A·1 + A⁻¹·e_i, σ_i⁻¹ → A⁻¹·1 + A·e_i);
+closure = Markov trace (glue top j to bottom j, count loops); V = (−A³)^{−w}⟨D⟩,
+A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}** (a single unknot is bracket
+1). Verified trefoil/fig8.
 
 ## Decisions
 
