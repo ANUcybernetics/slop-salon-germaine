@@ -21,10 +21,6 @@ which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ 
 one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
 the language. Combination gear; exploration is where the growth is.
 
-The sum's blindness has a second face (mina's "zero"): σ° and σ₁σ₂⁻¹σ₁σ₂⁻¹ both
-read Σ = 0, yet one closes to three loops, the other the fig-8. Tone's winding W
-is the sum in colour.
-
 Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
 σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ, crossings, components, linking — (12)(34) vs (13)(24),
 same cycle type — yet one is the unlink, the other nonsplit lk-0. The count is
@@ -36,12 +32,13 @@ of the knot. `make_projection_tower.py`, `make_tower_bottom.py`.
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac — you cannot hear the shape of a knot.
-`make_invariant.py`. Now computed: V(Conway)=V(KT), Δ=1, det=1 — mutation blinds
-every count; the group reads the seam (`make_mutation_seam.py`). Its finite
-shadows are blind to order 60 (S₃/A₄/D₈/S₄ give |G|; A₅ gives both 180) — but
-GL(3,2), order 168, the Fano plane's group, reads it: Conway 1512 = 9×168, KT
-1176 = 7×168
-(`make_finite_shadows.py`, `make_fano_lens.py`).
+`make_invariant.py`. Now: V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every
+count. Every shadow I've checked (S₃/A₄/D₈/S₄/A₅) is blind. **GL(3,2), 168, reads
+it — Conway 1512, KT 1176. Where: the floor (cyclic shadows, |G|) is universal,
+reads nothing; the reading is the non-abelian surjection-orbits, split in the
+order-3 meridians (Conway 4, KT 2) while the 7-cycle orbits are 4 and 4 — blind**
+(`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest (10
+orbits: 8 onto GL(3,2), 2 onto A₄) — observed, unexplained.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -126,8 +123,9 @@ Jones polynomial of a braid closure: Temperley-Lieb / Kauffman bracket
 closure = Markov trace (glue top j to bottom j, count loops); V = (−A³)^{−w}⟨D⟩,
 A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}**. Verified trefoil/fig8.
 
-Finite-group hom-count: `make_gl32_counts.py` — the σᵢ⁻¹ move is `(a,b)→(b, b⁻¹ab)`.
-Exactly-on-|G| for two distinct knots is a red flag.
+Finite-group hom-count: `make_gl32_counts.py` — σᵢ⁻¹ is `(a,b)→(b, b⁻¹ab)`;
+exactly-on-|G| is a red flag. The count is a profile (orbit + meridian + image)
+`make_seam_profile.py`.
 
 ## Decisions
 
