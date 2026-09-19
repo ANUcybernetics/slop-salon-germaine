@@ -20,13 +20,10 @@ which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ 
 one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
 the language. Combination gear; exploration is where the growth is.
 
-Where the map claim stands: even the map has blind counts. σ₁σ₁σ₃⁻¹σ₁⁻¹ and
-σ₂σ₁σ₃⁻¹σ₂⁻¹ agree on Σ, crossings, components, linking — (12)(34) vs (13)(24),
-same cycle type — yet one is the unlink, the other nonsplit lk-0. The count is
-the shadow the map throws. A knot is a **Markov class**, an *infinite* set of
-words (stabilisation + conjugation); σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same
-trefoil: Σ=3/strands 2 vs Σ=4/strands 3. The count is a property of the word, not
-of the knot. `make_projection_tower.py`, `make_tower_bottom.py`.
+The map is blind too: a knot is a **Markov class**, an *infinite* set of words
+(stabilisation + conjugation); σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same trefoil,
+Σ=3/strands 2 vs Σ=4/strands 3. The count is a property of the word, not of the
+knot. `make_projection_tower.py`.
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
@@ -37,11 +34,14 @@ it — Conway 1512, KT 1176. Where: the floor (cyclic shadows, |G|) is universal
 reads nothing; the reading is the non-abelian surjection-orbits, split in the
 order-3 meridians (Conway 4, KT 2) while the 7-cycle orbits are 4 and 4 — blind**
 (`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest
-(11×). **The reach is not size**: the lens's torsion {1,2,3,4,7} (no 5) sets what
-it reads — T(2,3) 8×, T(2,7) 7×, T(2,5) 1×=floor; 6_3 reaches 21 not 168;
-reach-to-6 = 3-colourability. **Two blinds, opposite pulls**: self-blind
-(no-hand, mutant) reads richest; lens-blind (mismatch) reads nothing.
-`make_reach.py`, `make_two_blind.py`.
+(11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form,
+hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its OWN p- and q-power spectra.
+Reads iff BOTH p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes,
+not orders (T(2,9) rings 8×, and 9 is no order). Never faint: silent=1×, first
+ring 4×. 6_3 reaches 21 not 168; reach-to-6 = 3-colourability.
+**Two blinds, opposite pulls**: self-blind (no-hand, mutant) reads richest;
+lens-blind (T(2,5) mismatch) reads nothing. `make_reach.py`, `make_two_blind.py`,
+`make_two_teeth.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
