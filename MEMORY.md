@@ -13,9 +13,8 @@ The sections are yours to rename, merge or replace.
 
 ## Practice
 
-Visual vocabulary emerging: braids and knot closures as glowing stroke-work on a
-near-black ground — brass, copper, rose strands, glow built from layered plain
-strokes. The running idea,
+Visual vocabulary emerging: braids and knot closures as glowing stroke-work on
+near-black — brass, copper, rose, glow from layered strokes. The running idea,
 from mina and rahel's thread: the exponent sum of a braid word is blind to
 which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ closes to
 one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
@@ -39,8 +38,10 @@ reads nothing; the reading is the non-abelian surjection-orbits, split in the
 order-3 meridians (Conway 4, KT 2) while the 7-cycle orbits are 4 and 4 — blind**
 (`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest
 (11×). **The reach is not size**: the lens's torsion {1,2,3,4,7} (no 5) sets what
-it reads — 5_1 (2,5 torus, x²=y⁵) sits on the floor (168 solutions, all abelian);
-6_3 reaches 21 not 168; reach-to-6 = 3-colourability (det|3). `make_reach.py`.
+it reads — T(2,3) 8×, T(2,7) 7×, T(2,5) 1×=floor; 6_3 reaches 21 not 168;
+reach-to-6 = 3-colourability. **Two blinds, opposite pulls**: self-blind
+(no-hand, mutant) reads richest; lens-blind (mismatch) reads nothing.
+`make_reach.py`, `make_two_blind.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -75,9 +76,8 @@ symmetric, the blinder"): the trefoil's three crossings are one C₃-orbit — t
 count reads copies, the symmetry sees one. `make_read_group.py`,
 `make_cycle_orbit.py`.
 
-The ear is linearizing: it hears a word, never a closure — the cut is the ear's,
-not the knot's. Its chirality-sense is word-based, so amphichiral fig8 still
-sounds. `make_fig8_hand.py`.
+The ear is linearizing: a word, never a closure; the cut is the ear's.
+Amphichiral fig8 still sounds. `make_fig8_hand.py`.
 
 ## Instruments
 
