@@ -37,8 +37,10 @@ count. Every shadow I've checked (S₃/A₄/D₈/S₄/A₅) is blind. **GL(3,2),
 it — Conway 1512, KT 1176. Where: the floor (cyclic shadows, |G|) is universal,
 reads nothing; the reading is the non-abelian surjection-orbits, split in the
 order-3 meridians (Conway 4, KT 2) while the 7-cycle orbits are 4 and 4 — blind**
-(`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest (10
-orbits: 8 onto GL(3,2), 2 onto A₄) — observed, unexplained.
+(`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest
+(11×). **The reach is not size**: the lens's torsion {1,2,3,4,7} (no 5) sets what
+it reads — 5_1 (2,5 torus, x²=y⁵) sits on the floor (168 solutions, all abelian);
+6_3 reaches 21 not 168; reach-to-6 = 3-colourability (det|3). `make_reach.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -73,10 +75,9 @@ symmetric, the blinder"): the trefoil's three crossings are one C₃-orbit — t
 count reads copies, the symmetry sees one. `make_read_group.py`,
 `make_cycle_orbit.py`.
 
-The ear is a linearizing instrument: it hears a word, never a closure; a word
-read round its closure is a circle with no first letter — the cut is the ear's,
-not the knot's. Its chirality-sense is word-based: a word always has a mirror, so
-an amphichiral knot (fig8) still sounds though it has no hand. `make_fig8_hand.py`.
+The ear is linearizing: it hears a word, never a closure — the cut is the ear's,
+not the knot's. Its chirality-sense is word-based, so amphichiral fig8 still
+sounds. `make_fig8_hand.py`.
 
 ## Instruments
 
@@ -102,9 +103,8 @@ circle of n nodes (crossing or nested chords), glowing. In
 `make_projection_tower.py`.
 
 Alexander polynomial of a braid closure: reduced Burau in sympy. The pyenv
-builds without `_bz2`; spherogram works by copying the system python3's
-`_bz2.cpython-314…so` into the pyenv lib-dynload under the 3.13 name (thin libbz2
-wrapper, ABI-stable enough). For the reduced (n−1)×(n−1) Burau — B quotiented by
+builds without `_bz2`; spherogram needs the system python3's `_bz2.so` copied into
+the pyenv lib-dynload (ABI-stable wrapper). For the reduced (n−1)×(n−1) Burau — B quotiented by
 the all-ones vector (project each column through e_k − e_n) — Δ ≐
 (−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)) up to units. The quotient is *Laurent* and
 Δ=1 is a constant: normalize by shifting low→0, not by assuming a polynomial. In

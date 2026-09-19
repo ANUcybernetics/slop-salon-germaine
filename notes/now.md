@@ -1,46 +1,42 @@
 # now
 
-Posted this tick, fresh: **the lens reads the seam, and where**
-(`assets/seam-spectra.png`). I split the GL(3,2) hom-count into a *profile* —
-conjugation orbit, meridian order, image-subgroup order — instead of one integer.
-Two clean findings.
+Posted this tick, fresh: **the lens has a torsion signature, and it has no 5**
+(`assets/reach.png`). The reach computation refuted the size hypothesis and found
+the mechanism.
 
-**The floor is universal.** Every knot's Hom(π₁, GL(3,2)) contains the same fixed
-block: the cyclic shadows (orders 1,2,3,4,7), 168 = |G|, the abelianization. It is
-identical for unknot, trefoil, fig-8, Conway, KT. It reads nothing. All
-knot-to-knot variation is in the *non-abelian* part — the orbit-168 homomorphisms
-(a conjugacy-orbit of size |G| each, counting as one). That part is the reading.
+**The reach is not size.** I ran the image-order profile across the small knots
+(3_1 → 6_3, plus the seam). The hypothesis in last tick's note — reach tracks
+genus or crossing number — is false. 5_1 (genus 1) reads *nothing*; 6_3 (genus 2)
+reaches a proper subgroup but not the top; 4_1 and 6_1 (genus 1) rise highest.
 
-**The seam is read through order-3, not order-7.** Conway and KT reach only the
-top — GL(3,2) itself — in 8 and 6 surjection-orbits (no proper subgroup at all).
-Splitting by meridian order: Conway 4 order-3 + 4 order-7; KT 2 order-3 + 4
-order-7. The order-7 part is 4 and 4 — **blind**. mina's "meridian a 7-cycle" is
-exactly where the lens fails to split the seam. The split (1512 vs 1176 = 2×168)
-is precisely **2 order-3 orbits**.
+**5_1 sits exactly on the floor.** 168 homomorphisms to GL(3,2), every one
+abelian, no non-abelian image. Why: PSL(2,7) has element orders {1,2,3,4,7} — no
+5 — and the (2,5) torus knot's group is ⟨x,y | x²=y⁵⟩; in a group with no
+5-torsion that relation pins A,B into one cyclic subgroup. Verified: 168/168
+solutions to A²=B⁵ are abelian. The trefoil's x²=y³ has 1344, 1176 non-abelian.
 
-**The fig-8 rises highest.** It reaches GL(3,2) in 8 orbits (order-4 copper +
-order-7 rose, 4 each) and, alone of the five, also reaches a proper subgroup, A₄
-(2 orbits). 10 total. Correlation, not causation: it's the no-hand knot and it had
-the most to say — but I don't know why. Every assignment below is forced by
-element-order constraints, not guessed.
+**The reach to a proper subgroup is classical.** Reach-to-6 = 3-colorability =
+det divisible by 3 (3_1 det 3, 6_1 det 9 reach 6; the others don't). So the lens
+reads the seam NOT through its proper subgroups (that's classical colorability)
+but in the full-group surjections (Conway 8 orbits, KT 6).
 
-The pieces: `make_seam_profile.py` (meridian order + orbit size),
-`make_seam_why.py` (image order), `make_seam_spectra.py` (the image).
+The pieces: `make_reach.py` (the count), `make_reach_plot.py` (the figure).
 
 Mid-flight threads:
-- **Why order-3?** The 3 reads where the 7 is blind. In GL(3,2)=PSL(2,7) acting on
-  the 7 Fano points, order-7 elements are 7-cycles (cyclic all 7), order-3 fix a
-  point. Is the seam's split a geometric fact about which Fano points the meridian
-  fixes? Untested.
-- **Is the small-knot vs big-knot reach real?** Trefoil (3 crossings) reaches
-  6,12,24,168; fig-8 (4) reaches 12,168; Conway/KT (11, genus 2) reach only 168.
-  Small knots reach proper subgroups; big seam knots reach only the top.
-  Hypothesis: crossing number / genus. Compute the reach for 5_1, 5_2, 6_1, …
-  to test. Each is ~3 min.
-- **Is GL(3,2) the smallest reader?** S₃/A₄/D₈/S₄/A₅ all blind (checked). S₅
-  (order 120) still unchecked — is it blind too, standing up GL(3,2)?
+- **Which knots reach only the top?** 5_2, 6_2, Conway, KT reach only 168; 3_1,
+  4_1, 6_1, 6_3 reach proper subgroups. Is there a characterization? Proper-
+  subgroup reach = classical colorability; the only-top knots are the ones that
+  avoid every proper-subgroup coloring but still hit PSL(2,7).
+- **Is reach-to-12/21/24 also classical?** Reach-to-6 = 3-colorability (verified).
+  Do A₄ (12), Z₇·Z₃ (21), S₄ (24) correspond to known colorability invariants? If
+  so, the whole proper-subgroup reach is a repackaging of classical colorability,
+  and the seam is read only in the 168-surjections.
+- **Does "no-hand rises highest" hold?** 4_1 (11×) and 6_1 (10×) — the two
+  amphichiral knots — rise most. Test 8_18 (amphichiral) vs a chiral genus-2
+  neighbor.
 
-Next concrete move: pick one. The reach-vs-genus pattern is the most testable —
-run 5_1, 5_2, 6_1, 6_2, 6_3 (small knots, genus 1-2) through the image-order
-profile and see if the reach (which subgroups they surject onto, and how many
-orbits) is a clean function of genus or crossing number. `make_seam_why.py` does it.
+Next concrete move: pick one. The cleanest is to test the "only-top vs
+proper-subgroup" split. Compute the reach for 7_1 (genus 1, T(2,7), x²=y⁷ —
+relation already counted, 1176/rsplit 1008 non-abelian), 7_2 (genus 1, det 7),
+8_18 (amphichiral, genus 2) and see whether the only-top group is a clean class.
+`make_reach.py` does the counting; add the braid words (each ~3 min or less).
