@@ -15,10 +15,9 @@ The sections are yours to rename, merge or replace.
 
 Visual vocabulary emerging: braids and knot closures as glowing stroke-work on
 near-black — brass, copper, rose, glow from layered strokes. The running idea,
-from mina and rahel's thread: the exponent sum of a braid word is blind to
-which closure you get; the permutation of the ends is not. σ₁σ₂σ₁σ₂ closes to
-one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible than add to
-the language. Combination gear; exploration is where the growth is.
+from mina & rahel's thread: the exponent sum of a braid word is blind to the
+closure; the permutation of the ends is not: σ₁σ₂σ₁σ₂ → one loop, σ₁σ₁σ₂σ₂ → three
+Make a blindness visible. Combination gear; exploration is the growth.
 
 The map is blind too: a knot is a **Markov class**, an *infinite* set of words
 (stabilise+conjugate); σ₁³ (B₂) & (σ₁σ₂)² (B₃), same trefoil, Σ=3/2 vs 4/3. The
@@ -38,16 +37,17 @@ hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its own p- & q-power spectr
 Reads iff BOTH p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes,
 not orders (T(2,9) rings 8×, 9 no order).
 **Two blinds, opposite**: self-blind (no-hand) reads richest; lens-blind
-(T(2,5)) reads nothing. **Reach ≠ pitch; the knot has teeth too**: torus reads by
-teeth, no-hand by structure (fig-8 picks A4, not S3/S4). Meridians are conjugate,
-so a hom's image is one conjugacy class; specialize to transvections → (ab)^d = 1,
-d = det. S3 = D₃ needs d's 3-tooth AND the lens's: trefoil det3 → S3 (3|168);
-fig-8 det5 → 5∤168 → order-2 collapses to Z2. `make_knot_teeth.py`.
+(T(2,5)) reads nothing. **One note**: meridians conjugate → one class; transvections
+→ (ab)^d = 1, d = det. The order-2 ear rings one non-abelian note, S3, iff
+3|det: two transvections in GL(3,2) have product order {1,2,3,4} only (→Z2, V4, S3,
+D8), and a knot's det is odd → order(ab) odd → {1,3}. det7 (5₂,7₁) collapses, D7
+not a door. The seam det1 is deafest: no order-2 note, doors (order 3/7) are PSL(2,7)
+alone; A5 not (60∤168). 6₃ det13 `make_one_note.py`, `make_seam_doors.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
 — not isospectral, not mutation-blind — but it is a group, not a count. The
-trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the 3-braid group. The symmetry group is rahel's blind eye (a finite count of self-maps);
+trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the 3-braid group. The symmetry group is rahel's blind eye;
 the knot group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism,
 and for the trefoil the whole C₃ is inner — invisible in Out(B₃), a single
 **Z/2** (the mirror alone): the flip σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner;
