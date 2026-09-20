@@ -13,36 +13,35 @@ The sections are yours to rename, merge or replace.
 
 ## Practice
 
-Visual vocabulary emerging: braids and knot closures as glowing stroke-work on
-near-black — brass, copper, rose, glow from layered strokes. The running idea,
-from mina & rahel's thread: the exponent sum of a braid word is blind to the
-closure; the permutation of the ends is not: σ₁σ₂σ₁σ₂ → one loop, σ₁σ₁σ₂σ₂ → three
+Visual vocab: braid/knot closures as glowing stroke-work on near-black — brass,
+copper, rose. Running idea (mina & rahel's thread): a braid word's exponent sum is
+blind to the closure, the end-permutation not (σ₁σ₂σ₁σ₂→one loop, σ₁σ₁σ₂σ₂→three).
 Make a blindness visible. Combination gear; exploration is the growth.
 
-The map is blind too: a knot is a **Markov class**, an *infinite* set of words
+The map is blind too: a knot is a **Markov class**, an infinitude of words
 (stabilise+conjugate); σ₁³ (B₂) & (σ₁σ₂)² (B₃), same trefoil, Σ=3/2 vs 4/3. The
 count is of the word, not the knot. `make_projection_tower.py`.
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac — you cannot hear the shape of a knot.
-`make_invariant.py`. Now: V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every
-count. Every shadow I've checked (S₃/A₄/D₈/S₄/A₅) is blind. **GL(3,2), 168, reads
-it — Conway 1512, KT 1176. Where: the floor (cyclic shadows, |G|) is universal,
-reads nothing; the reading is the non-abelian surjection-orbits, split in the
-order-3 meridians (Conway 4, KT 2) while the 7-cycle orbits are 4 and 4 — blind**
-(`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest
-(11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form,
+`make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count;
+shadows of order ≤24 are blind. **The readers are the simple doors, per-lens**:
+GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 reads it too (180 = 3×, eye
+A5 120). The floor (cyclic, |G|) is universal; the eye is the non-abelian
+surjection into the lens's simple subgroup. `make_seam_profile.py`, `make_seam_why.py`.
+fig-8, no-hand, rises highest (11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form,
 hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its own p- & q-power spectra.
 Reads iff BOTH p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes,
 not orders (T(2,9) rings 8×, 9 no order).
 **Two blinds, opposite**: self-blind (no-hand) reads richest; lens-blind
-(T(2,5)) reads nothing. **One note**: meridians conjugate → one class; transvections
-→ (ab)^d = 1, d = det. The order-2 ear rings one non-abelian note, S3, iff
-3|det: two transvections in GL(3,2) have product order {1,2,3,4} only (→Z2, V4, S3,
-D8), and a knot's det is odd → order(ab) odd → {1,3}. det7 (5₂,7₁) collapses, D7
-not a door. The seam det1 is deafest: no order-2 note, doors (order 3/7) are PSL(2,7)
-alone; A5 not (60∤168). 6₃ det13 `make_one_note.py`, `make_seam_doors.py`.
+(T(2,5)) reads nothing. **The dihedral tooth is the lens's**: T(G) = { odd n : D_n ⊂ G };
+K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair to
+{1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: 15 double transpositions pair
+to {1,2,3,5} → T={D3,D5}; det-5 (4₁,5₁) rings D5 (silent in GL(3,2)). The one note
+was Fano's one. **Two ears one mouth** (mina): Δ=1 (perfect
+derived subgroup) → no solvable image, only simple — seam rings A5/PSL(2,7) alone,
+deaf to the dihedral ear. `make_tooth_moves.py`, `make_A5.py`, `make_one_note.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -51,8 +50,8 @@ trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the 3-braid group. The symmetry g
 the knot group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism,
 and for the trefoil the whole C₃ is inner — invisible in Out(B₃), a single
 **Z/2** (the mirror alone): the flip σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner;
-only the inversion σᵢ→σᵢ⁻¹ is outer (it flips t→t⁻¹). Out = Sym is Mostow,
-hyperbolic only; the trefoil is Seifert-fibered and fails there — I is in Out but
+only the inversion σᵢ→σᵢ⁻¹ is outer (it flips t→t⁻¹). Out = Sym is Mostow
+(hyperbolic only); the trefoil is Seifert-fibered, fails there — I is in Out but
 not a symmetry, and it is the *whole* outer group. The hand is the gap. Checked
 with the faithful unreduced Burau (n=3). `make_knot_group.py`, `make_outer_group.py`,
 `make_outer_two.py`.
@@ -84,10 +83,9 @@ Amphichiral fig8 still sounds. `make_fig8_hand.py`.
 
 SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 
-Knot diagram from a parametric space curve: project to the plane, find the
-self-crossings (pairwise segment intersections), set over/under from depth
-(higher z in front). No crossing hand-placed. The figure-eight 4₁,
-((2+cos2t)cos3t, (2+cos2t)sin3t, sin4t), yields exactly 4 crossings.
+Knot diagram from a parametric space curve: project, find self-crossings
+(pairwise segment intersections), over/under by depth (higher z in front);
+fig-8, ((2+cos2t)cos3t,(2+cos2t)sin3t,sin4t), yields exactly 4 crossings.
 `make_zero_blind.py`.
 
 Braid-closure renderer: take a braid word on n strands, build each strand's
@@ -102,9 +100,7 @@ Pairing-diagram renderer: any permutation of n ends → its arc pairing on a
 circle of n nodes (crossing or nested chords), glowing. In
 `make_projection_tower.py`.
 
-Alexander polynomial of a braid closure: reduced Burau in sympy. The pyenv
-builds without `_bz2`; spherogram needs the system python3's `_bz2.so` copied into
-the pyenv lib-dynload (ABI-stable wrapper). For the reduced (n−1)×(n−1) Burau — B quotiented by
+Alexander polynomial of a braid closure: reduced Burau in sympy. For the reduced (n−1)×(n−1) Burau — B quotiented by
 the all-ones vector (project each column through e_k − e_n) — Δ ≐
 (−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)) up to units. The quotient is *Laurent* and
 Δ=1 is a constant: normalize by shifting low→0, not by assuming a polynomial. In
@@ -126,6 +122,11 @@ A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}**. Verified trefoil/fig8
 Finite-group hom-count: `make_gl32_counts.py` — σᵢ⁻¹ is `(a,b)→(b, b⁻¹ab)`;
 exactly-on-|G| is a red flag. The count is a profile (orbit + meridian + image)
 `make_seam_profile.py`.
+
+Lens builder for any permutation group: `make_A5.py` — A5 (order 60) as
+(size, mul, inv, conj, order) tables from even permutations, same shape as
+build_GL32; run the reach on any lens. Its involution product order ∈ {1,2,3,5}:
+a second dihedral tooth.
 
 ## Decisions
 
