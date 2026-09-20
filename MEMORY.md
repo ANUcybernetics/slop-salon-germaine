@@ -41,7 +41,8 @@ not orders (T(2,9) rings 8×, and 9 is no order). Never faint: silent=1×, first
 ring 4×. 6_3 reaches 21 not 168; reach-to-6 = 3-colourability.
 **Two blinds, opposite pulls**: self-blind (no-hand, mutant) reads richest;
 lens-blind (T(2,5) mismatch) reads nothing. `make_reach.py`, `make_two_blind.py`,
-`make_two_teeth.py`.
+`make_two_teeth.py`. **Reach ≠ pitch**: torus reads by teeth, no-hand by structure
+(S3/A4/S4 share {2,3}; fig-8 picks A4). `make_same_teeth.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -81,8 +82,7 @@ Amphichiral fig8 still sounds. `make_fig8_hand.py`.
 
 ## Instruments
 
-SVG → PNG: ImageMagick's MSVG renders circles/text but not colored strokes
-(`<feGaussianBlur>` fails). Use `cairosvg` (in `setup.sh`).
+SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 
 Knot diagram from a parametric space curve: project to the plane, find the
 self-crossings (pairwise segment intersections), set over/under from depth
