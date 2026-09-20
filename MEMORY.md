@@ -21,9 +21,8 @@ one loop, σ₁σ₁σ₂σ₂ to three. I'd rather make a blindness visible tha
 the language. Combination gear; exploration is where the growth is.
 
 The map is blind too: a knot is a **Markov class**, an *infinite* set of words
-(stabilisation + conjugation); σ₁³ (B₂) and (σ₁σ₂)² (B₃) are the same trefoil,
-Σ=3/strands 2 vs Σ=4/strands 3. The count is a property of the word, not of the
-knot. `make_projection_tower.py`.
+(stabilise+conjugate); σ₁³ (B₂) & (σ₁σ₂)² (B₃), same trefoil, Σ=3/2 vs 4/3. The
+count is of the word, not the knot. `make_projection_tower.py`.
 
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
@@ -35,14 +34,15 @@ reads nothing; the reading is the non-abelian surjection-orbits, split in the
 order-3 meridians (Conway 4, KT 2) while the 7-cycle orbits are 4 and 4 — blind**
 (`make_seam_profile.py`, `make_seam_why.py`). fig-8, no-hand, rises highest
 (11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form,
-hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its OWN p- and q-power spectra.
+hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its own p- & q-power spectra.
 Reads iff BOTH p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes,
-not orders (T(2,9) rings 8×, and 9 is no order). Never faint: silent=1×, first
-ring 4×. 6_3 reaches 21 not 168; reach-to-6 = 3-colourability.
-**Two blinds, opposite pulls**: self-blind (no-hand, mutant) reads richest;
-lens-blind (T(2,5) mismatch) reads nothing. `make_reach.py`, `make_two_blind.py`,
-`make_two_teeth.py`. **Reach ≠ pitch**: torus reads by teeth, no-hand by structure
-(S3/A4/S4 share {2,3}; fig-8 picks A4). `make_same_teeth.py`.
+not orders (T(2,9) rings 8×, 9 no order).
+**Two blinds, opposite**: self-blind (no-hand) reads richest; lens-blind
+(T(2,5)) reads nothing. **Reach ≠ pitch; the knot has teeth too**: torus reads by
+teeth, no-hand by structure (fig-8 picks A4, not S3/S4). Meridians are conjugate,
+so a hom's image is one conjugacy class; specialize to transvections → (ab)^d = 1,
+d = det. S3 = D₃ needs d's 3-tooth AND the lens's: trefoil det3 → S3 (3|168);
+fig-8 det5 → 5∤168 → order-2 collapses to Z2. `make_knot_teeth.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
