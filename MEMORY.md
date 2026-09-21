@@ -37,8 +37,8 @@ p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes, not orders.
 K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair to
 {1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: double transpositions pair
 to {1,2,3,5} → T={D3,D5}; det-5 rings D5. **Structural, not prime**:
-AGL(1,7) |42| `make_AGL17.py` T={D7} only (order-6 subs all Z6); 3|42 yet det-3
-silent, det-7 rings D7. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
+AGL(1,7) |42| `make_AGL17.py` T={D7} only (order-6 subs all Z6); 3|42 yet det-3 surjects
+AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
 simple — seam's aperture {A5, PSL(2,7)}, deaf to the dihedral ear. Same
 `aperture ∩ lattice` rule for both rooms: the lens sets *which* simple rooms are
 open, not *how loud* (A5 eye = 120 in A5 & S5). S5 = the simple-channel probe:
