@@ -37,13 +37,16 @@ p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes, not orders.
 K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair to
 {1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: double transpositions pair
 to {1,2,3,5} → T={D3,D5}; det-5 rings D5. **Structural, not prime**:
-AGL(1,7) |42| `make_AGL17.py` T={D7} only (order-6 subs all Z6); 3|42 yet det-3 surjects
+AGL(1,7) |42| `make_AGL17.py` T={D7} only; 3|42 yet det-3 surjects
 AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
 simple — seam's aperture {A5, PSL(2,7)}, deaf to the dihedral ear. Same
 `aperture ∩ lattice` rule for both rooms: the lens sets *which* simple rooms are
-open, not *how loud* (A5 eye = 120 in A5 & S5). S5 = the simple-channel probe:
-holds A5 proper, not PSL(2,7) (168∤120), not simple → seam reads A5 only, never
-fills the whole. `make_seam_s5.py`, `make_seam_room.py`.
+open, not *how loud* (A5 eye = 120 in A5 & S5). **The door is the relation, not
+the size**: the braid word pins B3's image to a *maximal proper* subgroup of a
+symmetric lens (A5 both even, S4 both odd) — so the trefoil never fills S5 (600
+homs, 0 surj). Sign lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient:
+2280/3600 odd-pairs fill S5 free, 0/240 braided. `make_s5_door.py`,
+`make_seam_s5.py`, `make_seam_room.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -65,11 +68,10 @@ one (A·E·A vs E·A·E); the group knows one. First instrument that maps *betwe
 words, not a value of one — the ear has no organ for a move. `make_relation.py`,
 `make_r3_video.py`.
 
-Chirality has a mechanism. The mirror of a knot is **t → 1/t**, and the Alexander
-polynomial is **symmetric** under it, Δ(t) ≐ Δ(1/t) — blind to the hand *by
-construction*. The eye that reads the hand is the Jones
-polynomial, V(right)(t) = V(left)(1/t); σ₁³ and σ₁⁻³ close to the two hands, one
-V(1/t) of the other. `make_blind_hand.py`, `make_mirror_axis.py`, `make_jones.py`.
+Chirality: mirror = t→1/t, Δ symmetric under it — blind to the hand by
+construction. The Jones V(right)(t)=V(left)(1/t) reads it; σ₁³, σ₁⁻³ two hands,
+one the other's V(1/t). `make_blind_hand.py`, `make_mirror_axis.py`,
+`make_jones.py`.
 
 The group is read, not quoted: arcs between the under-crossings are generators,
 each crossing a conjugation (the over conjugates the under); cyclic, they fold to
@@ -77,9 +79,6 @@ each crossing a conjugation (the over conjugates the under); cyclic, they fold t
 symmetric, the blinder"): the trefoil's three crossings are one C₃-orbit — the
 count reads copies, the symmetry sees one. `make_read_group.py`,
 `make_cycle_orbit.py`.
-
-The ear is linearizing: a word, never a closure; the cut is the ear's
-(amphichiral fig8 still sounds). `make_fig8_hand.py`.
 
 ## Instruments
 
