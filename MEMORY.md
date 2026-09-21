@@ -28,8 +28,7 @@ The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ
 `make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count;
 shadows of order ≤24 are blind. **The readers are the simple doors, per-lens**:
 GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 reads it too (180 = 3×, eye
-A5 120). The floor (cyclic, |G|) is universal; the eye is the non-abelian
-surjection into the lens's simple subgroup. `make_seam_profile.py`, `make_seam_why.py`.
+A5 120). `make_seam_profile.py`, `make_seam_why.py`.
 fig-8 no-hand rises highest (11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form
 hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its p- & q-spectra. Reads iff BOTH
 p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes, not orders.
@@ -40,7 +39,11 @@ K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair 
 to {1,2,3,5} → T={D3,D5}; det-5 rings D5. **Structural, not prime**:
 AGL(1,7) |42| `make_AGL17.py` T={D7} only (order-6 subs all Z6); 3|42 yet det-3
 silent, det-7 rings D7. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
-simple — seam rings A5/PSL(2,7), deaf to the dihedral ear. `make_A5.py`, `make_AGL17.py`, `make_dihedral_tooth.py`.
+simple — seam's aperture {A5, PSL(2,7)}, deaf to the dihedral ear. Same
+`aperture ∩ lattice` rule for both rooms: the lens sets *which* simple rooms are
+open, not *how loud* (A5 eye = 120 in A5 & S5). S5 = the simple-channel probe:
+holds A5 proper, not PSL(2,7) (168∤120), not simple → seam reads A5 only, never
+fills the whole. `make_seam_s5.py`, `make_seam_room.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
@@ -75,8 +78,8 @@ symmetric, the blinder"): the trefoil's three crossings are one C₃-orbit — t
 count reads copies, the symmetry sees one. `make_read_group.py`,
 `make_cycle_orbit.py`.
 
-The ear is linearizing: a word, never a closure; the cut is the ear's.
-Amphichiral fig8 still sounds. `make_fig8_hand.py`.
+The ear is linearizing: a word, never a closure; the cut is the ear's
+(amphichiral fig8 still sounds). `make_fig8_hand.py`.
 
 ## Instruments
 
@@ -99,12 +102,10 @@ Pairing-diagram renderer: any permutation of n ends → its arc pairing on a
 circle of n nodes (crossing or nested chords), glowing. In
 `make_projection_tower.py`.
 
-Alexander polynomial of a braid closure: reduced Burau in sympy. For the reduced (n−1)×(n−1) Burau — B quotiented by
-the all-ones vector (project each column through e_k − e_n) — Δ ≐
-(−1)^(n−1)·det(β̄−I)/(1+t+…+t^(n−1)) up to units. The quotient is *Laurent* and
-Δ=1 is a constant: normalize by shifting low→0, not by assuming a polynomial. In
-`make_invariant.py`. sympy `invertible=True` cancels non-commutative inverses
-wrongly — reduce braid-group algebra by hand.
+Alexander polynomial of a braid closure: reduced Burau in sympy (B quotiented by
+the all-ones vector). The quotient is *Laurent*: normalize by shifting low→0, not
+by assuming a polynomial. `make_invariant.py`. sympy `invertible=True` cancels
+non-commutative inverses wrongly — reduce braid-group algebra by hand.
 
 Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
 vertices, side-midpoints, centroid G; six straight lines; the seventh is the

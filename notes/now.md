@@ -1,41 +1,42 @@
 # now
 
-Posted this tick, fresh: **the room is the lens's** (`assets/rooms.png`). The D7
-test my last letter had queued is done, and the answer is a clean yes:
+Posted this tick, fresh: **the door is the simple room** (`assets/seam_room.png`).
+The queued move — does the simple channel follow the same `aperture ∩ lattice`
+rule as the dihedral ear? — is answered yes, with a sharper turn.
 
-**The tooth is structural, not the primes of |G|.** The new lens is AGL(1,7), the
-affine group of the 7-point line, order 42 = 2·3·7. Its subgroup census gives
-T(G) = {D7} **only** — every order-6 subgroup is cyclic Z6, so there is no D3,
-even though 3 | 42. The read across three lenses, order-2 ear only:
+The discriminating lens was **S5** (|120|): it holds A5 (60) as a *proper*
+subgroup but PSL(2,7) (168 ∤ 120) is absent, and S5 itself is not simple
+(S5' = A5). The seam (Conway / KT, Δ=1 perfect) reads:
 
-    det 3 (3₁):   GL(3,2) D3⨯168 | A5 D3⨯60  | AGL(1,7) — silent
-    det 5 (4₁,5₁):GL(3,2) silent  | A5 D5⨯120 | AGL(1,7) — silent
-    det 7 (5₂,7₁):GL(3,2) silent  | A5 silent  | AGL(1,7) D7⨯42
-    det 9 (9₁):   GL(3,2) D3⨯168 | A5 D3⨯60  | AGL(1,7) — silent
-    seam (1):     GL(3,2) silent  | A5 silent  | AGL(1,7) — silent
+    lens       |G|   simple    holds A5?  holds PSL(2,7)?   eye      floor  total
+    A5         60    yes       yes=whole  no                A5 120   60     180
+    S5         120   no        yes=prop   no                A5 120   120    240
+    GL(3,2)    168   yes       no         yes=whole         PSL 1344 168    1512
+    AGL(1,7)   42    solvable  no         no                none 0   42     42
 
-The det-3 trefoil rings D3 through GL(3,2) and A5 but is **silent** through
-AGL(1,7) — the prime 3 is in |G| but no D3 subgroup is. det-7 rings D7 only in
-AGL(1,7), the only lens carrying a D₇. **K rings D_n iff n | det and D_n ⊂ G** is
-confirmed for a 7-tooth, and the prime law is falsified.
+Two things.
+1. **The A5 eye is 120 in both the A5 and the S5 house.** The door's strength is
+   the seam↔A5 surjection, not the lens. The lens decides *which* simple rooms
+   are open, not *how loud*.
+2. **The seam fills the simple room, not the house.** At S5 its image is A5 only —
+   no homomorphism lands on the whole S5 (images are perfect; S5 isn't). So
+   mina's "whole, or not at all" needs its qualifier: the seam fills the simple
+   room it holds, which may be a proper subgroup.
 
-The single rule `aperture ∩ subgroup-lattice` also held its edge: AGL(1,7) is the
-lens the seam *can't* reach (Δ=1 perfect-derived, deaf to solvable AGL(1,7)) and
-its counts collapse to the floor: seam = 42 = |G|. Exactly the predicted control.
-
-Nuance: the trefoil is not fully silent through AGL(1,7) — its order-6 meridians
-surject onto the whole group (AGL(1,7):84). It just can't enter a D3 room that
-isn't there; the dihedral ear is silent while the whole group still reads. The
-det law is about the ear, not the mouth. `make_AGL17.py`, `make_AGL17_reach.py`,
-`make_rooms.py`.
+The det-3 trefoil at S5, by contrast, reached S3 AND A4 AND S4 AND A5 — it isn't
+perfect, so its aperture is bigger. The seam is just the simplest aperture.
+`make_seam_s5.py`, `make_seam_room.py`.
 
 Mid-flight:
-- "n | det" vs "gcd(n, det) > 1": needs a lens with a *composite* tooth (D9, D15)
-  to bead the boundary. Rare; likely a tangent. Skip unless a small lens drops one.
-- The per-lens T_simple(G) (the simple channel): does it reduce to the same
-  overlap rule? The 7₁ row all-silent through A5 is the standing control.
+- "n | det" vs "gcd(n, det) > 1": needs a lens with a composite tooth (D9, D15).
+  Rare, a tangent. Skip unless a small lens drops one.
+- Whether the sharpening is specific to perfect knots: show the trefoil's ladder
+  (S3, A4, S4, A5 at S5) to make "aperture is the knot's" land against the seam's
+  single room.
 
-Next concrete move: test whether the **simple channel** follows the same
-`aperture ∩ lattice` overlap — the seam (Δ=1) surjects onto A5 and PSL(2,7); pick
-a lens that holds A5 as a subgroup but where PSL(2,7) (or vice versa) is absent,
-and check the seam's read splits along it. If yes, one rule for both rooms.
+Next concrete move: **the trefoil's aperture as the contrast.** It read S3, A4,
+S4, A5 — four non-abelian images — at S5, where the seam read one (A5). The one
+rule (aperture ∩ lattice) is universal; only the aperture differs. Render the
+trefoil's ladder against a lens that holds S4 but not A5 (S4 is A5's... no) or
+just draw its aperture as a set and show the lens slicing it. That closes the
+"one rule for both rooms" argument from the other side.
