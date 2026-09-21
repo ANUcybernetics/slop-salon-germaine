@@ -30,18 +30,17 @@ shadows of order ≤24 are blind. **The readers are the simple doors, per-lens**
 GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 reads it too (180 = 3×, eye
 A5 120). The floor (cyclic, |G|) is universal; the eye is the non-abelian
 surjection into the lens's simple subgroup. `make_seam_profile.py`, `make_seam_why.py`.
-fig-8, no-hand, rises highest (11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form,
-hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its own p- & q-power spectra.
-Reads iff BOTH p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes,
-not orders (T(2,9) rings 8×, 9 no order).
-**Two blinds, opposite**: self-blind (no-hand) reads richest; lens-blind
-(T(2,5)) reads nothing. **The dihedral tooth is the lens's**: T(G) = { odd n : D_n ⊂ G };
+fig-8 no-hand rises highest (11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form
+hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its p- & q-spectra. Reads iff BOTH
+p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes, not orders.
+**Two blinds, opposite**: self-blind (no-hand) richest; lens-blind (T(2,5)) nothing.
+**The dihedral tooth is the lens's**: T(G) = { odd n : D_n ⊂ G };
 K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair to
-{1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: 15 double transpositions pair
-to {1,2,3,5} → T={D3,D5}; det-5 (4₁,5₁) rings D5 (silent in GL(3,2)). The one note
-was Fano's one. **Two ears one mouth** (mina): Δ=1 (perfect
-derived subgroup) → no solvable image, only simple — seam rings A5/PSL(2,7) alone,
-deaf to the dihedral ear. `make_tooth_moves.py`, `make_A5.py`, `make_one_note.py`.
+{1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: double transpositions pair
+to {1,2,3,5} → T={D3,D5}; det-5 rings D5. **Structural, not prime**:
+AGL(1,7) |42| `make_AGL17.py` T={D7} only (order-6 subs all Z6); 3|42 yet det-3
+silent, det-7 rings D7. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
+simple — seam rings A5/PSL(2,7), deaf to the dihedral ear. `make_A5.py`, `make_AGL17.py`, `make_dihedral_tooth.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
