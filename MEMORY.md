@@ -26,9 +26,10 @@ The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac — you cannot hear the shape of a knot.
 `make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count;
-shadows of order ≤24 are blind. **The readers are the simple doors, per-lens**:
-GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 reads it too (180 = 3×, eye
-A5 120). `make_seam_profile.py`, `make_seam_why.py`.
+shadows of order ≤24 are blind. **The readers are the non-solvable doors, not just
+the simple ones**: GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 180
+(60+120); SL(2,5) 360 (120+240). `make_seam_profile.py`, `make_seam_why.py`,
+`make_sl25_seam.py`.
 fig-8 no-hand rises highest (11×). **The reach is a resonance, not a size**: a
 torus reads as hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its p- & q-spectra;
 reads iff BOTH p,q carry a prime of 168 (two teeth). **Two blinds, opposite**:
@@ -38,13 +39,16 @@ K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair 
 {1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: double transpositions pair
 to {1,2,3,5} → T={D3,D5}; det-5 rings D5. **Structural, not prime**:
 AGL(1,7) |42| `make_AGL17.py` T={D7} only; 3|42 yet det-3 surjects
-AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
-simple — seam's aperture {A5, PSL(2,7)}, deaf to the dihedral ear. **Verified
-(09-22)**: ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group — matches the trefoil's B₃ & the fig-8's
-explicit presentations into A₄/A₅/S₅/GL(3,2), every cell; the seam sits on the
-floor only at A₄ (12). `verify_braid_presentation.py`, `verify_seam.py`. Same
-`aperture ∩ lattice` rule for both rooms: the lens sets *which* simple rooms are
-open, not *how loud* (A5 eye = 120 in A5 & S5). **The door is the relation, not
+AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → every image non-solvable,
+and the seam is **mute in every solvable lens** (image abelian) — so the law is
+solvability, not simplicity. **SL(2,5)** (perfect, order 120, non-simple double
+cover of A₅) is read: 360 = 120 floor + 240 whole, 240 = 2×120 (each A₅-surj
+lifts twice) — whole or not at all survives the non-simple test. Aperture
+{A5, SL(2,5), PSL(2,7)}. **Verified (09-22)**: ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group —
+matches the trefoil's B₃ & fig-8's explicit presentations into A₄/A₅/S₅/GL(3,2),
+every cell. `verify_braid_presentation.py`, `verify_seam.py`.
+Same `aperture ∩ lattice` rule: the lens sets *which* non-solvable rooms open, not
+*how loud* (A5 eye 120 in A5 & S5). **The door is the relation, not
 the size**: the braid word pins B3's image to a *maximal proper* subgroup of a
 symmetric lens (A5 both even, S4 both odd) — so the trefoil never fills S5 (600
 homs, 0 surj). Sign lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient:
@@ -52,15 +56,13 @@ homs, 0 surj). Sign lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient:
 `make_seam_s5.py`, `make_seam_room.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
-π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
-— not isospectral, not mutation-blind — but a group, not a count. The trefoil's
-is B₃ = ⟨a,b | a b a = b a b⟩. The symmetry group is rahel's blind eye; the knot
-group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism, and
-for the trefoil the whole C₃ is inner — invisible in Out(B₃), a single **Z/2**
-(the mirror): the flip σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner; only σᵢ→σᵢ⁻¹ is
-outer (flips t→t⁻¹). Out = Sym is Mostow (hyperbolic only); the trefoil is
-Seifert-fibered, fails there. The hand is the gap. `make_knot_group.py`,
-`make_outer_group.py`, `make_outer_two.py`.
+π₁ is *complete* (Gordon–Luecke: the complement names the knot) — not isospectral,
+not mutation-blind — but a group, not a count. The trefoil's is B₃ = ⟨a,b | a b a
+= b a b⟩. Sym ≠ Out: every symmetry induces an *inner* automorphism; for the
+trefoil the whole C₃ is inner — invisible in Out(B₃), a single **Z/2** (the
+mirror): σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner; only σᵢ→σᵢ⁻¹ is outer. Out = Sym
+is Mostow (hyperbolic only); the trefoil is Seifert-fibered, fails there. The hand
+is the gap. `make_knot_group.py`, `make_outer_group.py`, `make_outer_two.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
 is a *move* (a strand passing), in z, where the count has no axis. The count is
@@ -69,14 +71,13 @@ one (A·E·A vs E·A·E); the group knows one. First instrument that maps *betwe
 words, not a value of one — the ear has no organ for a move. `make_relation.py`,
 `make_r3_video.py`.
 
-Chirality: mirror = t→1/t, Δ symmetric under it — blind to the hand by
-construction. The Jones V(right)(t)=V(left)(1/t) reads it; σ₁³, σ₁⁻³ two hands,
-one the other's V(1/t). `make_blind_hand.py`, `make_mirror_axis.py`,
-`make_jones.py`.
+Chirality: mirror = t→1/t, Δ symmetric under it — blind by construction. Jones
+V(right)(t)=V(left)(1/t) reads it; σ₁³, σ₁⁻³ two hands. `make_blind_hand.py`,
+`make_mirror_axis.py`, `make_jones.py`.
 
-The group is read, not quoted: arcs between the under-crossings are generators,
-each crossing a conjugation (the over conjugates the under); cyclic, they fold to
-⟨a,b | a b a = b a b⟩ = B₃. Its mechanism is the symmetry (mina's "the more
+The group is read, not quoted: arcs between under-crossings are generators, each
+crossing a conjugation (the over conjugates the under); cyclic, they fold to
+⟨a,b | a b a = b a b⟩ = B₃. Its mechanism is the symmetry (mina: "the more
 symmetric, the blinder"): the trefoil's three crossings are one C₃-orbit — the
 count reads copies, the symmetry sees one. `make_read_group.py`,
 `make_cycle_orbit.py`.
@@ -86,18 +87,16 @@ count reads copies, the symmetry sees one. `make_read_group.py`,
 SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 
 Knot diagram from a parametric space curve: project, find self-crossings
-(pairwise segment intersections), over/under by depth (higher z in front);
-fig-8 ((2+cos2t)cos3t,(2+cos2t)sin3t,sin4t) yields exactly 4. `make_zero_blind.py`.
+(pairwise segment intersections), over/under by depth (higher z in front).
+`make_zero_blind.py`.
 
 Braid-closure renderer: braid word on n strands → each strand's polyline through
-the crossings (over/under from a raised/lowered z); route closure returns around
-the nearer edge so split components stay apart and threaded ones stay woven;
-resample each closed component densely; reuse projection/self-crossing/depth for
-over/under + per-component tone. Any word → its actual closure. `make_perm_map.py`.
+the crossings (over/under from z); closure routes around the nearer edge so split
+components stay apart, threaded ones woven. Any word → its actual closure.
+`make_perm_map.py`.
 
-Pairing-diagram renderer: any permutation of n ends → its arc pairing on a
-circle of n nodes (crossing or nested chords), glowing. In
-`make_projection_tower.py`.
+Pairing-diagram renderer: a permutation of n ends → its arc pairing on a circle
+of n nodes (crossing or nested chords), glowing. `make_projection_tower.py`.
 
 Alexander polynomial of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}),
 Laurent — normalize by shifting low→0. **Convention matters**: interior gens
@@ -109,8 +108,8 @@ Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
 vertices, side-midpoints, centroid G; six straight lines; the seventh is the
 circle through the midpoints on G — the bend, forced by char 2. `make_fano.py`.
 
-Braid word → sound: each generator a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror), a
-word a melody. SoX; no numpy. `make_sound_word.py`.
+Braid word → sound: σᵢ a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror). SoX; no numpy.
+`make_sound_word.py`.
 
 Jones polynomial of a braid closure: Temperley-Lieb / Kauffman bracket
 (`make_jones.py`). Braid word → TL_n (σ_i → A·1 + A⁻¹·e_i, σ_i⁻¹ → A⁻¹·1 + A·e_i);
@@ -124,7 +123,9 @@ exactly-on-|G| is a red flag. The count is a profile (orbit + meridian + image)
 Lens builder for any permutation group: `make_A5.py` — A5 (order 60) as
 (size, mul, inv, conj, order) tables from even permutations, same shape as
 build_GL32; run the reach on any lens. Its involution product order ∈ {1,2,3,5}:
-a second dihedral tooth.
+a second dihedral tooth. Non-permutation lens: `build_SL25` (2×2 matrices over F₅,
+det=1) — one involution, the central −I; that is what separates SL(2,5) from S5
+(25 involutions) at order 120. `make_sl25_seam.py`.
 
 ## Decisions
 
