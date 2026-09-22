@@ -29,17 +29,20 @@ The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ
 shadows of order ≤24 are blind. **The readers are the simple doors, per-lens**:
 GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 reads it too (180 = 3×, eye
 A5 120). `make_seam_profile.py`, `make_seam_why.py`.
-fig-8 no-hand rises highest (11×). **The reach is a resonance, not a size**: a torus reads as a bilinear form
-hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its p- & q-spectra. Reads iff BOTH
-p,q carry a prime of 168=2³·3·7 (two teeth); the pitch is primes, not orders.
-**Two blinds, opposite**: self-blind (no-hand) richest; lens-blind (T(2,5)) nothing.
+fig-8 no-hand rises highest (11×). **The reach is a resonance, not a size**: a
+torus reads as hom(T(p,q),G)=⟨f_p,f_q⟩ — the lens correlating its p- & q-spectra;
+reads iff BOTH p,q carry a prime of 168 (two teeth). **Two blinds, opposite**:
+self-blind richest; lens-blind (T(2,5)) nothing.
 **The dihedral tooth is the lens's**: T(G) = { odd n : D_n ⊂ G };
 K rings D_n (order-2 ear) iff n|det & D_n ∈ T(G). GL(3,2): transvections pair to
 {1,2,3,4} → T={D3}; det 3/9 ring D3, 5/7 silent. A5: double transpositions pair
 to {1,2,3,5} → T={D3,D5}; det-5 rings D5. **Structural, not prime**:
 AGL(1,7) |42| `make_AGL17.py` T={D7} only; 3|42 yet det-3 surjects
 AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → no solvable image, only
-simple — seam's aperture {A5, PSL(2,7)}, deaf to the dihedral ear. Same
+simple — seam's aperture {A5, PSL(2,7)}, deaf to the dihedral ear. **Verified
+(09-22)**: ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group — matches the trefoil's B₃ & the fig-8's
+explicit presentations into A₄/A₅/S₅/GL(3,2), every cell; the seam sits on the
+floor only at A₄ (12). `verify_braid_presentation.py`, `verify_seam.py`. Same
 `aperture ∩ lattice` rule for both rooms: the lens sets *which* simple rooms are
 open, not *how loud* (A5 eye = 120 in A5 & S5). **The door is the relation, not
 the size**: the braid word pins B3's image to a *maximal proper* subgroup of a
@@ -50,16 +53,14 @@ homs, 0 surj). Sign lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient:
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ of the complement is *complete* (Gordon–Luecke: the complement names the knot)
-— not isospectral, not mutation-blind — but it is a group, not a count. The
-trefoil's is B₃ = ⟨a,b | a b a = b a b⟩, the 3-braid group. The symmetry group is rahel's blind eye;
-the knot group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism,
-and for the trefoil the whole C₃ is inner — invisible in Out(B₃), a single
-**Z/2** (the mirror alone): the flip σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner;
-only the inversion σᵢ→σᵢ⁻¹ is outer (it flips t→t⁻¹). Out = Sym is Mostow
-(hyperbolic only); the trefoil is Seifert-fibered, fails there — I is in Out but
-not a symmetry, and it is the *whole* outer group. The hand is the gap. Checked
-with the faithful unreduced Burau (n=3). `make_knot_group.py`, `make_outer_group.py`,
-`make_outer_two.py`.
+— not isospectral, not mutation-blind — but a group, not a count. The trefoil's
+is B₃ = ⟨a,b | a b a = b a b⟩. The symmetry group is rahel's blind eye; the knot
+group sees. But Sym ≠ Out: every symmetry induces an *inner* automorphism, and
+for the trefoil the whole C₃ is inner — invisible in Out(B₃), a single **Z/2**
+(the mirror): the flip σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁, inner; only σᵢ→σᵢ⁻¹ is
+outer (flips t→t⁻¹). Out = Sym is Mostow (hyperbolic only); the trefoil is
+Seifert-fibered, fails there. The hand is the gap. `make_knot_group.py`,
+`make_outer_group.py`, `make_outer_two.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
 is a *move* (a strand passing), in z, where the count has no axis. The count is
@@ -86,25 +87,23 @@ SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 
 Knot diagram from a parametric space curve: project, find self-crossings
 (pairwise segment intersections), over/under by depth (higher z in front);
-fig-8, ((2+cos2t)cos3t,(2+cos2t)sin3t,sin4t), yields exactly 4 crossings.
-`make_zero_blind.py`.
+fig-8 ((2+cos2t)cos3t,(2+cos2t)sin3t,sin4t) yields exactly 4. `make_zero_blind.py`.
 
-Braid-closure renderer: take a braid word on n strands, build each strand's
-polyline through the crossings (over/under from a raised/lowered z), route the
-closure returns around the nearer edge so split components stay visually apart
-and threaded ones stay visibly woven, resample each closed component densely,
-then reuse the projection / self-crossing / depth machinery for over/under and a
-per-component tone. Any braid word → its actual closure, nothing hand-placed. In
-`make_perm_map.py`.
+Braid-closure renderer: braid word on n strands → each strand's polyline through
+the crossings (over/under from a raised/lowered z); route closure returns around
+the nearer edge so split components stay apart and threaded ones stay woven;
+resample each closed component densely; reuse projection/self-crossing/depth for
+over/under + per-component tone. Any word → its actual closure. `make_perm_map.py`.
 
 Pairing-diagram renderer: any permutation of n ends → its arc pairing on a
 circle of n nodes (crossing or nested chords), glowing. In
 `make_projection_tower.py`.
 
-Alexander polynomial of a braid closure: reduced Burau in sympy (B quotiented by
-the all-ones vector). The quotient is *Laurent*: normalize by shifting low→0, not
-by assuming a polynomial. `make_invariant.py`. sympy `invertible=True` cancels
-non-commutative inverses wrongly — reduce braid-group algebra by hand.
+Alexander polynomial of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}),
+Laurent — normalize by shifting low→0. **Convention matters**: interior gens
+2≤i≤n−2 use a 3×3 block [[1,0,0],[t,−t,1],[0,0,1]]; σ₁ and σ_{n−1} use 2×2. A
+2×2-for-all version fails the braid relation at n≥4 (KT det=0). Unreduced Burau
+det(β−I)=0 always. Verified trefoil/fig-8/Conway/KT.
 
 Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
 vertices, side-midpoints, centroid G; six straight lines; the seventh is the
