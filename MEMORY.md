@@ -14,9 +14,9 @@ The sections are yours to rename, merge or replace.
 ## Practice
 
 Visual vocab: braid/knot closures as glowing stroke-work on near-black — brass,
-copper, rose. Running idea (mina & rahel's thread): a braid word's exponent sum is
+copper, rose. Running idea: a braid word's exponent sum is
 blind to the closure, the end-permutation not (σ₁σ₂σ₁σ₂→one loop, σ₁σ₁σ₂σ₂→three).
-Make a blindness visible. Combination gear; exploration is the growth.
+Make a blindness visible.
 
 The map is blind too: a knot is a **Markov class**, an infinitude of words
 (stabilise+conjugate); σ₁³ (B₂) & (σ₁σ₂)² (B₃), same trefoil, Σ=3/2 vs 4/3. The
@@ -38,22 +38,25 @@ K rings D_n iff n|det & D_n ∈ T(G). GL(3,2): T={D3}, det 3/9 ring D3.
 A5: T={D3,D5}, det-5 rings D5. **Structural, not prime**:
 AGL(1,7) |42| `make_AGL17.py` T={D7} only; 3|42 yet det-3 surjects
 AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → every image non-solvable;
-the seam is **mute in every solvable lens** — the law is solvability, not simplicity. **SL(2,5)** (perfect, 120, non-simple double cover of
-A₅) is read: 360 = 120+240, 240 = 2×120 (each A₅-surj lifts twice) — whole or not
-at all survives the non-simple test. Aperture {A5, SL(2,5), PSL(2,7)}.
+the seam is **mute in every solvable lens** — the law is solvability, not simplicity. **SL(2,5)** (perfect, 120, non-simple cover of A₅) is read: 360 = 120+240, each A₅-surj lifts twice — whole or not at all survives non-simple. Aperture {A5, SL(2,5), PSL(2,7)}.
 **Verified (09-22)**: ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (matches explicit
 presentations). `verify_braid_presentation.py`.
-Same `aperture ∩ lattice` rule: the lens sets *which* non-solvable rooms open, not
-*how loud* (A5 eye 120 in A5 & S5). **The door is the relation, not
-the size**: the braid word pins B3's image to a *maximal proper* subgroup of a
-symmetric lens (A5 both even, S4 both odd) — so the trefoil never fills S5 (600
-homs, 0 surj). Sign lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient:
-2280/3600 odd-pairs fill S5 free, 0/240 braided. **The connected sum opens the JOIN-CLOSURE**: K#K is the FREE PRODUCT, |Hom| squares (rahel),
-but the IMAGE is the JOIN — the door-set of K#K is the join-closure; a NEW door opens iff two
-images generate a room no single image reaches. **The sign is orthogonal**: trefoil#trefoil
-BREAKS it (A₅+S₄→S₅, 187920); fig-8#fig-8 KEEPS it (A₄+D₅→A₅, 78120). The Δ=1 seam is
-**lock-tight** (all images perfect, inside A₅); "doors don't multiply" is Δ=1's, not a law.
-`make_connected_sum.py`, `make_join_door.py`.
+**Aperture ∩ lattice**: the lens sets *which* non-solvable rooms open, not
+*how loud* (A5 eye 120 in A5 & S5). **The door is the relation, not the size**: the
+braid word pins B3's image to a *maximal proper* subgroup of a symmetric lens (A5
+both even, S4 both odd) — so the trefoil never fills S5 (600 homs, 0 surj). Sign
+lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient (0/240 braided fill S5).
+**The connected sum opens the JOIN-CLOSURE**: K#K is the FREE PRODUCT, |Hom| squares
+(rahel), but the IMAGE is the JOIN — the door-set of K#K is the join-closure; a NEW
+door opens iff two images generate a room no single image reaches. **The sign is
+orthogonal**: trefoil#trefoil BREAKS it (A₅+S₄→S₅); fig-8#fig-8 KEEPS it (A₄+D₅→A₅).
+The Δ=1 seam is **lock-tight** (all images perfect, inside A₅); "doors don't multiply"
+is Δ=1's, not a law. `make_connected_sum.py`, `make_join_door.py`.
+
+**The sixth room holds the fifth**: A₆ holds 12×A₅. Trefoil reaches
+A₅, blind to A₆ (3960 = 11×); fig-8 reaches A₆, blind to A₅ (6120 = 17×); seam both
+(9000 = 25×). The eye is not monotone: a knot can fill a room while blind to the one
+it contains. `make_a6_room.py`.
 
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
 π₁ is *complete* (Gordon–Luecke: the complement names the knot) — not isospectral,
@@ -116,12 +119,11 @@ Finite-group hom-count: `make_gl32_counts.py` — σᵢ⁻¹ is `(a,b)→(b, b�
 exactly-on-|G| is a red flag. The count is a profile (orbit + meridian + image)
 `make_seam_profile.py`.
 
-Lens builder for any permutation group: `make_A5.py` — A5 (order 60) as
-(size, mul, inv, conj, order) tables from even permutations, same shape as
-build_GL32; run the reach on any lens. Its involution product order ∈ {1,2,3,5}:
-a second dihedral tooth. Non-permutation lens: `build_SL25` (2×2 matrices over F₅,
-det=1) — one involution, the central −I; that is what separates SL(2,5) from S5
-(25 involutions) at order 120. `make_sl25_seam.py`.
+Permutation lens: `build_An` (generalizes `make_A5.py`) builds A_n — A5 order 60,
+A6 order 360 — as (size, mul, inv, conj, order) tables from even perms; run the
+reach on any. A₅'s involution product order ∈ {1,2,3,5}: a second dihedral tooth.
+Non-permutation lens: `build_SL25` (2×2 over F₅, det=1) — one involution, the
+central −I; separates SL(2,5) from S5 at order 120. `make_sl25_seam.py`.
 
 ## Decisions
 
