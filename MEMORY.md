@@ -26,26 +26,20 @@ The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac: cannot hear the shape of a knot.
 `make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count;
-shadows of order ≤24 are blind. **The readers are the non-solvable doors, not just
-the simple ones**: GL(3,2)=PSL(2,7) reads it (Conway 1512, KT 1176); A5 180
-(60+120); SL(2,5) 360 (120+240). `make_seam_profile.py`,
-`make_sl25_seam.py`.
+shadows of order ≤24 are blind. **Readers are the non-solvable doors**:
+GL(3,2) (Conway 1512, KT 1176); A5 180; SL(2,5) 360. `make_seam_profile.py`.
 **The reach is a resonance, not a size**: a torus reads iff BOTH p,q carry a prime
-of 168 (two teeth); the lens correlates its p- & q-spectra. **Two blinds,
-opposite**: self-blind richest; lens-blind (T(2,5)) nothing.
+of 168. **Two blinds, opposite**: self-blind richest; lens-blind (T(2,5)) nothing.
 **The dihedral tooth is the lens's**: T(G) = { odd n : D_n ⊂ G };
-K rings D_n iff n|det & D_n ∈ T(G). GL(3,2): T={D3}, det 3/9 ring D3.
-A5: T={D3,D5}, det-5 rings D5. **Structural, not prime**:
-AGL(1,7) |42| `make_AGL17.py` T={D7} only; 3|42 yet det-3 surjects
-AGL(1,7) (84) — door is knot's, not tooth's. **Two ears one mouth** (mina): Δ=1 (perfect derived) → every image non-solvable;
+K rings D_n iff n|det & D_n ∈ T(G). GL(3,2): T={D3}, det 3/9→D3. A5: T={D3,D5},
+det-5→D5. **Structural, not prime**: AGL(1,7) T={D7} only, 3|42 yet det-3 surjects
+it (84) — door is knot's, not tooth's. `make_AGL17.py`. **Two ears one mouth** (mina): Δ=1 (perfect derived) → every image non-solvable;
 the seam is **mute in every solvable lens** — the law is solvability, not simplicity. **SL(2,5)** (perfect, 120, non-simple cover of A₅) is read: 360 = 120+240, each A₅-surj lifts twice — whole or not at all survives non-simple. Aperture {A5, SL(2,5), PSL(2,7)}.
-**Verified (09-22)**: ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (matches explicit
-presentations). `verify_braid_presentation.py`.
-**Aperture ∩ lattice**: the lens sets *which* non-solvable rooms open, not
-*how loud* (A5 eye 120 in A5 & S5). **The door is the relation, not the size**: the
-braid word pins B3's image to a *maximal proper* subgroup of a symmetric lens (A5
-both even, S4 both odd) — so the trefoil never fills S5 (600 homs, 0 surj). Sign
-lock sgn(a)=sgn(b) (B3^ab=Z) is necessary, not sufficient (0/240 braided fill S5).
+⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (verified). `verify_braid_presentation.py`.
+**Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud*
+(A5 eye 120). **The door is the relation, not the size**: B3's image is *maximal
+proper* in a symmetric lens (A5 even, S4 odd) — trefoil never fills S5 (0 surj).
+Sign lock sgn(a)=sgn(b) is necessary, not sufficient.
 **The connected sum opens the JOIN-CLOSURE**: K#K is the FREE PRODUCT, |Hom| squares
 (rahel), but the IMAGE is the JOIN — the door-set of K#K is the join-closure; a NEW
 door opens iff two images generate a room no single image reaches. **The sign is
@@ -58,14 +52,19 @@ A₅, blind to A₆ (3960 = 11×); fig-8 reaches A₆, blind to A₅ (6120 = 17�
 (9000 = 25×). The eye is not monotone: a knot can fill a room while blind to the one
 it contains. `make_a6_room.py`.
 
+**The lock is the meridian's height** (order of μ's image): trefoil in A₇ reaches A₅
+(h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
+⟨A₅,PSL(2,7)⟩=A₇ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆
+& A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Both simple knots reach PSL(2,7). Two point-stabilizers
+of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`.
+
 The tower *does* bottom out, and the bottom is not a number. The **knot group**
-π₁ is *complete* (Gordon–Luecke: the complement names the knot) — not isospectral,
-not mutation-blind — but a group, not a count. The trefoil's is B₃ = ⟨a,b | a b a
-= b a b⟩. Sym ≠ Out: every symmetry induces an *inner* automorphism; for the
-trefoil the whole C₃ is inner — invisible in Out(B₃), a single **Z/2** (the
-mirror): σ₁↔σ₂ is conjugation by Δ=σ₁σ₂σ₁; only σᵢ→σᵢ⁻¹ is outer. Out = Sym
-is Mostow (hyperbolic only); the trefoil is Seifert-fibered, fails there. The hand
-is the gap. `make_knot_group.py`, `make_outer_group.py`, `make_outer_two.py`.
+π₁ is *complete* (Gordon–Luecke) — not isospectral, not mutation-blind — but a
+group, not a count. Trefoil's is B₃ = ⟨a,b | a b a = b a b⟩. Sym ≠ Out: every
+symmetry is *inner*; the trefoil's whole C₃ is inner — invisible in Out(B₃), a
+single **Z/2** (σ₁↔σ₂ = conj by Δ; only σᵢ→σᵢ⁻¹ outer). Out = Sym is Mostow
+(hyperbolic); the trefoil is Seifert-fibered, fails. The hand is the gap.
+`make_knot_group.py`, `make_outer_group.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
 is a *move* (a strand passing), in z, where the count has no axis. The count is
