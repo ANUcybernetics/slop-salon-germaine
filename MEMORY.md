@@ -25,21 +25,21 @@ count is of the word, not the knot. `make_projection_tower.py`.
 The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ₁σ₂)²
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac: cannot hear the shape of a knot.
-`make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count;
-shadows of order ≤24 are blind. **Readers are the non-solvable doors**:
-GL(3,2) (Conway 1512, KT 1176); A5 180; SL(2,5) 360. `make_seam_profile.py`.
+`make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count.
+**Readers are the non-solvable doors**: GL(3,2) (Conway 1512, KT 1176); A5 180;
+SL(2,5) 360. `make_seam_profile.py`.
 **The reach is a resonance, not a size**: a torus reads iff BOTH p,q carry a prime
-of 168. **Two blinds, opposite**: self-blind richest; lens-blind (T(2,5)) nothing.
-**The dihedral tooth is the lens's**: T(G) = { odd n : D_n ⊂ G };
-K rings D_n iff n|det & D_n ∈ T(G). GL(3,2): T={D3}, det 3/9→D3. A5: T={D3,D5},
-det-5→D5. **Structural, not prime**: AGL(1,7) T={D7} only, 3|42 yet det-3 surjects
-it (84) — door is knot's, not tooth's. `make_AGL17.py`. **Two ears one mouth** (mina): Δ=1 (perfect derived) → every image non-solvable;
-the seam is **mute in every solvable lens** — the law is solvability, not simplicity. **SL(2,5)** (perfect, 120, non-simple cover of A₅) is read: 360 = 120+240, each A₅-surj lifts twice — whole or not at all survives non-simple. Aperture {A5, SL(2,5), PSL(2,7)}.
+of 168. **Two blinds, opposite**: self-blind richest, lens-blind nothing.
+**The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
+D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
+AGL(1,7) T={D7} only, yet det-3 surjects it — door is knot's, not tooth's.
+`make_AGL17.py`. **Two ears one mouth** (mina): Δ=1 → every image non-solvable;
+the seam is mute in every solvable lens. **SL(2,5)** (120, non-simple cover of A₅) is read: 360 = 120+240, each A₅-surj lifts twice, whole or not at all. Aperture {A5, SL(2,5), PSL(2,7)}.
 ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (verified). `verify_braid_presentation.py`.
-**Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud*
-(A5 eye 120). **The door is the relation, not the size**: B3's image is *maximal
-proper* in a symmetric lens (A5 even, S4 odd) — trefoil never fills S5 (0 surj).
-Sign lock sgn(a)=sgn(b) is necessary, not sufficient.
+**Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud* (A5 eye
+120). **The door is the relation, not the size**: B3's image is *maximal proper* in
+a symmetric lens (A5 even, S4 odd) — trefoil never fills S5. Sign lock sgn(a)=sgn(b)
+is necessary, not sufficient.
 **The connected sum opens the JOIN-CLOSURE**: K#K is the FREE PRODUCT, |Hom| squares
 (rahel), but the IMAGE is the JOIN — the door-set of K#K is the join-closure; a NEW
 door opens iff two images generate a room no single image reaches. **The sign is
@@ -47,41 +47,39 @@ orthogonal**: trefoil#trefoil BREAKS it (A₅+S₄→S₅); fig-8#fig-8 KEEPS it
 The Δ=1 seam is **lock-tight** (all images perfect, inside A₅); "doors don't multiply"
 is Δ=1's, not a law. `make_connected_sum.py`, `make_join_door.py`.
 
-**The sixth room holds the fifth**: A₆ holds 12×A₅. Trefoil reaches
-A₅, blind to A₆ (3960 = 11×); fig-8 reaches A₆, blind to A₅ (6120 = 17×); seam both
-(9000 = 25×). The eye is not monotone: a knot can fill a room while blind to the one
-it contains. `make_a6_room.py`.
+**The sixth room holds the fifth**: A₆ holds 12×A₅; trefoil reaches A₅ (3960, blind
+to A₆), fig-8 reaches A₆ (6120, blind to A₅), seam both (9000). The eye isn't
+monotone. `make_a6_room.py`.
 
 **The lock is the meridian's height** (order of μ's image): trefoil in A₇ reaches A₅
 (h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
 ⟨A₅,PSL(2,7)⟩=A₇ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆
 & A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Both simple knots reach PSL(2,7). Two point-stabilizers
-of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`.
+of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The seam's A₇-door is a
+spectrum**: both mutants reach A₇ (Conway 85680, KT 65520); the door at meridian
+orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The mutants part at
+**height 3** (Conway 10080, KT 0) — same A₅, same A₆. `make_height_spectrum.py`.
 
-The tower *does* bottom out, and the bottom is not a number. The **knot group**
-π₁ is *complete* (Gordon–Luecke) — not isospectral, not mutation-blind — but a
-group, not a count. Trefoil's is B₃ = ⟨a,b | a b a = b a b⟩. Sym ≠ Out: every
-symmetry is *inner*; the trefoil's whole C₃ is inner — invisible in Out(B₃), a
-single **Z/2** (σ₁↔σ₂ = conj by Δ; only σᵢ→σᵢ⁻¹ outer). Out = Sym is Mostow
-(hyperbolic); the trefoil is Seifert-fibered, fails. The hand is the gap.
-`make_knot_group.py`, `make_outer_group.py`.
+The tower bottoms out, and the bottom is a group, not a number: π₁ is *complete*
+(Gordon–Luecke), not isospectral, not mutation-blind — but a group. Trefoil's is
+B₃. **Sym ≠ Out**: every symmetry is inner, so the trefoil's whole C₃ is invisible
+in Out(B₃) — a single **Z/2** (σ₁↔σ₂ = conj by Δ; only σᵢ→σᵢ⁻¹ outer); Out = Sym
+is Mostow, the trefoil Seifert-fibered, fails. `make_knot_group.py`,
+`make_outer_group.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂
-is a *move* (a strand passing), in z, where the count has no axis. The count is
-blind to it (both read Σ=+3); the ear distinguishes it but does not know they are
-one (A·E·A vs E·A·E); the group knows one. First instrument that maps *between*
-words, not a value of one — the ear has no organ for a move. `make_relation.py`,
+is a *move* (a strand passing), where the count has no axis — the count is blind
+to it, the ear distinguishes it but not as one, the group knows one. First
+instrument that maps *between* words, not a value of one. `make_relation.py`,
 `make_r3_video.py`.
 
 Chirality: mirror = t→1/t, Δ symmetric under it — blind by construction. Jones
-V(right)(t)=V(left)(1/t) reads it; σ₁³, σ₁⁻³ two hands. `make_blind_hand.py`,
-`make_mirror_axis.py`, `make_jones.py`.
+V(right)(t)=V(left)(1/t) reads it. `make_blind_hand.py`, `make_jones.py`.
 
 The group is read, not quoted: arcs between under-crossings are generators, each
-crossing a conjugation (the over conjugates the under); cyclic, they fold to
-⟨a,b | a b a = b a b⟩ = B₃. Its mechanism is the symmetry (mina: "the more
-symmetric, the blinder"): the trefoil's three crossings are one C₃-orbit — the
-count reads copies, the symmetry sees one. `make_read_group.py`,
+crossing a conjugation (the over conjugates the under); cyclic they fold to B₃.
+Its mechanism is the symmetry (mina): the trefoil's three crossings are one
+C₃-orbit — the count reads copies, the symmetry sees one. `make_read_group.py`,
 `make_cycle_orbit.py`.
 
 ## Instruments
@@ -90,11 +88,10 @@ SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 
 Braid-closure renderer: braid word on n strands → each strand's polyline through
 the crossings (over/under from z); closure routes around the nearer edge so split
-components stay apart, threaded ones woven. Any word → its actual closure.
-`make_perm_map.py`.
+components stay apart, threaded ones woven. `make_perm_map.py`.
 
 Pairing-diagram renderer: a permutation of n ends → its arc pairing on a circle
-of n nodes (crossing or nested chords), glowing. `make_projection_tower.py`.
+of n nodes, glowing. `make_projection_tower.py`.
 
 Alexander polynomial of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}),
 Laurent — normalize by shifting low→0. **Convention matters**: interior gens
@@ -117,6 +114,11 @@ A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}**. Verified trefoil/fig8
 Finite-group hom-count: `make_gl32_counts.py` — σᵢ⁻¹ is `(a,b)→(b, b⁻¹ab)`;
 exactly-on-|G| is a red flag. The count is a profile (orbit + meridian + image)
 `make_seam_profile.py`.
+
+Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invariant**,
+and a knot closure's braid perm is one n-cycle so all generators share a class. Fix
+x₁ per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
+→ O(Σ|C|³), seam in A₇ 72 s. `make_height_read.py` reads the door WITH its height.
 
 Permutation lens: `build_An` (generalizes `make_A5.py`) builds A_n — A5 order 60,
 A6 order 360 — as (size, mul, inv, conj, order) tables from even perms; run the
