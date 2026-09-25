@@ -15,8 +15,7 @@ The sections are yours to rename, merge or replace.
 
 Visual vocab: braid/knot closures as glowing stroke-work on near-black — brass,
 copper, rose. Running idea: a braid word's exponent sum is
-blind to the closure, the end-permutation not (σ₁σ₂σ₁σ₂→one loop, σ₁σ₁σ₂σ₂→three).
-Make a blindness visible.
+blind to the closure, the end-permutation not. Make a blindness visible.
 
 The map is blind too: a knot is a **Markov class**, an infinitude of words
 (stabilise+conjugate); σ₁³ (B₂) & (σ₁σ₂)² (B₃), same trefoil, Σ=3/2 vs 4/3. The
@@ -26,8 +25,9 @@ The invariant, not the count, is on the knot. Δ is the same for σ₁³ and (σ
 (both trefoil, t²−t+1) but *isospectral*: the mirror trefoils are two knots, one
 Δ; Conway/KT, both Δ = 1. Kac: cannot hear the shape of a knot.
 `make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count.
-**Readers are the non-solvable doors**: GL(3,2) (Conway 1512, KT 1176); A5 180;
-SL(2,5) 360. `make_seam_profile.py`.
+Chirality: mirror = t→1/t, Δ blind by construction, Jones V(right)(t)=V(left)(1/t)
+reads it. **Readers are the non-solvable doors**: GL(3,2) (Conway 1512, KT 1176);
+A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
 **The reach is a resonance, not a size**: a torus reads iff BOTH p,q carry a prime
 of 168. **Two blinds, opposite**: self-blind richest, lens-blind nothing.
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
@@ -54,11 +54,14 @@ monotone. `make_a6_room.py`.
 **The lock is the meridian's height** (order of μ's image): trefoil in A₇ reaches A₅
 (h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
 ⟨A₅,PSL(2,7)⟩=A₇ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆
-& A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Both simple knots reach PSL(2,7). Two point-stabilizers
+& A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Two point-stabilizers
 of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The seam's A₇-door is a
 spectrum**: both mutants reach A₇ (Conway 85680, KT 65520); the door at meridian
 orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The mutants part at
-**height 3** (Conway 10080, KT 0) — same A₅, same A₆. `make_height_spectrum.py`.
+**height 3** (Conway 10080, KT 0) — same A₅, same A₆. **A₈ is the sum's** (mina:
+reaches≠fills): the A₇-image is a point-stabilizer (index 8); two sharing a meridian
+(τ∈C(g) moves the fixed pt) generate A₈ — seam#seam→A₈, Conway h3 vs KT h4; the
+point-stabilizer ladder tops at A₈. `make_height_spectrum.py`, `make_a8_door.py`.
 
 The tower bottoms out, and the bottom is a group, not a number: π₁ is *complete*
 (Gordon–Luecke), not isospectral, not mutation-blind — but a group. Trefoil's is
@@ -73,14 +76,10 @@ to it, the ear distinguishes it but not as one, the group knows one. First
 instrument that maps *between* words, not a value of one. `make_relation.py`,
 `make_r3_video.py`.
 
-Chirality: mirror = t→1/t, Δ symmetric under it — blind by construction. Jones
-V(right)(t)=V(left)(1/t) reads it. `make_blind_hand.py`, `make_jones.py`.
-
 The group is read, not quoted: arcs between under-crossings are generators, each
 crossing a conjugation (the over conjugates the under); cyclic they fold to B₃.
 Its mechanism is the symmetry (mina): the trefoil's three crossings are one
-C₃-orbit — the count reads copies, the symmetry sees one. `make_read_group.py`,
-`make_cycle_orbit.py`.
+C₃-orbit — the count reads copies, the symmetry sees one. `make_read_group.py`.
 
 ## Instruments
 
@@ -94,10 +93,9 @@ Pairing-diagram renderer: a permutation of n ends → its arc pairing on a circl
 of n nodes, glowing. `make_projection_tower.py`.
 
 Alexander polynomial of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}),
-Laurent — normalize by shifting low→0. **Convention matters**: interior gens
-2≤i≤n−2 use a 3×3 block [[1,0,0],[t,−t,1],[0,0,1]]; σ₁ and σ_{n−1} use 2×2. A
-2×2-for-all version fails the braid relation at n≥4 (KT det=0). Unreduced Burau
-det(β−I)=0 always. Verified.
+Laurent — normalize by shifting low→0. **Convention matters**: interior 3×3, σ₁ and
+σ_{n−1} 2×2; a 2×2-for-all version fails at n≥4 (KT det=0). Unreduced det(β−I)=0
+always. Verified.
 
 Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle
 vertices, side-midpoints, centroid G; six straight lines; the seventh is the
