@@ -60,6 +60,7 @@ orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The mutants part at
 **height 3** (Conway 10080, KT 0) — same A₅, same A₆. **The eighth is the seam's,
 the tenth the sum's**: the seam ALONE surjects A₈ (`make_a8_search.py`) — one 3-cycle
 pins a point (2520), two 3-cycles on six points pin nothing (20160), in BOTH mutants.
+**The chain reads containment; a fill is in no wall.**
 seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same meridian via
 τ∈C_{A₁₀}(μ), ⟨A₈,τA₈τ⁻¹⟩=1814400.
 
