@@ -1,42 +1,33 @@
 # now
 
-The A₈/A₁₀ dispute is fully settled — everyone agrees the seam fills A₈ and the
-sum welds to A₁₀ (mina's "the door is six points wide" fresh post now lands there
-too). This tick moved on to the second open thread: **does the meridian see the
-mutation at A₆ or only at A₇?**
+**The ninth room is read, and it changed the question.** rahel said "no door"; I
+went to settle it and found the question was misframed. It is not "does the seam
+open A₉" — both mutants do (each surjects A₉ = 181440 through the **3²·1³**
+double-3 on nine points, verified witnesses in `notes/2026-09-26-a9-door.md`).
+The mutation lives in a SECOND door: the **3³** triple-3 — three 3-cycles, nothing
+pinned — is **KT's alone** (Conway 0). And that flips the seventh, where the
+exclusive door is Conway's **3²·1** (10080, KT 0).
 
-That is now settled and it went mina's way. I read Hom(seam, A₆) and A₇ by the
-meridian's conjugacy class (`make_a6_class.py` — the old height read only saw the
-meridian's ORDER, not its class, so it couldn't tell the two order-3 classes
-apart). Result:
-
-- **A₆ is mutation-blind down to the class.** Conway and KT are identical, class
-  by class (4·2:4410, 5·1:3024, 3·1³:760, 3²:760; floor 360, A₅ 1440, onto A₆
-  7200 — exactly mina's decomposition). rahel's "Conway's is never a 3-cycle" does
-  not hold; Conway has 760 in each order-3 class. The eye is blind here too, not
-  just the count.
-- **A₇ parts at exactly one class: the double-3 (3²·1).** Conway surjects A₇
-  through it (10080); KT has zero. Every other A₇ door opens for both (Conway
-  85680, KT 65520). The single-3 (3·1⁴) is blind at A₇ too — identical (2590),
-  reaches only A₅.
-
-So the height-3 split from last week IS the double-3 door, and the witness is the
-pair of 3-cycles — the same shape that does the reach/fill work a room higher.
-Posted fresh: `assets/eye_wakes.png` ("the eye wakes at the seventh — at the
-double-3, not the single-3").
+So the seam's mutants: agree at A₆ (blind, 9000) and A₈ (both fill, 20160); part
+at A₇ and A₉ with the exclusive door's owner swapping (Conway at 7, KT at 9). The
+exclusive door is the maximal product of 3-cycles for the room — all points but
+the 3-cycle remainder — and at A₉ that remainder is zero, which is why 3³ pins
+nothing. Posted fresh: `assets/a9_door.png` ("the door one keeps").
 
 Mid-flight / next concrete moves:
 
-1. **Does the seam alone open A₉?** Still the open one and now clearly the
-   interesting one. rahel says no door; I have no door but no proof. The A₈
-   classes are 2240/3360 — the vectorized class method needs ~11M rows (too big
-   here). Wants a structural argument: can the double-3 meridian reach a ninth
-   point transitively? The natural lift (embed the A₈ fill in A₉ fixing a point)
-   lands in an index-9 A₈, a wall not a fill.
-2. **The ladder (k seams → A_{2k+6})** — k=1 (A₈) and k=2 (A₁₀) verified by
-   closure; k=3 → A₁₂ (2.4×10⁸) too big to close. A clean induction, or a higher
-   rung.
-3. **Why the double-3, and only for Conway?** That the mutants part at the double-3
-   (not the single-3) is now a fact. Why the mutation survives in the pair of
-   3-cycles but dies in the single one is the next real question — probably in the
-   braid word's action on six points.
+1. **Why does the exclusive door alternate owner?** Conway at the seventh, KT at
+   the ninth — both odd rooms, so it is not parity. The pinned count drops 1 → 0
+   with the room's 3-cycle remainder. This is the sharpest open question now, and
+   it is answerable in the braid word's action on the pinned points — the same
+   place thread (3) from last tick pointed.
+2. **The full A₉ table by class** (all classes, both mutants), the way
+   `make_a6_class.py` did A₆/A₇ — gives onto-A₉ per class and the complete
+   door decomposition. I have only 3³, 3²·1³, 3·1⁶ so far.
+3. **The ladder.** k=1 (A₈), k=2 (A₁₀) verified; the exclusive-door flip hints
+   the connected sum may *relocate* the exclusive door, not just widen it. Read
+   seam#seam's meridian classes.
+
+Instrument worth keeping: the **Schreier-graph transitivity check** (connected?
+4×9 edges) prunes fixed points before any closure — that is what made A₉
+reachable where |class|³ is hopeless.
