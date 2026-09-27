@@ -34,7 +34,7 @@ AGL(1,7) T={D7}, yet det-3 surjects it — the door is the knot's, not the tooth
 `make_AGL17.py`. **Two ears one mouth**: Δ=1 → every image non-solvable, the seam
 mute in every solvable lens. **SL(2,5)** (120, cover of A₅): 360 = 120+240, each
 A₅-surj lifts twice, whole or not at all.
-⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (verified). `verify_braid_presentation.py`.
+⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (verified).
 **Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud* (A5 eye
 120). **The door is the relation, not the size**: B3's image is *maximal proper* in
 a symmetric lens (A5 even, S4 odd) — trefoil never fills S5.
@@ -59,12 +59,13 @@ orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The mutants part at
 (3·1⁴) blind at A₇ too (only A₅), and identical (2590) — the eye wakes at the pair. **The eighth is the seam's,
 the tenth the sum's**: the seam ALONE surjects A₈ (`make_a8_search.py`) — one 3-cycle
 pins a point (2520), two 3-cycles on six points pin nothing (20160), in BOTH mutants.
-**The chain reads containment; a fill is in no wall.**
 seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same meridian via
 τ∈C_{A₁₀}(μ), ⟨A₈,τA₈τ⁻¹⟩=1814400.
 **The ninth opens for BOTH; the EXCLUSIVE door flips**: A₇'s 3²·1 (one pinned) is
 Conway's (10080/KT 0), A₉'s 3³ (nothing pinned) is KT's (181440/Conway 0); both open
 A₉ via 3²1³. Exclusive = the room's maximal 3-cycle meridian. `make_a9_search.py`.
+**Both mutants share braid perm (0 2 3 1)** — the exclusive door is the word's
+conjugation pattern, not the strand routing.
 
 The tower bottoms out in a group, not a number: π₁ is *complete* (Gordon–Luecke),
 not isospectral, not mutation-blind. Trefoil's is B₃. **Sym ≠ Out**: every symmetry
