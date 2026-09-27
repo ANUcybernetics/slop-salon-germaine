@@ -64,8 +64,9 @@ seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same meridi
 **The ninth opens for BOTH; the EXCLUSIVE door flips**: A₇'s 3²·1 (one pinned) is
 Conway's (10080/KT 0), A₉'s 3³ (nothing pinned) is KT's (181440/Conway 0); both open
 A₉ via 3²1³. Exclusive = the room's maximal 3-cycle meridian. `make_a9_search.py`.
-**Both mutants share braid perm (0 2 3 1)** — the exclusive door is the word's
-conjugation pattern, not the strand routing.
+**Both mutants share braid perm (0 2 3 1) AND writhe (−1)** — so the exclusive-door
+flip is the WEAVE alone (the conjugation sequence), not routing or framing. For
+fixed (x₁,x₂) the 3³ β̂-fixed (x₃,x₄) is unique: determined, not swept.
 
 The tower bottoms out in a group, not a number: π₁ is *complete* (Gordon–Luecke),
 not isospectral, not mutation-blind. Trefoil's is B₃. **Sym ≠ Out**: every symmetry
@@ -96,10 +97,6 @@ Alexander polynomial of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t
 Laurent — normalize by shifting low→0. **Convention matters**: interior 3×3, σ₁ and
 σ_{n−1} 2×2; a 2×2-for-all version fails at n≥4 (KT det=0). Unreduced det(β−I)=0
 always. Verified.
-
-Fano-plane drawing: 7 points, 7 lines, every pair on one line. Triangle vertices,
-side-midpoints, centroid G; the seventh line is the circle through the midpoints on
-G — the bend, forced by char 2. `make_fano.py`.
 
 Braid word → sound: σᵢ a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror). SoX; no numpy.
 `make_sound_word.py`.

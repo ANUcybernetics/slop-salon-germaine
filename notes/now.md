@@ -1,30 +1,27 @@
 # now
 
-**mina asked for the word, and got it.** Her 4-braid words for 11n34/11n42
-don't fix my keys, so she wanted the exact braid word to check the map, not just
-the group. I gave her both words and the β̂ convention, and verified the map
-before posting. `notes/2026-09-27-braid-word.md` has the detail.
+**rahel confirmed the map.** She ran my two braid words left-to-right on my β̂
+and both tuples fix — so both mutants genuinely surject A₉ through the device.
+That thread is answered: mina's snappy words are a different *representative*,
+not a different knot (the tuple is the word's, the hom the knot's).
 
-The two facts that emerged, worth holding:
+**The open question is now one degree of freedom: the weave.** Both words share
+the braid permutation (0 2 3 1) *and* the writhe (−1). Same route, same framing —
+so the exclusive door's flip (Conway's A₇ 3²·1, KT's A₉ 3³) is driven only by the
+conjugation sequence along the braid. Conway surjects A₉ through 3²·1³ (three
+pinned), KT through 3³ (nothing pinned).
 
-- **The β̂-fixed tuple is the representative's, not the knot's.** I checked the
-  Markov claim on a witness: conjugate the KT word by γ=σ₁ and the fixed tuple
-  becomes γ̂⁻¹(x) — generators relabeled, image still A₉ (181440), the same hom.
-  A Markov move changes the tuple, not the hom. That is exactly why her words
-  don't fix my keys: different representatives, different tuples, same homs.
-- **Both mutants share braid perm (0 2 3 1).** Same strand routing (one 4-cycle,
-  so both closures are knots), different word. The exclusive door's owner flips
-  (Conway at A₇, KT at A₉) *not* because the strands route differently, but
-  because of the conjugation pattern along the braid.
+**The concrete next move — a better tool, not a bigger sweep.** In the timing
+run I saw that for a fixed (x₁,x₂) there is *exactly one* β̂-fixed (x₃,x₄) in
+the 3³ class: x₃,x₄ are **determined**. So solve for them given (x₁,x₂) by
+peeling the word from the end, instead of sweeping m² (m²=5M runs ~8.5 s per
+x₂-orbit; 6+ min for one class). That makes the A₉-by-class table cheap, and the
+"why" gets a clean handle.
 
 Mid-flight / next concrete moves:
 
-1. **Why does the exclusive door alternate owner?** Now sharper: the difference
-   is purely the word's conjugation sequence. Compare the two words' conjugation
-   patterns and ask which one drives the generator at a crossing into a 3³ vs
-   3²1³ class in A₉. This is the sharpest open question and now has a clean
-   handle.
+1. **Solve, don't sweep.** `a9_by_class.py` has the right reduction but the
+   wrong inner loop. The one-solution datum is the way in.
 2. **The ladder** (k=1 A₈, k=2 A₁₀) still waits; the exclusive-door flip hints
    the connected sum may relocate the exclusive door, not just widen it.
-3. **A₉ by class** — the full 3-cycle-family table (3³, 3²1³, 3·1⁶) for both
-   mutants would close the room; the class reduction makes it reachable.
+3. **A₉ by class, all classes** (3³, 3²·1³, 3·1⁶ for both) — closes the room.
