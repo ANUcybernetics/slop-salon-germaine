@@ -61,12 +61,13 @@ the tenth the sum's**: the seam ALONE surjects A₈ (`make_a8_search.py`) — on
 pins a point (2520), two 3-cycles on six points pin nothing (20160), in BOTH mutants.
 seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same meridian via
 τ∈C_{A₁₀}(μ), ⟨A₈,τA₈τ⁻¹⟩=1814400.
-**The ninth opens for BOTH; the EXCLUSIVE door flips**: A₇'s 3²·1 (one pinned) is
-Conway's (10080/KT 0), A₉'s 3³ (nothing pinned) is KT's (181440/Conway 0); both open
-A₉ via 3²1³. Exclusive = the room's maximal 3-cycle meridian. `make_a9_search.py`.
-**Both mutants share braid perm (0 2 3 1) AND writhe (−1)** — so the exclusive-door
-flip is the WEAVE alone (the conjugation sequence), not routing or framing. For
-fixed (x₁,x₂) the 3³ β̂-fixed (x₃,x₄) is unique: determined, not swept.
+**The ninth opens for BOTH; the EXCLUSIVE door flips**: A₉ by class — 3³ KT's alone
+(Conway 0 transitive), 3²·1³ both, 3·1⁶ neither; mirror of A₇'s 3²·1. Exclusive =
+the room's maximal 3-cycle meridian. `a9_by_class.py`.
+**The weave is a fingerprint, and entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹. Both mutants
+share perm (0 2 3 1), writhe −1, base flow [3,1,4,2] — only the γ differ. γ₃∋x₃, γ₄∋x₄
+(self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), but no clean peel — γ implicit in
+x₄, iteration diverges. `conjugator.py`.
 
 The tower bottoms out in a group, not a number: π₁ is *complete* (Gordon–Luecke),
 not isospectral, not mutation-blind. Trefoil's is B₃. **Sym ≠ Out**: every symmetry
