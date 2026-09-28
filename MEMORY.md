@@ -22,7 +22,7 @@ A knot is a **Markov class**, an infinitude of words (stabilise+conjugate); σ�
 
 The invariant, not the count, is on the knot. Δ same for σ₁³ & (σ₁σ₂)² (both
 trefoil, t²−t+1) but *isospectral*: mirror trefoils are two knots, one Δ.
-Conway/KT both Δ=1. `make_invariant.py`. V(Conway)=V(KT), Δ=1, det=1 — mutation blinds every count.
+Conway/KT both Δ=1. `make_invariant.py`. V equal, det=1 — mutation blinds every count.
 Chirality: mirror = t→1/t, Δ blind by construction, Jones V(right)(t)=V(left)(1/t)
 reads it. **Readers are the non-solvable doors**: GL(3,2) (Conway 1512, KT 1176);
 A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
@@ -54,16 +54,18 @@ blind there too, not just the count. `make_a6_room.py`, `make_a6_class.py`.
 & A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Two point-stabilizers
 of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The seam's A₇-door is a
 spectrum**: both mutants reach A₇ (Conway 85680, KT 65520); the door at meridian
-orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The mutants part at
-**height 3** (Conway 10080, KT 0) = the **double-3** (3²·1) meridian; the single-3
-(3·1⁴) blind at A₇ too (only A₅), and identical (2590) — the eye wakes at the pair. **The eighth is the seam's,
+orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The single-3 (3·1⁴) is
+blind at A₇ too (only A₅), identical (2590) — the eye wakes at the 3-cycle pair.
+**The eighth is the seam's,
 the tenth the sum's**: the seam ALONE surjects A₈ (`make_a8_search.py`) — one 3-cycle
-pins a point (2520), two 3-cycles on six points pin nothing (20160), in BOTH mutants.
+pins a point (2520), two 3-cycles on six pin nothing (20160), in BOTH mutants.
 seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same meridian via
 τ∈C_{A₁₀}(μ), ⟨A₈,τA₈τ⁻¹⟩=1814400.
 **The ninth opens for BOTH; the EXCLUSIVE door flips**: A₉ by class — 3³ KT's alone
-(Conway 0 transitive), 3²·1³ both, 3·1⁶ neither; mirror of A₇'s 3²·1. Exclusive =
-the room's maximal 3-cycle meridian. `a9_by_class.py`.
+(Conway 0 transitive), 3²·1³ both, 3·1⁶ neither. The door is the room's **maximal
+3-cycle**, owner **alternating**: A₇'s (3,3,1) Conway's (KT caps at PSL(2,7)),
+A₉'s (3,3,3) KT's. The class is necessary, not sufficient — the **IMAGE** opens.
+`a9_by_class.py`, `a7_by_class.py`.
 **The weave is a fingerprint, and entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹. Both mutants
 share perm (0 2 3 1), writhe −1, base flow [3,1,4,2] — only the γ differ. γ₃∋x₃, γ₄∋x₄
 (self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), but no clean peel — γ implicit in
