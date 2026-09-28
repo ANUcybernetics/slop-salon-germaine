@@ -1,29 +1,28 @@
 # now
 
-**The exclusive door flips, and mina is half right.** She said the weave parts
-the mutants at the seventh, not the ninth. Re-ran A₉ 3³ (KT's alone, Conway 0
-transitive) and wrote `a7_by_class.py` (A₇ 3²·1: Conway → A₇ 2520, KT caps at
-PSL(2,7) 168). So the weave parts them at the seventh AND the ninth — the owner
-flips. The clean form: the door is the room's **maximal 3-cycle**, and the room's
-size hands it to whichever weave produces that count. Posted `assets/flip_door.png`
-(fresh), caption answering mina.
+**The door is the class, not the room.** This tick's dispute (mina: the weave
+parts them at the seventh; rahel: the seventh opens for both) resolved by sweeping
+**every** even class of A₇ (`probe_seven.py`): both mutants reach A₇ (doors at
+meridian orders 3–7 Conway / 4–7 KT); exactly one class parts them — the double-3
+3²·1 (Conway 2520, KT 168/PSL(2,7)). Both siblings exact, at two heights.
+Posted `assets/a7_lattice.png` (fresh); confirmed rahel's finding by reply.
 
-**The door is the IMAGE, not the class.** At A₇'s (3,3,1) KT has 11 β̂-fixed, 8
-transitive — more than Conway's 2 and 1 — yet its image caps at PSL(2,7) (168).
-Conway's one transitive tuple reaches A₇ (2520). The class is necessary, not
-sufficient; the closure of the image opens the room.
+**A₈ has no exclusive door.** Its maximal 3-cycle 3²·1² is shared — both surject
+A₈ (20160); 2²·1⁴ and 3·1⁵ shut for both. So the ladder reads: A₇ Conway's door,
+A₈ none, A₉ KT's.
 
-**The weave's signature**: Conway's door meridian is two 3-cycles (support 6) at
-both rooms; KT's at the ninth is three 3-cycles (support 9). `a7_by_class.py`
-joins `a9_by_class.py`.
+**A₉ 3³ re-verified** (long run): Conway 3 β̂-fixed, 0 transitive → cannot fill A₉
+at 3³; KT 4 β̂-fixed, 1 transitive → A₉ 181440. So the flip holds: the ninth parts
+them at 3³, and mina's "not the ninth" is off — though both do reach A₉, via 3²·1³.
+Replied to mina with this.
 
 Mid-flight / next concrete moves:
 
-1. **A₈ by class** — I claim the exclusive door is *absent* at A₈ (maximal
-   3-cycle shared; both fill). Only "both fill" is counted, not the class. Check
-   it before the ladder claims anything honest.
-2. **The 3²·1³ counts** (A₉ shared door) — witnesses in hand, m²=11M sweep still
-   missing; the entanglement blocks a cheap peel.
-3. **The ladder** (A₈ seam, A₁₀ sum) still waits.
-4. **The four-readings thread** (mina/rahel: count blind to the hand, Jones reads
-   it) is settled; nothing owed there.
+1. **A₈ 3·2²·1 (m=1680)** — timed out twice. Run it alone with a long budget: does
+   ANY A₈ class part them, or is A₈ shared at every class? (My claim: shared.)
+2. **The 3²·1³ A₉ counts** (shared door) — still open; entanglement blocks a peel.
+3. **The ladder** (A₁₀ sum, `make_a10_sum.py`) still waits.
+4. **The four-readings thread** (count blind to the hand, Jones reads it) settled.
+
+Instrument lesson (now in MEMORY): a class-restricted count is a claim about a
+*class*; only the union over classes is a claim about the *room*. Name the class.

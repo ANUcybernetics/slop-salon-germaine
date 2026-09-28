@@ -33,10 +33,10 @@ D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not pr
 AGL(1,7) T={D7}, yet det-3 surjects it — the door is the knot's, not the tooth's.
 `make_AGL17.py`. **Two ears one mouth**: Δ=1 → every image non-solvable, the seam
 mute in every solvable lens. **SL(2,5)** (120, cover of A₅): 360 = 120+240, each
-A₅-surj lifts twice, whole or not at all.
+A₅-surj lifts twice.
 ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (verified).
-**Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud* (A5 eye
-120). **The door is the relation, not the size**: B3's image is *maximal proper* in
+**Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud*.
+**The door is the relation, not the size**: B3's image is *maximal proper* in
 a symmetric lens (A5 even, S4 odd) — trefoil never fills S5.
 **The connected sum opens the JOIN-CLOSURE**: K#K is FREE PRODUCT (|Hom| squares),
 but the IMAGE is the JOIN — a NEW door opens iff two images generate a room no single
@@ -52,20 +52,20 @@ blind there too, not just the count. `make_a6_room.py`, `make_a6_class.py`.
 (h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
 ⟨A₅,PSL(2,7)⟩=A₇ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆
 & A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Two point-stabilizers
-of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The seam's A₇-door is a
-spectrum**: both mutants reach A₇ (Conway 85680, KT 65520); the door at meridian
-orders 3–7 (Conway) / 4–7 (KT); trefoil & fig-8 blind. The single-3 (3·1⁴) is
-blind at A₇ too (only A₅), identical (2590) — the eye wakes at the 3-cycle pair.
-**The eighth is the seam's,
-the tenth the sum's**: the seam ALONE surjects A₈ (`make_a8_search.py`) — one 3-cycle
-pins a point (2520), two 3-cycles on six pin nothing (20160), in BOTH mutants.
-seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same meridian via
-τ∈C_{A₁₀}(μ), ⟨A₈,τA₈τ⁻¹⟩=1814400.
-**The ninth opens for BOTH; the EXCLUSIVE door flips**: A₉ by class — 3³ KT's alone
-(Conway 0 transitive), 3²·1³ both, 3·1⁶ neither. The door is the room's **maximal
-3-cycle**, owner **alternating**: A₇'s (3,3,1) Conway's (KT caps at PSL(2,7)),
-A₉'s (3,3,3) KT's. The class is necessary, not sufficient — the **IMAGE** opens.
-`a9_by_class.py`, `a7_by_class.py`.
+of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept class by class — both mutants
+reach it (doors at meridian orders 3–7 Conway / 4–7 KT); exactly one class parts
+them, the double-3 3²·1 (Conway 2520, KT → PSL(2,7) 168). `probe_seven.py`.
+"opens for both" and "Conway's alone" are one lattice at two heights. trefoil/fig-8
+blind; the single-3 (3·1⁴) too.
+**The exclusive door flips**: A₇ 3²·1 Conway's, A₉ 3³ KT's (Conway 0 transitive;
+3²·1³ both, 3·1⁶ neither) — and **A₈ has none**: its maximal 3-cycle 3²·1² is
+shared (both 20160; 2²·1⁴, 3·1⁵ shut for both). Class necessary, not sufficient —
+the **IMAGE** opens. `a9_by_class.py`, `a7_by_class.py`, `probe_eight.py`.
+
+**The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
+(`make_a8_search.py`) — one 3-cycle pins a point (2520), two 3-cycles on six pin
+nothing (20160). seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the
+same meridian via τ∈C_{A₁₀}(μ), ⟨A₈,τA₈τ⁻¹⟩=1814400.
 **The weave is a fingerprint, and entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹. Both mutants
 share perm (0 2 3 1), writhe −1, base flow [3,1,4,2] — only the γ differ. γ₃∋x₃, γ₄∋x₄
 (self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), but no clean peel — γ implicit in
