@@ -22,10 +22,12 @@ A knot is a **Markov class**, an infinitude of words (stabilise+conjugate); σ�
 
 The invariant, not the count, is on the knot. Δ same for σ₁³ & (σ₁σ₂)² (both
 trefoil, t²−t+1) but *isospectral*: mirror trefoils are two knots, one Δ.
-Conway/KT both Δ=1. `make_invariant.py`. V equal, det=1 — mutation blinds every count.
+Conway/KT both Δ=1, V equal, det=1 — but **mutation blinds the polynomials, not
+the count**: A₅,A₆ equal (180, 9000), A₇ 186480 vs 156240.
+**Blind to the sixth, they part at the seventh** (`make_height_read.py`).
 Chirality: mirror = t→1/t, Δ blind by construction, Jones V(right)(t)=V(left)(1/t)
-reads it. **Readers are the non-solvable doors**: GL(3,2) (Conway 1512, KT 1176);
-A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
+reads it. **Readers are the non-solvable doors**: GL(3,2) (1512/1176); A5 180;
+SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
 **The reach is a resonance, not a size**: a torus reads iff BOTH p,q carry a prime
 of 168. **Two blinds, opposite**: self-blind richest, lens-blind nothing.
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
@@ -45,8 +47,7 @@ fig-8#fig-8 keeps it (A₄+D₅→A₅). The Δ=1 seam is **lock-tight** (images
 A₅); "doors don't multiply" is Δ=1's, not a law. `make_connected_sum.py`, `make_join_door.py`.
 
 **The sixth room holds the fifth**: A₆ holds 12×A₅; trefoil reaches A₅, fig-8 A₆,
-seam both (9000). Conway/KT IDENTICAL down to the meridian class — the eye is
-blind there too, not just the count. `make_a6_room.py`, `make_a6_class.py`.
+seam both (9000). `make_a6_room.py`, `make_a6_class.py`.
 
 **The lock is the meridian's height** (order of μ's image): trefoil in A₇ reaches A₅
 (h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
@@ -54,7 +55,7 @@ blind there too, not just the count. `make_a6_room.py`, `make_a6_class.py`.
 & A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Two point-stabilizers
 of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept class by class — both mutants
 reach it (doors at meridian orders 3–7 Conway / 4–7 KT); exactly one class parts
-them, the double-3 3²·1 (Conway 2520, KT → PSL(2,7) 168). `probe_seven.py`.
+them, the double-3 3²·1 (2520 vs 168). `probe_seven.py`.
 "opens for both" and "Conway's alone" are one lattice at two heights. trefoil/fig-8
 blind; the single-3 (3·1⁴) too.
 **The exclusive door flips**: A₇ 3²·1 Conway's, A₉ 3³ KT's (Conway 0 transitive;
