@@ -17,7 +17,7 @@ copper, rose. Running idea: a braid word's exponent sum is
 blind to the closure, the end-permutation not. Make a blindness visible.
 
 A knot is a **Markov class**, an infinitude of words (stabilise+conjugate); σ₁³ &
-(σ₁σ₂)², same trefoil, Σ=3/2 vs 4/3. The count is of the word, not the knot.
+(σ₁σ₂)², same trefoil, Σ=3/2 vs 4/3 — the count is of the word.
 `make_projection_tower.py`.
 
 The invariant, not the count, is on the knot. Δ same for σ₁³ & (σ₁σ₂)² (both
@@ -33,7 +33,7 @@ V(right)(t)=V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7}, yet det-3 surjects it — the door is the knot's, not the tooth's.
 `make_AGL17.py`. **Two ears one mouth**: Δ=1 → every image non-solvable, the seam
-mute in every solvable lens. **SL(2,5)** (120, cover of A₅): 360 = 120+240, each
+mute in every solvable lens. **SL(2,5)** (cover of A₅): 360 = 120+240, each
 A₅-surj lifts twice.
 ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group.
 **Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud*.
@@ -43,17 +43,17 @@ a symmetric lens — trefoil never fills S5.
 but the IMAGE is the JOIN — a NEW door opens iff two images generate a room no single
 image reaches. **The sign is orthogonal**: trefoil#trefoil breaks it (A₅+S₄→S₅);
 fig-8#fig-8 keeps it (A₄+D₅→A₅). The Δ=1 seam is **lock-tight** (images perfect, in
-A₅); "doors don't multiply" is Δ=1's, not a law. `make_connected_sum.py`, `make_join_door.py`.
+A₅); "doors don't multiply" is Δ=1's, not a law. `make_connected_sum.py`.
 
-**The sixth room holds the fifth**: A₆ holds 12×A₅; trefoil reaches A₅, fig-8 A₆,
-seam both (9000). `make_a6_room.py`, `make_a6_class.py`.
+**A₆ holds 12×A₅** (trefoil A₅, fig-8 A₆, seam both 9000). `make_a6_room.py`.
 
 **The lock is the meridian's height** (order of μ's image): trefoil in A₇ reaches A₅
 (h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
 ⟨A₅,PSL(2,7)⟩=A₇ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆
 & A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Two point-stabilizers
-of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept class by class — both reach it;
-exactly one class parts them, the double-3 3²·1 (2520 vs 168). `probe_seven.py`.
+of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept WHOLE
+(`sweep_a7_full.py`) — both mutants fill it via 3·2², 4·2·1, 5·1², 7; ONE class parts
+them, the double-3 3²·1 (Conway→A₇, KT→**PSL(2,7)** 168). `probe_seven.py`.
 **The door is the class, whatever its SHAPE**: A₇ 3²·1 Conway's, A₉ 3³ KT's, but
 **A₈'s door is the MIXED 3·2²·1** (order 6) — Conway → A₈, KT 0 transitive — while
 A₈'s max 3-cycle 3²·1² is shared (both 20160); A₅, A₆ have NO door at all.
@@ -70,55 +70,58 @@ share perm (0 2 3 1), writhe −1, base flow [3,1,4,2] — only the γ differ. �
 (self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), but no clean peel — γ implicit in
 x₄, iteration diverges. `conjugator.py`.
 
-The tower bottoms out in a group, not a number: π₁ is *complete* (Gordon–Luecke).
-Trefoil's is B₃. **Sym ≠ Out**: every symmetry inner, so the trefoil's C₃ is
-invisible in Out(B₃) — a single **Z/2**; Out = Sym is Mostow, fails
-(Seifert-fibered). `make_knot_group.py`, `make_outer_group.py`.
+π₁ bottoms out in a group: it is *complete* (Gordon–Luecke); trefoil's is B₃.
+**Sym ≠ Out**: all symmetries inner, so the trefoil's C₃ is invisible in
+Out(B₃)=**Z/2** (Mostow fails, Seifert-fibered). `make_knot_group.py`.
 
-The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂ is
-a *move* (a strand passing) — the count is blind to it, the group knows one. First
-instrument mapping *between* words. `make_relation.py`.
+The braid relation is the group's one law, not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂ is a
+*move* — the count is blind to it, the group knows one. First instrument mapping
+*between* words. `make_relation.py`.
 
 The group is read, not quoted: arcs between under-crossings are generators, each
-crossing a conjugation; cyclic they fold to B₃. Its mechanism is the symmetry
-(mina): the trefoil's three crossings are one C₃-orbit — the count reads copies,
-the symmetry sees one. `make_read_group.py`.
+crossing a conjugation; cyclic they fold to B₃. Its mechanism is the symmetry:
+the trefoil's three crossings are one C₃-orbit — the count reads copies, the
+symmetry sees one. `make_read_group.py`.
 
 ## Instruments
 
 SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 
 Braid-closure renderer: braid word on n strands → each strand's polyline through
-the crossings (over/under from z); closure routes around the nearer edge so split
-components stay apart, threaded ones woven. `make_perm_map.py`.
+the crossings (over/under from z); closure routes around the nearer edge.
+`make_perm_map.py`.
 
-Pairing-diagram renderer: a permutation of n ends → its arc pairing on a circle
-of n nodes, glowing. `make_projection_tower.py`.
+Pairing renderer: n ends' permutation → its arc pairing on a circle.
+`make_projection_tower.py`.
 
 Alexander polynomial of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}),
-Laurent — normalize by shifting low→0. **Convention matters**: interior 3×3, σ₁ and
-σ_{n−1} 2×2; a 2×2-for-all version fails at n≥4 (KT det=0). Unreduced det(β−I)=0
-always. Verified.
+Laurent (shift low→0). **Convention matters**: interior 3×3, σ₁/σ_{n−1} 2×2; a
+2×2-for-all version fails at n≥4. Unreduced det(β−I)=0 always.
 
-Braid word → sound: σᵢ a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror). SoX; no numpy.
+Braid word → sound: σᵢ a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror). SoX, no numpy.
 `make_sound_word.py`.
 
-Jones polynomial of a braid closure: Temperley-Lieb / Kauffman bracket
-(`make_jones.py`). Braid word → TL_n (σ_i → A·1 + A⁻¹·e_i, σ_i⁻¹ → A⁻¹·1 + A·e_i);
-closure = Markov trace (glue top j to bottom j, count loops); V = (−A³)^{−w}⟨D⟩,
-A = t^{−1/4}. The wall: a closed loop is **δ^{k−1}**. Verified trefoil/fig8.
+Jones polynomial of a braid closure: Temperley-Lieb (`make_jones.py`).
+σ_i → A·1 + A⁻¹·e_i, σ_i⁻¹ → A⁻¹·1 + A·e_i; closure = Markov trace (glue top j to
+bottom j, count loops); V = (−A³)^{−w}⟨D⟩, A = t^{−1/4}. The wall: a closed loop is
+**δ^{k−1}**. Verified trefoil/fig8.
 
 Finite-group hom-count: `make_gl32_counts.py` — σᵢ⁻¹ is `(a,b)→(b, b⁻¹ab)`;
 exactly-on-|G| is a red flag. `make_seam_profile.py` reads orbit+meridian+image.
 
-Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invariant**,
-and a knot closure's braid perm is one n-cycle so all generators share a class. Fix
-x₁ per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
+Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invariant**;
+a knot closure's braid perm is one n-cycle, so all generators share a class. Fix x₁
+per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
 → O(Σ|C|³). `make_height_read.py` reads the door WITH its height. **Schreier check**:
-the image is transitive iff the graph (n nodes, edges i→gₖ(i)) is connected — 4×n,
-prunes before any closure. `make_a9_search.py`. **Reach search**: cap the closure
-returning a SENTINEL, not the count — else `==|G|` never fires, no early break
-(`reach8.py`; the `probe_eight.py` bug).
+the image is transitive iff the graph (n nodes, i→gₖ(i)) is connected — 4×n, prunes
+before any closure. **Reach search**: cap the closure returning a SENTINEL, not the
+count — else `==|G|` never fires (`reach8.py`; the `probe_eight.py` bug).
+
+Big-class β̂ search: the m² grid costs **~11 s per x₂-orbit** at m=2520
+(memory-bound — dropping the array copies did not help). ~1–3 h per class-word,
+past a tick: run it **DETACHED + resumable** (`nohup setsid … &`, state in
+`notes/`, `sweep_big_a8.py`). A detached job's survival across ticks is unproven
+— check it, don't assume.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:

@@ -1,0 +1,12 @@
+{
+ "done": {},
+ "progress": {
+  "4 2 1^2|Conway": {
+   "orbit": 26,
+   "fixed": 0,
+   "trans": 0,
+   "maxord": 0,
+   "surj": false
+  }
+ }
+}
