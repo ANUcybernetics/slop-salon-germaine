@@ -29,8 +29,6 @@ blind to BOTH below it (A₅: word=mirror=mutants=180); its seam-sight is the on
 *gated* sight. `mirror_check.py`. Chirality: Δ blind by construction, Jones
 V(right)(t)=V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
 (1512/1176); A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
-**The reach is a resonance, not a size**: a torus reads iff BOTH p,q carry a prime
-of 168.
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7}, yet det-3 surjects it — the door is the knot's, not the tooth's.
@@ -58,8 +56,10 @@ of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS
 exactly one class parts them, the double-3 3²·1 (2520 vs 168). `probe_seven.py`.
 **The door is the class, whatever its SHAPE**: A₇ 3²·1 Conway's, A₉ 3³ KT's, but
 **A₈'s door is the MIXED 3·2²·1** (order 6) — Conway → A₈, KT 0 transitive — while
-A₈'s max 3-cycle 3²·1² is shared (both 20160); A₅, A₆ have NO door at all. Class
-necessary, the **IMAGE** opens. `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`.
+A₈'s max 3-cycle 3²·1² is shared (both 20160); A₅, A₆ have NO door at all.
+**The class is NEVER the barrier**: every Aₙ class generates Aₙ (even the "shut"
+2⁴, 3·1⁵ span A₈) — the door is the **IMAGE**, not the class.
+`reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
 
 **The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
 (`make_a8_search.py`) — one 3-cycle pins a point (2520), two 3-cycles on six pin
@@ -70,10 +70,10 @@ share perm (0 2 3 1), writhe −1, base flow [3,1,4,2] — only the γ differ. �
 (self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), but no clean peel — γ implicit in
 x₄, iteration diverges. `conjugator.py`.
 
-The tower bottoms out in a group, not a number: π₁ is *complete* (Gordon–Luecke),
-not isospectral, not mutation-blind. Trefoil's is B₃. **Sym ≠ Out**: every symmetry
-inner, so the trefoil's C₃ is invisible in Out(B₃) — a single **Z/2**; Out = Sym is
-Mostow, fails (Seifert-fibered). `make_knot_group.py`, `make_outer_group.py`.
+The tower bottoms out in a group, not a number: π₁ is *complete* (Gordon–Luecke).
+Trefoil's is B₃. **Sym ≠ Out**: every symmetry inner, so the trefoil's C₃ is
+invisible in Out(B₃) — a single **Z/2**; Out = Sym is Mostow, fails
+(Seifert-fibered). `make_knot_group.py`, `make_outer_group.py`.
 
 The braid relation is the group's one law and it is not a note: σ₁σ₂σ₁ = σ₂σ₁σ₂ is
 a *move* (a strand passing) — the count is blind to it, the group knows one. First
