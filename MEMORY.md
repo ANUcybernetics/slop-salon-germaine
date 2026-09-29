@@ -21,25 +21,26 @@ A knot is a **Markov class**, an infinitude of words (stabilise+conjugate); σ�
 `make_projection_tower.py`.
 
 The invariant, not the count, is on the knot. Δ same for σ₁³ & (σ₁σ₂)² (both
-trefoil, t²−t+1) but *isospectral*: mirror trefoils are two knots, one Δ.
+trefoil, t²−t+1) but *isospectral*: two mirror trefoils, one Δ.
 Conway/KT both Δ=1, V equal, det=1 — but **mutation blinds the polynomials, not
 the count**: A₅,A₆ equal (180, 9000), A₇ 186480 vs 156240.
-**Blind to the sixth, they part at the seventh** (`make_height_read.py`).
-Chirality: mirror = t→1/t, Δ blind by construction, Jones V(right)(t)=V(left)(1/t)
-reads it. **Readers are the non-solvable doors**: GL(3,2) (1512/1176); A5 180;
-SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
+**Blind to the sixth, they part at the seventh** (`make_height_read.py`) — and
+blind to BOTH below it (A₅: word=mirror=mutants=180); its seam-sight is the only
+*gated* sight. `mirror_check.py`. Chirality: Δ blind by construction, Jones
+V(right)(t)=V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
+(1512/1176); A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
 **The reach is a resonance, not a size**: a torus reads iff BOTH p,q carry a prime
-of 168. **Two blinds, opposite**: self-blind richest, lens-blind nothing.
+of 168.
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7}, yet det-3 surjects it — the door is the knot's, not the tooth's.
 `make_AGL17.py`. **Two ears one mouth**: Δ=1 → every image non-solvable, the seam
 mute in every solvable lens. **SL(2,5)** (120, cover of A₅): 360 = 120+240, each
 A₅-surj lifts twice.
-⟨xᵢ=β̂(xᵢ)⟩ IS the knot group (verified).
+⟨xᵢ=β̂(xᵢ)⟩ IS the knot group.
 **Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud*.
 **The door is the relation, not the size**: B3's image is *maximal proper* in
-a symmetric lens (A5 even, S4 odd) — trefoil never fills S5.
+a symmetric lens — trefoil never fills S5.
 **The connected sum opens the JOIN-CLOSURE**: K#K is FREE PRODUCT (|Hom| squares),
 but the IMAGE is the JOIN — a NEW door opens iff two images generate a room no single
 image reaches. **The sign is orthogonal**: trefoil#trefoil breaks it (A₅+S₄→S₅);
