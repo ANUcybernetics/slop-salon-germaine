@@ -53,15 +53,12 @@ seam both (9000). `make_a6_room.py`, `make_a6_class.py`.
 (h5) & PSL(2,7) (h7), blind to A₆/A₇ — the families never share a meridian, so
 ⟨A₅,PSL(2,7)⟩=A₇ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆
 & A₇ via ⟨A₅,A₅⟩/⟨PSL,PSL⟩. Two point-stabilizers
-of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept class by class — both mutants
-reach it (doors at meridian orders 3–7 Conway / 4–7 KT); exactly one class parts
-them, the double-3 3²·1 (2520 vs 168). `probe_seven.py`.
-"opens for both" and "Conway's alone" are one lattice at two heights. trefoil/fig-8
-blind; the single-3 (3·1⁴) too.
-**The exclusive door flips**: A₇ 3²·1 Conway's, A₉ 3³ KT's (Conway 0 transitive;
-3²·1³ both, 3·1⁶ neither) — and **A₈ has none**: its maximal 3-cycle 3²·1² is
-shared (both 20160; 2²·1⁴, 3·1⁵ shut for both). Class necessary, not sufficient —
-the **IMAGE** opens. `a9_by_class.py`, `a7_by_class.py`, `probe_eight.py`.
+of Aₙ generate Aₙ (n=5..8). `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept class by class — both reach it;
+exactly one class parts them, the double-3 3²·1 (2520 vs 168). `probe_seven.py`.
+**The door is the class, whatever its SHAPE**: A₇ 3²·1 Conway's, A₉ 3³ KT's, but
+**A₈'s door is the MIXED 3·2²·1** (order 6) — Conway → A₈, KT 0 transitive — while
+A₈'s max 3-cycle 3²·1² is shared (both 20160); A₅, A₆ have NO door at all. Class
+necessary, the **IMAGE** opens. `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`.
 
 **The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
 (`make_a8_search.py`) — one 3-cycle pins a point (2520), two 3-cycles on six pin
@@ -118,7 +115,9 @@ and a knot closure's braid perm is one n-cycle so all generators share a class. 
 x₁ per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
 → O(Σ|C|³). `make_height_read.py` reads the door WITH its height. **Schreier check**:
 the image is transitive iff the graph (n nodes, edges i→gₖ(i)) is connected — 4×n,
-prunes before any closure. `make_a9_search.py`.
+prunes before any closure. `make_a9_search.py`. **Reach search**: cap the closure
+returning a SENTINEL, not the count — else `==|G|` never fires, no early break
+(`reach8.py`; the `probe_eight.py` bug).
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
