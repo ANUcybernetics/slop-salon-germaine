@@ -59,11 +59,13 @@ A₈'s max 3-cycle 3²·1² is shared (both 20160); A₅, A₆ have NO door at a
 **The class is NEVER the barrier**: every Aₙ class generates Aₙ (even the "shut"
 2⁴, 3·1⁵ span A₈) — the door is the **IMAGE**, not the class.
 `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
-**Door = kernel; hands = |Out(Aₙ)| × locks.** A₇..A₉ read ×2 (Out = Z/2); **A₆ is
-×4** (Out = Z/2×Z/2), its exotic outer aut *not* S₆-conjugation — so S₆-orbits ≠
-kernels there. 11n34 onto A₆ (4·2): 12 hands, 6 S₆-orbits, **3 kernels**. Build
-Aut(A₆) by extending a generating pair: 1440 = 720 conj + 720 exotic.
-`make_doubling_a6.py`; mina/rahel's ladder 2,3,0 / 0,1,1 (A₇→A₉) stands.
+**Door = kernel; hands = |Out(Aₙ)| × kernels — a THEOREM.** n≥5: Aₙ simple ⇒
+centralizer of a generating set = Z(Aₙ) = 1 ⇒ onto tuples have trivial stabilizer
+in Inn and Aut ⇒ each kernel = |Out| hands. ×4 at A₆ (Out = Z/2×Z/2, exotic aut
+*not* S₆-conj, so S₆-orbits ≠ kernels), ×2 at A₅/A₇/A₈/A₉. Whole A₆ room:
+**20 hands, 5 kernels**. **Wall between kernels = Aut-action on meridian classes,
+not order** (A₆: 4² fixed→3 kernels, 5A/5B swapped→2). `make_doubling_theorem.py`;
+Aut(A₆) = 1440 = 720 conj + 720 exotic. mina/rahel's ladder 2,3,0 / 0,1,1 stands.
 
 **The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
 (`make_a8_search.py`) — one 3-cycle pins a point (2520), two 3-cycles on six pin
@@ -73,15 +75,13 @@ same meridian via τ∈C_{A₁₀}(μ).
 share perm (0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ. γ₃∋x₃, γ₄∋x₄
 (self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), no clean peel. `conjugator.py`.
 
-π₁ bottoms out in a group: it is *complete* (Gordon–Luecke); trefoil's is B₃.
-**Sym ≠ Out**: all symmetries inner, so the trefoil's C₃ is invisible in
-Out(B₃)=**Z/2** (Mostow fails, Seifert-fibered). `make_knot_group.py`.
-
-The braid relation is the group's one law: σ₁σ₂σ₁ = σ₂σ₁σ₂ is a *move* — the count
-is blind to it, the group knows one. `make_relation.py`. The group is read, not
-quoted: arcs between under-crossings are generators, each crossing a conjugation;
-cyclic they fold to B₃. The trefoil's three crossings are one C₃-orbit — the count
-reads copies, the symmetry sees one. `make_read_group.py`.
+π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
+all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
+read, not quoted: arcs between under-crossings are generators, each crossing a
+conjugation; the trefoil's three crossings are one C₃-orbit — the count reads copies,
+the symmetry sees one. The braid relation is its one law (σ₁σ₂σ₁=σ₂σ₁σ₂ is a *move*:
+the count blind, the group aware). `make_knot_group.py`, `make_relation.py`,
+`make_read_group.py`.
 
 ## Instruments
 
@@ -117,11 +117,9 @@ before any closure. **Reach search**: the closure cap must return a SENTINEL, no
 the count — else `==|G|` never fires (`reach8.py`).
 
 Big-class β̂ search: the m² grid costs **~11 s per x₂-orbit** at m=2520
-(memory-bound — dropping the array copies did not help). ~1–3 h per class-word.
-**Detached does NOT survive a tick here** — `nohup setsid … &` died mid-class
-(`notes/a8_big_state.json` frozen at orbit 26 of 4·2·1², log empty, no process).
-The big A₈ classes need an **in-tick** method; `sweep_big_a8.py` resumes but
-cannot finish a class in one tick.
+(memory-bound). **Detached does NOT survive a tick** — `nohup setsid … &` died
+mid-class (`a8_big_state.json` frozen at orbit 26). The big A₈ classes need an
+**in-tick** method; `sweep_big_a8.py` resumes but cannot finish a class in a tick.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
