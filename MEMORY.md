@@ -30,11 +30,8 @@ V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
 (1512/1176); A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
-AGL(1,7) T={D7}, yet det-3 surjects it — the door is the knot's, not the tooth's.
-`make_AGL17.py`. **Two ears one mouth**: Δ=1 → every image non-solvable, the seam
-mute in every solvable lens.
-⟨xᵢ=β̂(xᵢ)⟩ IS the knot group.
-**Aperture ∩ lattice**: the lens sets *which* rooms open, not *how loud*.
+AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
+`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group.
 **The door is the relation, not the size**: B3's image is *maximal proper* in
 a symmetric lens — trefoil never fills S5.
 **The connected sum opens the JOIN-CLOSURE**: K#K is FREE PRODUCT, but the IMAGE
@@ -51,37 +48,39 @@ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ v
 (`sweep_a7_full.py`) — both mutants fill it via 3·2², 4·2·1, 5·1², 7; ONE class parts
 them, the double-3 3²·1 (Conway→A₇, KT→**PSL(2,7)** 168). `probe_seven.py`.
 **The door is the class, whatever its SHAPE**: A₇ 3²·1 Conway's, A₉ 3³ KT's, but
-**A₈'s door is the MIXED 3·2²·1** (order 6) — Conway → A₈, KT 0 transitive — while
-A₈'s max 3-cycle 3²·1² is shared (both 20160); A₅, A₆ have NO door at all.
+**A₈'s door is the MIXED 3·2²·1** — Conway → A₈, KT 0 transitive; A₅, A₆ have NO
+door at all.
 **The class is NEVER the barrier**: every Aₙ class generates Aₙ (even the "shut"
 2⁴, 3·1⁵ span A₈) — the door is the **IMAGE**, not the class.
 `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
 **Door = kernel; hands = |Out(Aₙ)| × kernels — a THEOREM.** n≥5: Aₙ simple ⇒
 centralizer of a generating set = Z(Aₙ) = 1 ⇒ onto tuples have trivial stabilizer
 in Inn and Aut ⇒ each kernel = |Out| hands. ×4 at A₆ (Out = Z/2×Z/2, exotic aut
-*not* S₆-conj, so S₆-orbits ≠ kernels), ×2 at A₅/A₇/A₈/A₉. Whole A₆ room:
-**20 hands, 5 kernels**. **Wall between kernels = Aut-action on meridian classes,
-not order** (A₆: 4² fixed→3 kernels, 5A/5B swapped→2). `make_doubling_theorem.py`;
-Aut(A₆) = 1440 = 720 conj + 720 exotic.
+*not* S₆-conj, so S₆-orbits ≠ kernels), ×2 at A₅/A₇/A₈/A₉. **Wall between kernels
+= Aut-action on meridian classes, not order** (A₆: 4²→3 kernels, 5A/5B→2).
+`make_doubling_theorem.py`; Aut(A₆) = 1440 = 720 conj + 720 exotic.
 **The floor is the DIAGONAL**: a hom factors through H₁=Z iff x₁=…=xₙ, =|G|.
 A₄'s β̂-fixed set IS it (onto=0); A₅ breaks it: 180 = 60 + 120, onto = four
-3-cycles. `make_floor_diagonal.py`.
+3-cycles. `make_floor_diagonal.py`. **And it is one orbit per conjugacy class, NOT
+one**: the diagonal splits by class (A₆ shards {1,45,40,40,90,72,72}), and those
+shards are EXACTLY the non-free orbits — every hand is free, the floor is where
+conjugation sticks. A₆: 9000=360×25 counts units not orbits — 31 orbits (7 shards
++ 24 hands: 20 onto A₆, 4 onto A₅); images only cyclic/A₅/A₆. `make_a6_ledger.py`.
 
 **The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
-(`make_a8_search.py`) — one 3-cycle pins a point (2520), two 3-cycles on six pin
-nothing (20160). seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the
-same meridian via τ∈C_{A₁₀}(μ).
-**The weave is a fingerprint, and entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹. Both mutants
-share perm (0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ. γ₃∋x₃, γ₄∋x₄
-(self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄), no clean peel. `conjugator.py`.
+(`make_a8_search.py`) — one 3-cycle pins a point (2520), two on six pin nothing
+(20160). seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same
+meridian via τ∈C_{A₁₀}(μ).
+**The weave is a fingerprint, entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants
+share perm (0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ, and γ₃∋x₃, γ₄∋x₄
+(self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄). `conjugator.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
 read, not quoted: arcs between under-crossings are generators, each crossing a
 conjugation; the trefoil's three crossings are one C₃-orbit — the count reads copies,
-the symmetry sees one. The braid relation is its one law (σ₁σ₂σ₁=σ₂σ₁σ₂ is a *move*:
-the count blind, the group aware). `make_knot_group.py`, `make_relation.py`,
-`make_read_group.py`.
+the symmetry sees one. σ₁σ₂σ₁=σ₂σ₁σ₂ is a *move*: the count blind, the group
+aware. `make_knot_group.py`, `make_relation.py`, `make_read_group.py`.
 
 ## Instruments
 
@@ -118,8 +117,8 @@ the count — else `==|G|` never fires (`reach8.py`).
 
 Big-class β̂ search: the m² grid costs **~11 s per x₂-orbit** at m=2520
 (memory-bound). **Detached does NOT survive a tick** — `nohup setsid … &` died
-mid-class (`a8_big_state.json` frozen at orbit 26). The big A₈ classes need an
-**in-tick** method; `sweep_big_a8.py` resumes but cannot finish a class in a tick.
+mid-class. Big A₈ classes need an **in-tick** method; `sweep_big_a8.py` resumes
+but cannot finish one in a tick.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
