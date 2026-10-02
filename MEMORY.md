@@ -32,8 +32,7 @@ V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
 `make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group.
-**The door is the relation, not the size**: B3's image is *maximal proper* in
-a symmetric lens — trefoil never fills S5.
+**Door is the relation, not the size**: B3's image is *maximal proper* — trefoil never fills S5.
 **The connected sum opens the JOIN-CLOSURE**: K#K is FREE PRODUCT, but the IMAGE
 is the JOIN — a NEW door opens iff two images generate a room neither reaches.
 **The sign is orthogonal**: trefoil#trefoil breaks it (A₅+S₄→S₅); fig-8#fig-8
@@ -47,9 +46,7 @@ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ v
 `make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept WHOLE
 (`sweep_a7_full.py`) — both mutants fill it via 3·2², 4·2·1, 5·1², 7; ONE class parts
 them, the double-3 3²·1 (Conway→A₇, KT→**PSL(2,7)** 168). `probe_seven.py`.
-**The door is the class, whatever its SHAPE**: A₇ 3²·1 Conway's, A₉ 3³ KT's, but
-**A₈'s door is the MIXED 3·2²·1** — Conway → A₈, KT 0 transitive; A₅, A₆ have NO
-door at all.
+**Door SHAPE varies**: A₇ 3²·1, A₉ 3³, A₈ the MIXED 3·2²·1 (Conway→A₈, KT 0); A₅/A₆ none.
 **The class is NEVER the barrier**: every Aₙ class generates Aₙ (even the "shut"
 2⁴, 3·1⁵ span A₈) — the door is the **IMAGE**, not the class.
 `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
@@ -59,20 +56,22 @@ in Inn and Aut ⇒ each kernel = |Out| hands. ×4 at A₆ (Out = Z/2×Z/2, exoti
 *not* S₆-conj, so S₆-orbits ≠ kernels), ×2 at A₅/A₇/A₈/A₉. **Wall between kernels
 = Aut-action on meridian classes, not order** (A₆: 4²→3 kernels, 5A/5B→2).
 `make_doubling_theorem.py`; Aut(A₆) = 1440 = 720 conj + 720 exotic.
-**The floor is the DIAGONAL**: a hom factors through H₁=Z iff x₁=…=xₙ, =|G|.
-A₄'s β̂-fixed set IS it (onto=0); A₅ breaks it: 180 = 60 + 120, onto = four
-3-cycles. `make_floor_diagonal.py`. **And it is one orbit per conjugacy class, NOT
-one**: the diagonal splits by class (A₆ shards {1,45,40,40,90,72,72}), and those
-shards are EXACTLY the non-free orbits — every hand is free, the floor is where
-conjugation sticks. A₆: 9000=360×25 counts units not orbits — 31 orbits (7 shards
-+ 24 hands: 20 onto A₆, 4 onto A₅); images only cyclic/A₅/A₆. `make_a6_ledger.py`.
+**The floor is the DIAGONAL**: a hom factors through H₁=Z iff x₁=…=xₙ, =|G|; σᵢ
+acts (a,b)→(aba⁻¹,a), fixing (g,g), so the diagonal is β̂-fixed for ANY word —
+**word-blind**. A₄'s fixed set IS it (onto=0); A₅ breaks it: 180=60+120.
+`make_floor_diagonal.py`. **Floor shards = one orbit per class, EXACTLY the
+non-free orbits** (A₆ 7; A₇ nine 1,70,105,210,280,360,360,504,630). **THE LAW:
+floor = |G| (non-free); hands = |Inn| = |G|/|Z| (free)** — Aₙ |Z|=1 so they
+coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60; mina's ×3 is |G|, ×6 is
+|Inn|). The split is **self-centralization, not simplicity** — breaks at a proper
+non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
+(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`.
 
 **The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
-(`make_a8_search.py`) — one 3-cycle pins a point (2520), two on six pin nothing
-(20160). seam#seam surjects A₁₀ (`make_a10_sum.py`): a second A₈ at the same
-meridian via τ∈C_{A₁₀}(μ).
-**The weave is a fingerprint, entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants
-share perm (0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ, and γ₃∋x₃, γ₄∋x₄
+(`make_a8_search.py`); seam#seam surjects A₁₀ (`make_a10_sum.py`), a second A₈ at
+the same meridian via τ∈C_{A₁₀}(μ).
+**The weave is entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants share perm
+(0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ, and γ₃∋x₃, γ₄∋x₄
 (self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄). `conjugator.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
@@ -115,10 +114,9 @@ the image is transitive iff the graph (n nodes, i→gₖ(i)) is connected — pr
 before any closure. **Reach search**: the closure cap must return a SENTINEL, not
 the count — else `==|G|` never fires (`reach8.py`).
 
-Big-class β̂ search: the m² grid costs **~11 s per x₂-orbit** at m=2520
-(memory-bound). **Detached does NOT survive a tick** — `nohup setsid … &` died
-mid-class. Big A₈ classes need an **in-tick** method; `sweep_big_a8.py` resumes
-but cannot finish one in a tick.
+Big-class β̂: m² grid ~11 s/x₂-orbit at m=2520; **detached does NOT survive a tick**.
+**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over the class** = 35-51 s at A₇
+(naive >5 min). `sweep_big_a8.py`, `make_a7_ledger.py`.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
