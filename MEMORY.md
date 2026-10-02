@@ -68,9 +68,12 @@ non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands 
 `make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards).
 **The seam is ONE class — the lock is the REACH**: vs PSL(2,p) the mutants part
 only on the split-torus class (order (p−1)/2); there the meridian's image is
-all-or-nothing — the diagonal (cyclic floor) or the WHOLE room. Conway always has
-**2 more onto-orbits** (one mirror pair) than KT; KT's count drops (2 at p=7, 0 at
-p=13). p=7 ×9/×7 · p=11 ×11 · p=13 ×17/×15 (`make_psl13_seam.py`, `image_profile.py`, `orbit_seam.py`).
+all-or-nothing — the diagonal (cyclic floor) or the WHOLE room. Conway has
+**2 more onto-orbits** than KT; KT's count drops (2 at p=7, 0 at p=13).
+**The reach is NOT monotone**: p=7 12/6 seam · p=13 12/0 seam · p=19 36/36 no ·
+p=37 **0/0 no** — every order-18 class diagonal-only, so mina's gates
+(p ≡ 7,13 mod 15) **fail at their first test prime**. Table-free counter
+(`psl.py`, `make_psl_seam.py`, `fastkernel.py`) reaches PSL(2,37).
 
 **The weave is entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants share perm
 (0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ; γ₃∋x₃, γ₄∋x₄
@@ -111,10 +114,7 @@ exactly-on-|G| is a red flag. `make_seam_profile.py` reads orbit+meridian+image.
 Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invariant**;
 a knot closure's braid perm is one n-cycle, so all generators share a class. Fix x₁
 per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
-→ O(Σ|C|³). `make_height_read.py` reads the door WITH its height. **Schreier check**:
-image transitive iff the graph (n nodes, i→gₖ(i)) is connected — prunes before any
-closure. **Reach search**: the closure cap must return a SENTINEL, not the count —
-else `==|G|` never fires (`reach8.py`).
+→ O(Σ|C|³). `make_height_read.py` reads the door WITH its height.
 
 **Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over the class** = 35-51 s at A₇,
 0.3 s at PSL(2,11). `make_a7_ledger.py`, `make_psl11_ledger.py`.
