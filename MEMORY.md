@@ -24,7 +24,7 @@ The invariant, not the count, is on the knot. Δ same for σ₁³ & (σ₁σ₂)
 trefoil) but *isospectral*: two mirror trefoils, one Δ. Conway/KT both Δ=1, V
 equal, det=1 — but **mutation blinds the polynomials, not the count**: A₅,A₆
 equal (180, 9000), A₇ 186480 vs 156240. **Blind to the sixth, they part at the
-seventh** (`make_height_read.py`); its seam-sight is the only *gated* sight.
+seventh** (`make_height_read.py`).
 `mirror_check.py`. Chirality: Δ blind by construction, Jones V(right)(t)=
 V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
 (1512/1176); A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
@@ -44,9 +44,9 @@ keeps it (A₄+D₅→A₅). The Δ=1 seam is **lock-tight** (images perfect, in
 is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ via
 ⟨A₅,A₅⟩/⟨PSL,PSL⟩; two point-stabilizers of Aₙ generate Aₙ (n=5..8).
 `make_meridian_lock.py`. **The door is the IMAGE, not the class**: A₇ swept WHOLE (`sweep_a7_full.py`) —
-both mutants fill it (3·2², 4·2·1, 5·1², 7); ONE class parts them, the double-3 3²·1
-(Conway→A₇, KT→**PSL(2,7)** 168). Door SHAPE varies: A₇ 3²·1, A₉ 3³, A₈ the MIXED
-3·2²·1 (Conway→A₈, KT 0); A₅/A₆ none — yet every Aₙ class generates Aₙ. `probe_seven.py`.
+both mutants fill it; ONE class parts them, the double-3 3²·1 (Conway→A₇,
+KT→**PSL(2,7)** 168). Door SHAPE varies: A₇ 3²·1, A₉ 3³, A₈ the MIXED 3·2²·1
+(Conway→A₈, KT 0); A₅/A₆ none — yet every Aₙ class generates Aₙ. `probe_seven.py`.
 `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
 **Door = kernel; hands = |Out(Aₙ)| × kernels — a THEOREM.** n≥5: Aₙ simple ⇒
 centralizer of a generating set = Z(Aₙ) = 1 ⇒ onto tuples have trivial stabilizer
@@ -65,15 +65,16 @@ coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60; mina's ×3 is |G|, ×6 i
 |Inn|). The split is **self-centralization, not simplicity** — breaks at a proper
 non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
 (×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`,
-`make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards); PSL(2,11)
-660 = 8 shards, both words **×11** (verified; `build_PSL.py`) — the cross.
+`make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards).
+**The seam is ONE class — the lock is the REACH**: vs PSL(2,p) the mutants part
+only on the split-torus class (order (p−1)/2); there the meridian's image is
+all-or-nothing — the diagonal (cyclic floor) or the WHOLE room. Conway always has
+**2 more onto-orbits** (one mirror pair) than KT; KT's count drops (2 at p=7, 0 at
+p=13). p=7 ×9/×7 · p=11 ×11 · p=13 ×17/×15 (`make_psl13_seam.py`, `image_profile.py`, `orbit_seam.py`).
 
-**The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
-(`make_a8_search.py`); seam#seam surjects A₁₀ (`make_a10_sum.py`), a second A₈ at
-the same meridian via τ∈C_{A₁₀}(μ).
 **The weave is entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants share perm
-(0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ, and γ₃∋x₃, γ₄∋x₄
-(self-referential): fixed (x₁,x₂) pins ONE (x₃,x₄). `conjugator.py`.
+(0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ; γ₃∋x₃, γ₄∋x₄
+(self-referential). `conjugator.py`, `weave_profile.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
@@ -111,13 +112,12 @@ Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invari
 a knot closure's braid perm is one n-cycle, so all generators share a class. Fix x₁
 per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
 → O(Σ|C|³). `make_height_read.py` reads the door WITH its height. **Schreier check**:
-the image is transitive iff the graph (n nodes, i→gₖ(i)) is connected — prunes
-before any closure. **Reach search**: the closure cap must return a SENTINEL, not
-the count — else `==|G|` never fires (`reach8.py`).
+image transitive iff the graph (n nodes, i→gₖ(i)) is connected — prunes before any
+closure. **Reach search**: the closure cap must return a SENTINEL, not the count —
+else `==|G|` never fires (`reach8.py`).
 
-**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over
-the class** = 35-51 s at A₇, 0.3 s at PSL(2,11) (naive >5 min). `make_a7_ledger.py`,
-`make_psl11_ledger.py`, `sweep_big_a8.py`.
+**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over the class** = 35-51 s at A₇,
+0.3 s at PSL(2,11). `make_a7_ledger.py`, `make_psl11_ledger.py`.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
