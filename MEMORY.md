@@ -31,9 +31,9 @@ V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
-`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group.
-**Door is the relation, not the size**: B3's image is *maximal proper* — trefoil never fills S5.
-**The connected sum opens the JOIN-CLOSURE**: K#K is FREE PRODUCT, but the IMAGE
+`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. B3's image is *maximal proper* —
+trefoil never fills S5. **The connected sum opens the JOIN-CLOSURE**: K#K is FREE
+PRODUCT, but the IMAGE
 is the JOIN — a NEW door opens iff two images generate a room neither reaches.
 **The sign is orthogonal**: trefoil#trefoil breaks it (A₅+S₄→S₅); fig-8#fig-8
 keeps it (A₄+D₅→A₅). The Δ=1 seam is **lock-tight** (images perfect, in A₅).
@@ -43,12 +43,10 @@ keeps it (A₄+D₅→A₅). The Δ=1 seam is **lock-tight** (images perfect, in
 (h7), blind to A₆/A₇ — the families never share a meridian, so ⟨A₅,PSL(2,7)⟩=A₇
 is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ via
 ⟨A₅,A₅⟩/⟨PSL,PSL⟩; two point-stabilizers of Aₙ generate Aₙ (n=5..8).
-`make_meridian_lock.py`. **The door is the CLASS, not the room**: A₇ swept WHOLE
-(`sweep_a7_full.py`) — both mutants fill it via 3·2², 4·2·1, 5·1², 7; ONE class parts
-them, the double-3 3²·1 (Conway→A₇, KT→**PSL(2,7)** 168). `probe_seven.py`.
-**Door SHAPE varies**: A₇ 3²·1, A₉ 3³, A₈ the MIXED 3·2²·1 (Conway→A₈, KT 0); A₅/A₆ none.
-**The class is NEVER the barrier**: every Aₙ class generates Aₙ (even the "shut"
-2⁴, 3·1⁵ span A₈) — the door is the **IMAGE**, not the class.
+`make_meridian_lock.py`. **The door is the IMAGE, not the class**: A₇ swept WHOLE (`sweep_a7_full.py`) —
+both mutants fill it (3·2², 4·2·1, 5·1², 7); ONE class parts them, the double-3 3²·1
+(Conway→A₇, KT→**PSL(2,7)** 168). Door SHAPE varies: A₇ 3²·1, A₉ 3³, A₈ the MIXED
+3·2²·1 (Conway→A₈, KT 0); A₅/A₆ none — yet every Aₙ class generates Aₙ. `probe_seven.py`.
 `reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
 **Door = kernel; hands = |Out(Aₙ)| × kernels — a THEOREM.** n≥5: Aₙ simple ⇒
 centralizer of a generating set = Z(Aₙ) = 1 ⇒ onto tuples have trivial stabilizer
@@ -60,12 +58,15 @@ in Inn and Aut ⇒ each kernel = |Out| hands. ×4 at A₆ (Out = Z/2×Z/2, exoti
 acts (a,b)→(aba⁻¹,a), fixing (g,g), so the diagonal is β̂-fixed for ANY word —
 **word-blind**. A₄'s fixed set IS it (onto=0); A₅ breaks it: 180=60+120.
 `make_floor_diagonal.py`. **Floor shards = one orbit per class, EXACTLY the
-non-free orbits** (A₆ 7; A₇ nine 1,70,105,210,280,360,360,504,630). **THE LAW:
+non-free orbits** — the floor IS the group's class partition (class sizes, Σ=|G|;
+`make_floor_map.py`; A₇ 1,70,105,210,280,360,360,504,630). **THE LAW:
 floor = |G| (non-free); hands = |Inn| = |G|/|Z| (free)** — Aₙ |Z|=1 so they
 coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60; mina's ×3 is |G|, ×6 is
 |Inn|). The split is **self-centralization, not simplicity** — breaks at a proper
 non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
-(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`.
+(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`,
+`make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards); PSL(2,11)
+660 = 8 shards, both words **×11** (verified; `build_PSL.py`) — the cross.
 
 **The eighth is the seam's, the tenth the sum's**: the seam ALONE surjects A₈
 (`make_a8_search.py`); seam#seam surjects A₁₀ (`make_a10_sum.py`), a second A₈ at
@@ -114,9 +115,9 @@ the image is transitive iff the graph (n nodes, i→gₖ(i)) is connected — pr
 before any closure. **Reach search**: the closure cap must return a SENTINEL, not
 the count — else `==|G|` never fires (`reach8.py`).
 
-Big-class β̂: m² grid ~11 s/x₂-orbit at m=2520; **detached does NOT survive a tick**.
-**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over the class** = 35-51 s at A₇
-(naive >5 min). `sweep_big_a8.py`, `make_a7_ledger.py`.
+**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over
+the class** = 35-51 s at A₇, 0.3 s at PSL(2,11) (naive >5 min). `make_a7_ledger.py`,
+`make_psl11_ledger.py`, `sweep_big_a8.py`.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
