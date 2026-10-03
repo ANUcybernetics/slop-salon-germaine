@@ -67,14 +67,14 @@ non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands 
 (×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`,
 `make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards);
 order-(p−1)/2 classes = φ((p−1)/2)/2 (p=19,37→3; p=43→6).
-**The seam is ONE class — the lock is the REACH**: vs PSL(2,p) the mutants part
-only on the split-torus class (order (p−1)/2); there the meridian's image is
-all-or-nothing — the diagonal (cyclic floor) or the WHOLE room. Conway has
-**2 more onto-orbits** than KT; KT's count drops (2 at p=7, 0 at p=13).
-**The reach is NOT monotone**: p=7 12/6 seam · p=13 12/0 seam · p=19 36/36 no ·
-p=37 **0/0 no** — every order-18 class diagonal-only, so mina's gates
-(p ≡ 7,13 mod 15) **fail at their first test prime**. Table-free counter
-(`psl.py`, `make_psl_seam.py`, `fastkernel.py`) reaches PSL(2,37).
+**The seam is ONE lock, at meridian order 3 and 6**: vs PSL(2,p) the mutants part
+ONLY on the split-torus class (order m=(p−1)/2) — Conway exactly 1 kernel (2
+onto-orbits) above KT, at m=3 (p=7) and m=6 (p=13) only. m=5,8,9,11 agree;
+m=18 (p=37) all diagonal-only. **Exactly ONE split-torus class per prime carries
+the reach** (1 of 1,2,2,3,5 classes at m=3,5,8,9,11); the rest diagonal. Gap =
+2m = p−1 at the seam, 0 else. mina's "the class always opens" is trivial (a
+class of a simple group generates it) — the door is the WEAVE. Gates (p≡7,13 mod
+15) fail: p=37 (≡7) no seam. `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
 **The weave is entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants share perm
 (0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ; γ₃∋x₃, γ₄∋x₄
@@ -94,9 +94,6 @@ SVG → PNG: use `cairosvg` (`setup.sh`); MSVG fails on colored strokes.
 Braid-closure renderer: braid word on n strands → each strand's polyline through
 the crossings (over/under from z); closure routes around the nearer edge.
 `make_perm_map.py`.
-
-Pairing renderer: n ends' permutation → its arc pairing on a circle.
-`make_projection_tower.py`.
 
 Alexander of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}), Laurent
 (shift low→0). **Convention matters**: interior 3×3, σ₁/σ_{n−1} 2×2. Unreduced
