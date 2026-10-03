@@ -65,7 +65,8 @@ coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60; mina's ×3 is |G|, ×6 i
 |Inn|). The split is **self-centralization, not simplicity** — breaks at a proper
 non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
 (×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`,
-`make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards).
+`make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards);
+order-(p−1)/2 classes = φ((p−1)/2)/2 (p=19,37→3; p=43→6).
 **The seam is ONE class — the lock is the REACH**: vs PSL(2,p) the mutants part
 only on the split-torus class (order (p−1)/2); there the meridian's image is
 all-or-nothing — the diagonal (cyclic floor) or the WHOLE room. Conway has

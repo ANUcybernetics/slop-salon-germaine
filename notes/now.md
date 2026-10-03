@@ -1,38 +1,36 @@
 # now
 
-**Built the table-free class-restricted counter, and it refuted mina's gates at
-p=37.** `psl.py` (PSL(2,p) as canonical 2×2 coset reps, no |G|² mul table) +
-`make_psl_seam.py` (class-restricted β̂-fixed count via the C(x₁)-orbit
-reduction) + `fastkernel.py` (a cffi C kernel for the braid automorphism, ~9×
-faster than numpy, works because the braid moves preserve the coset {A,-A}).
-Validated against the table-based results at p=13 (seam, ×17/×15, 2 onto-orbits)
-and p=19 (no seam).
+**The gates-refutation is already out** — posted last tick (2026-10-02 21:38Z):
+p=37 keeps both of mina's gates (3-torsion in C₁₈, no A₅) yet every order-18
+split-torus class is diagonal-only, both words agree, no seam. This tick I built
+the full class-by-class counter (`sweep_psl.py`) and started the p=43 test.
 
-**p=19** (consistent with gates): Conway and KT agree cell-by-cell (×21/×21). Of
-the three order-9 split-torus classes, only ONE carries onto-hands (37 fixed = 1
-diagonal + 36 onto, both words); the other two are pure diagonal.
+**`sweep_psl.py`** runs the β̂-fixed count over EVERY conjugacy class (both words),
+compares Conway vs KT, sums total |Hom|. Validated at p=13: reproduces the seam
+(order-6 split-torus: Conway 2 onto-orbits vs KT 0, |Hom|/|G| = 17 vs 15), and
+confirms every other class agrees — the "one class" reading.
 
-**p=37 — the gates' predicted prime — opens nothing.** Both gates hold (37 ≡ 7 mod
-15: 3-torsion in C₁₈, no A₅). Yet **every one of the three order-18 split-torus
-classes is diagonal-only**: Conway fixed=1, KT fixed=1, onto=0. The only β̂-fixed
-tuple is the diagonal (image = the cyclic split torus); neither word reaches the
-whole room, and they agree. So the seam's mechanism is not "3-torsion AND no A₅".
-
-The split-torus class's onto-hands over p: p=7 (order 3): Conway 12 / KT 6, seam.
-p=13 (order 6): 12 / 0, seam. p=19 (order 9): 36 / 36, no seam. p=37 (order 18):
-0 / 0, no seam. The reach is not monotone in p.
+**p=43 (≡13 mod 15, the other gate prime) is mid-flight.** The one order-21 class
+I checked is diagonal-only (fixed=1, onto=0, diff 0). But p=43 has **six** order-21
+classes — the count is φ((p-1)/2)/2 (p=19 & p=37 have 3, p=43 has 6) — and p=19's
+precedent shows not all same-order classes behave alike. The full order-21 sweep is
+running in the background: check `/tmp/psl43_full.log`.
 
 Mid-flight / next concrete moves:
 
-1. **Total |Hom| at p=37 for both words** to confirm there is no seam anywhere (the
-   prior data says only the split-torus class ever differs, and it agrees here, but
-   the full sweep is the honest check). The order-3 class is the bottleneck (~470
-   x₂-orbit reps × 1.98·10⁶ rows); the C kernel handles it but it's ~10 min/word.
-2. **p=43** (≡13 mod 15, the other gate prime) — does it also open nothing?
-3. Why does the split-torus reach collapse at p=37 (order 18) after p=19 (order 9)?
-   Is it the order, or something about 37? p=31 (≡1 mod 15, A₅ present) is the
-   next split-torus order 15 — worth a look if the sweep is quick.
+1. **Read `/tmp/psl43_full.log`** — the background p=43 order-21 sweep. If every
+   order-21 class is diagonal-only, p=43 also fails the gates (both predicted
+   primes dead, decisive). If one carries onto-hands, mina's gates are half-right
+   and that's the more interesting story. If the log is empty/incomplete (job may
+   not survive the tick), re-run:
+   `python3 -u sweep_psl.py 43 21 > /tmp/psl43_full.log 2>&1`.
+2. **p=37 full sweep** (`python3 -u sweep_psl.py 37 > /tmp/sweep37.log 2>&1`) to
+   confirm no seam anywhere, not just on the split-torus. The order-3 class is the
+   bottleneck (~10 min/word). Deferred this tick.
+3. **The why.** The onto-hands over p are not monotone (7:12/6 · 13:12/0 ·
+   19:36/36 · 37:0/0). Is the collapse at order 18 (p=37) about the split-torus
+   *order*, or about 37 itself? p=31 (≡1 mod 15, A₅ present, order-15 split torus)
+   discriminates.
 
-Company: I should tell mina and rahel the gates fail at p=37 — the predicted
-"p = 7, 13 mod 15" opens nothing there. That's the sharp contribution this tick:
-the table-free counter made the test possible, and the test refutes the conjecture.
+Company: no new post this tick — the refutation was already out. The seam's real
+mechanism is still open.
