@@ -33,14 +33,13 @@ D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not pr
 AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
 `make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. B3's image is *maximal proper* —
 trefoil never fills S5. **The connected sum opens the JOIN-CLOSURE**: K#K is FREE
-PRODUCT, but the IMAGE
-is the JOIN — a NEW door opens iff two images generate a room neither reaches.
-**The sign is orthogonal**: trefoil#trefoil breaks it (A₅+S₄→S₅); fig-8#fig-8
-keeps it (A₄+D₅→A₅). The Δ=1 seam is **lock-tight** (images perfect, in A₅).
+PRODUCT but the IMAGE is the JOIN — a new door opens iff two images generate a
+room neither reaches; the sign is orthogonal (trefoil#trefoil breaks it: A₅+S₄→S₅;
+fig-8#fig-8 keeps it: A₄+D₅→A₅). The Δ=1 seam is **lock-tight**.
 `make_connected_sum.py`.
 
 **The lock is the meridian's height**: trefoil in A₇ reaches A₅ (h5) & PSL(2,7)
-(h7), blind to A₆/A₇ — the families never share a meridian, so ⟨A₅,PSL(2,7)⟩=A₇
+(h7), blind to A₆/A₇ — no shared meridian, so ⟨A₅,PSL(2,7)⟩=A₇
 is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ via
 ⟨A₅,A₅⟩/⟨PSL,PSL⟩; two point-stabilizers of Aₙ generate Aₙ (n=5..8).
 `make_meridian_lock.py`. **The door is the IMAGE, not the class**: A₇ swept WHOLE (`sweep_a7_full.py`) —
@@ -58,28 +57,28 @@ in Inn and Aut ⇒ each kernel = |Out| hands. ×4 at A₆ (Out = Z/2×Z/2, exoti
 acts (a,b)→(aba⁻¹,a), fixing (g,g), so the diagonal is β̂-fixed for ANY word —
 **word-blind**. A₄'s fixed set IS it (onto=0); A₅ breaks it: 180=60+120.
 `make_floor_diagonal.py`. **Floor shards = one orbit per class, EXACTLY the
-non-free orbits** — the floor IS the group's class partition (class sizes, Σ=|G|;
-`make_floor_map.py`; A₇ 1,70,105,210,280,360,360,504,630). **THE LAW:
+non-free orbits** — the floor IS the group's class partition (Σ=|G|;
+`make_floor_map.py`). **THE LAW:
 floor = |G| (non-free); hands = |Inn| = |G|/|Z| (free)** — Aₙ |Z|=1 so they
 coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60; mina's ×3 is |G|, ×6 is
 |Inn|). The split is **self-centralization, not simplicity** — breaks at a proper
 non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
-(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`,
-`make_psl11_ledger.py`. **PSL(2,p): #classes = (p+5)/2** (floor shards);
-order-(p−1)/2 classes = φ((p−1)/2)/2 (p=19,37→3; p=43→6).
+(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`. **PSL(2,p): #classes = (p+5)/2**;
+order-(p−1)/2 classes = φ((p−1)/2)/2.
 **The seam is ONE lock, at meridian order 3 and 6**: vs PSL(2,p) the mutants part
 ONLY on the split-torus class (order m=(p−1)/2) — Conway 1 kernel (2 onto-orbits)
-above KT, at m=3 (p=7) and m=6 (p=13) only. The words' onto-tuples are **DISJOINT**
-(never share a tuple): p=11 ties 10/10 but Conway pins x1–x4, KT x3–x4 — count blind
-to which pair. **The reach is NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,**0**,2 at
-m=3,5,6,8,9,11,18,21 — m=18 an isolated zero. **Both mod-15 gate primes dead**:
-p=37 (≡7) no reach, p=43 (≡13) reach but agree. **Reach on split-torus classes
-(φ(m)/2 beads): ONE lit to m=18, TWO at p=43 (m=21, 2 & 4 orbits)**; rest diagonal.
-The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
+above KT, at m=3 (p=7) and m=6 (p=13) only. The words' onto-tuples are **DISJOINT**:
+p=11 ties 10/10 but C pins x1–x4, K x3–x4 — count blind to which pair. **The reach is NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,**0**,2 at
+m=3..21 — m=18 a lone zero; both mod-15 gate primes dead (p=37, p=43). **Reach lit
+bead by exponent j (a^j class): m=3,5,6,8,9→{1};
+m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is word-blind; the seam is the
+SPREAD**: onto-hands split by axis — FOLD (a pair shares a torus) vs SPREAD (axes
+apart); C & K fold the SAME count (C x1·x4, K x3·x4), so **seam = C spread − K
+spread** (mina's "KT=Conway folded" holds iff KT doesn't spread; fails at 17,19).
+`make_axis_profile.py`. The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
-**The weave is entangled**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both mutants share perm
-(0 2 3 1), writhe −1, flow [3,1,4,2] — only γ differ; γ₃∋x₃, γ₄∋x₄
-(self-referential). `conjugator.py`, `weave_profile.py`.
+**The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both share perm (0 2 3 1), writhe −1,
+flow [3,1,4,2] — only γ differ (γ₃∋x₃, γ₄∋x₄). `conjugator.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
