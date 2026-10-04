@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""make_psl_bead.py — run the seam count on a subset of split-torus classes.
+
+Usage: python3 make_psl_bead.py <p> [j1 j2 ...]
+
+Runs class_seam on the order-(p-1)/2 classes whose bead label (min exponent j)
+is in the given list (or all if none given), printing the per-bead onto-orbits
+for each word.  Lets an interrupted p=43 run finish its last classes without
+recomputing the ones already done.
+"""
+import sys
+import time
+from psl import PSL
+from make_psl_seam import class_seam, WORDS
+
+import math
+
+
+def bead_labels(G, m):
+    """label each order-m class by min(j, m-j) of a^j."""
+    a = next(x for x in G.reps if G.order(x) == m)
+    label = {}
+    for j in range(1, m):
+        if math.gcd(j, m) != 1:
+            continue
+        aj = G.id
+        for _ in range(j):
+            aj = G.m(aj, a)
+        for t in G.reps:
+            label.setdefault(G.cj(aj, t), min(j, m - j))
+    return label
+
+
+def main():
+    p = int(sys.argv[1])
+    want = set(int(x) for x in sys.argv[2:]) or None
+    t0 = time.time()
+    G = PSL(p)
+    m = (p - 1) // 2
+    print(f"|PSL(2,{p})| = {G.n}  m={m}  (built {time.time()-t0:.1f}s)")
+    classes = G.classes()
+    label = bead_labels(G, m)
+    cand = [rep for rep in classes if G.order(rep) == m]
+    for rep in cand:
+        j = label.get(rep)
+        if want and j not in want:
+            continue
+        C = classes[rep]
+        print(f"\n  order {m} class bead-label j={j} |C|={len(C)}:")
+        for name, word in WORDS.items():
+            nf, no, noo = class_seam(G, rep, C, word, p)
+            print(f"    {name:6s}: fixed(x1=rep)={nf:7d}  onto(x1=rep)={no:6d}  onto-orbits={noo:5d}")
+
+
+if __name__ == "__main__":
+    main()
