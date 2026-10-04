@@ -60,25 +60,27 @@ acts (a,b)→(aba⁻¹,a), fixing (g,g), so the diagonal is β̂-fixed for ANY w
 non-free orbits** — the floor IS the group's class partition (Σ=|G|;
 `make_floor_map.py`). **THE LAW:
 floor = |G| (non-free); hands = |Inn| = |G|/|Z| (free)** — Aₙ |Z|=1 so they
-coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60; mina's ×3 is |G|, ×6 is
-|Inn|). The split is **self-centralization, not simplicity** — breaks at a proper
+coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60).
+The split is **self-centralization, not simplicity** — breaks at a proper
 non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
-(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`. **PSL(2,p): #classes = (p+5)/2**;
-order-(p−1)/2 classes = φ((p−1)/2)/2.
-**The seam is ONE lock, at meridian order 3 and 6**: vs PSL(2,p) the mutants part
+(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`. **PSL(2,p): #classes=(p+5)/2;
+order-m classes=φ(m)/2.**
+**The seam is ONE lock, at order 3 and 6**: vs PSL(2,p) the mutants part
 ONLY on the split-torus class (order m=(p−1)/2) — Conway 1 kernel (2 onto-orbits)
 above KT, at m=3 (p=7) and m=6 (p=13) only. The words' onto-tuples are **DISJOINT**:
-p=11 ties 10/10 but C pins x1–x4, K x3–x4 — count blind to which pair. **The reach is NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,**0**,2 at
-m=3..21 — m=18 a lone zero; both mod-15 gate primes dead (p=37, p=43). **Reach lit
+p=11 ties 10/10 but pins different pairs — count blind to which. **The reach is NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,0,2 at
+m=3..21 — m=18 a lone zero; mod-15 gates dead. **Reach lit
 bead by exponent j (a^j class): m=3,5,6,8,9→{1};
-m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is word-blind; the seam is the
-SPREAD**: onto-hands split by axis — FOLD (a pair shares a torus) vs SPREAD (axes
-apart); C & K fold the SAME count (C x1·x4, K x3·x4), so **seam = C spread − K
-spread** (mina's "KT=Conway folded" holds iff KT doesn't spread; fails at 17,19).
-`make_axis_profile.py`. The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
+m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is the RUNG's, not the word's**:
+onto-hands split by axis — FOLD (a pair shares a torus, as INVERSES) vs
+SPREAD. Both words fold the SAME count at the SAME rungs — m=3,5 only; m≥6 all
+spread. Which pair is the word's (C x1·x4, K x3·x4, label-sensitive); whether any
+folds is the rung's. **seam = C spread − K spread**, one-sided (C ≥ K), opens at
+one-ring m=3,6. `make_axis_profile.py`, `verify_rung_fold.py`.
+The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
-**The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; both share perm (0 2 3 1), writhe −1,
-flow [3,1,4,2] — only γ differ (γ₃∋x₃, γ₄∋x₄). `conjugator.py`.
+**The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; perm (0 2 3 1), flow [3,1,4,2], writhe −1
+— only γ differ (γ₃∋x₃, γ₄∋x₄). `conjugator.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
