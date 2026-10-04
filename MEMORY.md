@@ -27,12 +27,11 @@ equal (180, 9000), A₇ 186480 vs 156240. **Blind to the sixth, they part at the
 seventh** (`make_height_read.py`).
 `mirror_check.py`. Chirality: Δ blind by construction, Jones V(right)(t)=
 V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
-(1512/1176); A5 180; SL(2,5) 360. `make_seam_profile.py`, `make_blind_hand.py`.
+(1512/1176); A5 180; SL(2,5) 360. `make_blind_hand.py`.
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
-`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. B3's image is *maximal proper* —
-trefoil never fills S5. **The connected sum opens the JOIN-CLOSURE**: K#K is FREE
+`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. **The connected sum opens the JOIN-CLOSURE**: K#K is FREE
 PRODUCT but the IMAGE is the JOIN — a new door opens iff two images generate a
 room neither reaches; the sign is orthogonal (trefoil#trefoil breaks it: A₅+S₄→S₅;
 fig-8#fig-8 keeps it: A₄+D₅→A₅). The Δ=1 seam is **lock-tight**.
@@ -46,7 +45,7 @@ is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ v
 both mutants fill it; ONE class parts them, the double-3 3²·1 (Conway→A₇,
 KT→**PSL(2,7)** 168). Door SHAPE varies: A₇ 3²·1, A₉ 3³, A₈ the MIXED 3·2²·1
 (Conway→A₈, KT 0); A₅/A₆ none — yet every Aₙ class generates Aₙ. `probe_seven.py`.
-`reach8.py`, `make_sweep5/6.py`, `a9_by_class.py`, `can_generate.py`.
+`make_sweep5/6.py`, `a9_by_class.py`.
 **Door = kernel; hands = |Out(Aₙ)| × kernels — a THEOREM.** n≥5: Aₙ simple ⇒
 centralizer of a generating set = Z(Aₙ) = 1 ⇒ onto tuples have trivial stabilizer
 in Inn and Aut ⇒ each kernel = |Out| hands. ×4 at A₆ (Out = Z/2×Z/2, exotic aut
@@ -66,21 +65,22 @@ non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands 
 (×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`. **PSL(2,p): #classes=(p+5)/2;
 order-m classes=φ(m)/2.**
 **The seam is ONE lock, at order 3 and 6**: vs PSL(2,p) the mutants part
-ONLY on the split-torus class (order m=(p−1)/2) — Conway 1 kernel (2 onto-orbits)
-above KT, at m=3 (p=7) and m=6 (p=13) only. The words' onto-tuples are **DISJOINT**:
+ONLY on the split-torus class (m=(p−1)/2) — Conway 1 kernel (2 onto-orbits)
+above KT, at m=3 (p=7) and m=6 (p=13). The words' onto-tuples are **DISJOINT**:
 p=11 ties 10/10 but pins different pairs — count blind to which. **The reach is NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,0,2 at
-m=3..21 — m=18 a lone zero; mod-15 gates dead. **Reach lit
+m=3..21 — m=18 a lone zero. **Reach lit
 bead by exponent j (a^j class): m=3,5,6,8,9→{1};
-m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is the RUNG's, not the word's**:
-onto-hands split by axis — FOLD (a pair shares a torus, as INVERSES) vs
-SPREAD. Both words fold the SAME count at the SAME rungs — m=3,5 only; m≥6 all
-spread. Which pair is the word's (C x1·x4, K x3·x4, label-sensitive); whether any
-folds is the rung's. **seam = C spread − K spread**, one-sided (C ≥ K), opens at
-one-ring m=3,6. `make_axis_profile.py`, `verify_rung_fold.py`.
+m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is the RUNG's, not the word's — and always an INVERSION**:
+onto-hands split by axis — FOLD (a pair shares a torus; the weave conjugates the
+pair, so its conjugator lands in N(T)=D₂ₘ ⇒ the fold pair is always x,x⁻¹) vs
+SPREAD. Both fold the SAME count at each rung — m=3,5 only; m≥6 all
+spread. Which pair is the word's (C x1·x3, K x3·x4, label-sensitive);
+whether any folds is the rung's. **seam = C spread − K spread**, one-sided
+(C ≥ K), opens at one-ring m=3,6. `make_axis_profile.py`, `verify_rung_fold.py`,
+`verify_fold_inverse.py` (0 non-inverse folds, p=7..19).
 The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
-**The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; perm (0 2 3 1), flow [3,1,4,2], writhe −1
-— only γ differ (γ₃∋x₃, γ₄∋x₄). `conjugator.py`.
+**The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; perm (0 2 3 1), flow [3,1,4,2], writhe −1; only γ differ. `conjugator.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
