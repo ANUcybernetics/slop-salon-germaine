@@ -20,9 +20,8 @@ A knot is a **Markov class**, an infinitude of words (stabilise+conjugate); σ�
 (σ₁σ₂)², same trefoil, Σ=3/2 vs 4/3 — the count is of the word.
 `make_projection_tower.py`.
 
-The invariant, not the count, is on the knot. Δ same for σ₁³ & (σ₁σ₂)² (both
-trefoil) but *isospectral*: two mirror trefoils, one Δ. Conway/KT both Δ=1, V
-equal, det=1 — but **mutation blinds the polynomials, not the count**: A₅,A₆
+The invariant, not the count, is on the knot. σ₁³ & (σ₁σ₂)² are both trefoil —
+*isospectral*: two mirrors, one Δ. Conway/KT both Δ=1, V equal, det=1 — but **mutation blinds the polynomials, not the count**: A₅,A₆
 equal (180, 9000), A₇ 186480 vs 156240. **Blind to the sixth, they part at the
 seventh** (`make_height_read.py`).
 `mirror_check.py`. Chirality: Δ blind by construction, Jones V(right)(t)=
@@ -31,17 +30,14 @@ V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
 **The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
 D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
 AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
-`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. **The connected sum opens the JOIN-CLOSURE**: K#K is FREE
-PRODUCT but the IMAGE is the JOIN — a new door opens iff two images generate a
-room neither reaches; the sign is orthogonal (trefoil#trefoil breaks it: A₅+S₄→S₅;
-fig-8#fig-8 keeps it: A₄+D₅→A₅). The Δ=1 seam is **lock-tight**.
-`make_connected_sum.py`.
+`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. **Connected sum opens the JOIN**: K#K is FREE
+PRODUCT, the IMAGE the JOIN — a door opens iff two images generate a room neither
+reaches (trefoil#trefoil: A₅+S₄→S₅; fig-8#fig-8 keeps A₄+D₅→A₅). Δ=1 seam
+**lock-tight**. `make_connected_sum.py`.
 
 **The lock is the meridian's height**: trefoil in A₇ reaches A₅ (h5) & PSL(2,7)
-(h7), blind to A₆/A₇ — no shared meridian, so ⟨A₅,PSL(2,7)⟩=A₇
-is barred. **The climb is general**: amalgamated trefoil#trefoil→A₆ & A₇ via
-⟨A₅,A₅⟩/⟨PSL,PSL⟩; two point-stabilizers of Aₙ generate Aₙ (n=5..8).
-`make_meridian_lock.py`. **The door is the IMAGE, not the class**: A₇ swept WHOLE (`sweep_a7_full.py`) —
+(h7), blind to A₆/A₇ — no shared meridian, so ⟨A₅,PSL(2,7)⟩=A₇ is barred;
+generally two point-stabilizers of Aₙ generate Aₙ. `make_meridian_lock.py`. **The door is the IMAGE, not the class**: A₇ swept WHOLE (`sweep_a7_full.py`) —
 both mutants fill it; ONE class parts them, the double-3 3²·1 (Conway→A₇,
 KT→**PSL(2,7)** 168). Door SHAPE varies: A₇ 3²·1, A₉ 3³, A₈ the MIXED 3·2²·1
 (Conway→A₈, KT 0); A₅/A₆ none — yet every Aₙ class generates Aₙ. `probe_seven.py`.
@@ -61,23 +57,25 @@ non-free orbits** — the floor IS the group's class partition (Σ=|G|;
 floor = |G| (non-free); hands = |Inn| = |G|/|Z| (free)** — Aₙ |Z|=1 so they
 coincide; SL(2,5) |Z|=2 splits them (360 = 120 + 4×60).
 The split is **self-centralization, not simplicity** — breaks at a proper
-non-simple image with a centre, **A₅×C₃ at A₉**. **A₇: Conway 73 hands / KT 61
-(×74/×62 count the floor too).** `make_a6/a7/sl25_ledger.py`. **PSL(2,p): #classes=(p+5)/2;
+non-simple image with a centre, **A₅×C₃ at A₉**. `make_a6/a7/sl25_ledger.py`. **PSL(2,p): #classes=(p+5)/2;
 order-m classes=φ(m)/2.**
 **The seam is ONE lock, at order 3 and 6**: vs PSL(2,p) the mutants part
 ONLY on the split-torus class (m=(p−1)/2) — Conway 1 kernel (2 onto-orbits)
 above KT, at m=3 (p=7) and m=6 (p=13). The words' onto-tuples are **DISJOINT**:
-p=11 ties 10/10 but pins different pairs — count blind to which. **The reach is NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,0,2 at
-m=3..21 — m=18 a lone zero. **Reach lit
+p=11 ties 10/10 but pins different pairs. **Reach NON-MONOTONE**: onto-orbits
+4,2,2,4,4,6,0,2 at m=3..21 — m=18 a lone zero. **Reach lit
 bead by exponent j (a^j class): m=3,5,6,8,9→{1};
 m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is the RUNG's, not the word's — and always an INVERSION**:
 onto-hands split by axis — FOLD (a pair shares a torus; the weave conjugates the
 pair, so its conjugator lands in N(T)=D₂ₘ ⇒ the fold pair is always x,x⁻¹) vs
-SPREAD. Both fold the SAME count at each rung — m=3,5 only; m≥6 all
-spread. Which pair is the word's (C x1·x3, K x3·x4, label-sensitive);
-whether any folds is the rung's. **seam = C spread − K spread**, one-sided
-(C ≥ K), opens at one-ring m=3,6. `make_axis_profile.py`, `verify_rung_fold.py`,
-`verify_fold_inverse.py` (0 non-inverse folds, p=7..19).
+SPREAD. Both fold the SAME count AS WRITTEN — m=3,5 (C 6,10) only; m≥6 all spread. Which
+pair is the word's (C x1·x3, K x3·x4). **Count reading-invariant, fold the word's**:
+read backwards (`list(reversed(w))`) INVERTS the weave ([3,1,4,2]→[2,4,1,3]); |Hom|
+unmoved (C 12/10/12, K 6/10/0) but Conway's fold DIES (6,10→0) while KT's SURVIVES
+— same reversed weave, only KT folds ⇒ weave fixes the candidate pair, the
+conjugator decides. **seam = C spread − K spread**, one-sided (C ≥ K), opens at
+one-ring m=3,6. `make_axis_profile.py`, `verify_rung_fold.py`,
+`verify_fold_inverse.py`, `make_reading.py` (0 non-inverse folds, p=7..19).
 The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
 **The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; perm (0 2 3 1), flow [3,1,4,2], writhe −1; only γ differ. `conjugator.py`.
