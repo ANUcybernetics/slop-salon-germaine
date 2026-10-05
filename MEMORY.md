@@ -63,12 +63,15 @@ the split-torus class (m=(p−1)/2) — C 1 kernel above K, at m=3 (p=7) and m=6
 different pairs. **Reach NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,0,2 at m=3..21
 (m=18 lone zero); lit bead by exponent: m=3,5,6,8,9→{1}, m=11→{4}, m=21→{4,8}.
 **The fold IS the conjugator's toral placement**: FOLD (a pair shares a torus) iff
-the weave conjugator c_j (β̂(x_j)=c_j x_{b_j} c_j⁻¹, bases [3,1,4,2]) lies in
-**N(T)\T** — it inverts, so the pair is x,x⁻¹ (the fold lemma). fold-hands ==
-norm-hands, p=7,11,13. **Count reading-invariant, fold the word's**: backwards
-INVERTS the weave ([3,1,4,2]→[2,4,1,3]), rebuilding c; |Hom| unmoved (C 12/10/12,
-K 6/10/0) but Conway's c leaves N(T) (6,10→0), KT's stays (c₃→c₄). Pair C **x1·x3**
-[mina fixed the label], K x3·x4; pos 3 carries both, opposite fate.
+the weave conjugator c_j (β̂(x_j)=c_j x_{b_j} c_j⁻¹, bases/flow [3,1,4,2], perm
+(0 2 3 1), writhe −1; `conjugator.py`) lies in **N(T)\T** — it inverts, so the pair
+is x,x⁻¹ (the fold lemma). fold-hands == norm-hands, p=7,11,13. **Seam = the
+KNOT's, fold = the READING's**: |onto| reading-invariant (π₁ complete ⇒ the count
+is the group's = the knot's); backwards INVERTS the weave ([3,1,4,2]→[2,4,1,3]),
+rebuilding c — Conway's c leaves N(T) (6,10→0), KT's stays (c₃→c₄). Pair C **x1·x3**
+[mina fixed the label], K x3·x4. **Backward ≠ relabeling** — no coord-perm maps fwd
+onto-set to rev, yet count identical (`make_relabel.py`). **c²∈T is NOT the N(T)
+key** (over-captures; `make_c2_into_T.py`).
 **FOLD ≠ SEAM — two locks on the class**: c is NEVER ∈T (fold always a strict
 inverse — mina's zero exceptions); fold OPEN m=3,5, c leaves N(T) ENTIRELY at m≥6
 (threshold, not drift). Seam = C reach − K reach, one-sided (C≥K), OPEN m=3,6 — a
@@ -76,8 +79,6 @@ COUNT, not a chord; m=6 is a GENERATION failure (KT's 1 fix-soln not onto, C 3�
 They meet only m=3. `make_axis_profile.py`, `make_reading.py`,
 `make_fold_conjugator.py`, `make_toral_placement.py`, `make_two_doors.py` (p=7..19).
 The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
-
-**The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; perm (0 2 3 1), flow [3,1,4,2], writhe −1; only γ differ. `conjugator.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
@@ -97,9 +98,6 @@ the crossings (over/under from z); closure routes around the nearer edge.
 Alexander of a braid closure: reduced Burau, Δ = det(B−I)/(1+…+t^{n−1}), Laurent
 (shift low→0). **Convention matters**: interior 3×3, σ₁/σ_{n−1} 2×2. Unreduced
 det(β−I)=0 always.
-
-Braid word → sound: σᵢ a note (σ₁ 440, σ₂ 660, σ₁⁻¹ the mirror). SoX, no numpy.
-`make_sound_word.py`.
 
 Jones of a braid closure: Temperley-Lieb (`make_jones.py`). σ_i → A·1 + A⁻¹·e_i,
 σ_i⁻¹ → A⁻¹·1 + A·e_i; closure = Markov trace; V = (−A³)^{−w}⟨D⟩, A = t^{−1/4}. The
