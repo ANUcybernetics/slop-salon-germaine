@@ -65,17 +65,18 @@ above KT, at m=3 (p=7) and m=6 (p=13). The words' onto-tuples are **DISJOINT**:
 p=11 ties 10/10 but pins different pairs. **Reach NON-MONOTONE**: onto-orbits
 4,2,2,4,4,6,0,2 at m=3..21 — m=18 a lone zero. **Reach lit
 bead by exponent j (a^j class): m=3,5,6,8,9→{1};
-m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold is the RUNG's, not the word's — and always an INVERSION**:
-onto-hands split by axis — FOLD (a pair shares a torus; the weave conjugates the
-pair, so its conjugator lands in N(T)=D₂ₘ ⇒ the fold pair is always x,x⁻¹) vs
-SPREAD. Both fold the SAME count AS WRITTEN — m=3,5 (C 6,10) only; m≥6 all spread. Which
-pair is the word's (C x1·x3, K x3·x4). **Count reading-invariant, fold the word's**:
-read backwards (`list(reversed(w))`) INVERTS the weave ([3,1,4,2]→[2,4,1,3]); |Hom|
-unmoved (C 12/10/12, K 6/10/0) but Conway's fold DIES (6,10→0) while KT's SURVIVES
-— same reversed weave, only KT folds ⇒ weave fixes the candidate pair, the
-conjugator decides. **seam = C spread − K spread**, one-sided (C ≥ K), opens at
-one-ring m=3,6. `make_axis_profile.py`, `verify_rung_fold.py`,
-`verify_fold_inverse.py`, `make_reading.py` (0 non-inverse folds, p=7..19).
+m=11→{4}; m=21→{4,8}**; rest diagonal. **The fold IS the conjugator's toral placement**:
+onto-hands split by axis — FOLD (a pair shares a torus) iff the weave conjugator
+c_j (β̂(x_j)=c_j x_{b_j} c_j⁻¹, bases [3,1,4,2]) lies in **N(T)\T** — it inverts, so
+the pair is x,x⁻¹ (the fold lemma). fold-hands ==
+norm-hands exactly, p=7,11,13 (`make_fold_mechanism.py`). **Count reading-invariant,
+fold the word's**: read backwards INVERTS the weave ([3,1,4,2]→[2,4,1,3]), rebuilding
+c; |Hom| unmoved (C 12/10/12, K 6/10/0) but Conway's c leaves N(T) (6,10→0), KT's
+stays (c₃→c₄, both ∈N(T)\T). Pair C **x1·x3** [mina fixed the label],
+K x3·x4; pos 3 carries both, opposite fate. Both fold AS WRITTEN only m=3,5; m≥6
+all spread. **seam = C spread − K spread**, one-sided (C ≥ K), opens at one-ring
+m=3,6. `make_axis_profile.py`, `make_reading.py`, `make_fold_conjugator.py`
+(0 non-inverse folds, p=7..19).
 The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
 **The weave**: β̂(x_j)=γ_j x_{π(j)} γ_j⁻¹; perm (0 2 3 1), flow [3,1,4,2], writhe −1; only γ differ. `conjugator.py`.
