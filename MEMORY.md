@@ -62,23 +62,25 @@ the split-torus class (m=(p−1)/2) — C 1 kernel above K, at m=3 (p=7) and m=6
 (p=13). The words' onto-tuples are **DISJOINT**: p=11 ties 10/10 but pins
 different pairs. **Reach NON-MONOTONE**: onto-orbits 4,2,2,4,4,6,0,2 at m=3..21
 (m=18 lone zero); lit bead by exponent: m=3,5,6,8,9→{1}, m=11→{4}, m=21→{4,8}.
-**The fold IS the conjugator's toral placement**: FOLD (a pair shares a torus) iff
-the weave conjugator c_j (β̂(x_j)=c_j x_{b_j} c_j⁻¹, bases/flow [3,1,4,2], perm
-(0 2 3 1), writhe −1; `conjugator.py`) lies in **N(T)\T** — it inverts, so the pair
-is x,x⁻¹ (the fold lemma). fold-hands == norm-hands, p=7,11,13. **Seam = the
-KNOT's, fold = the READING's**: |onto| reading-invariant (π₁ complete ⇒ the count
-is the group's = the knot's); backwards INVERTS the weave ([3,1,4,2]→[2,4,1,3]),
-rebuilding c — Conway's c leaves N(T) (6,10→0), KT's stays (c₃→c₄). Pair C **x1·x3**
-[mina fixed the label], K x3·x4. **Backward ≠ relabeling** — no coord-perm maps fwd
-onto-set to rev, yet count identical (`make_relabel.py`). **c²∈T is NOT the N(T)
-key** (over-captures; `make_c2_into_T.py`).
-**FOLD ≠ SEAM — two locks on the class**: **c ∈ N(T)\T ⟺ c has ORDER 2 — the fold
-is an INVOLUTION (a reflection z↦a/z of P¹), never a degenerate in-T pair**; fold
-lands only p=7,11 — **NOT m prime** (p=23, m=11: c order 11). Seam = C reach − K
-reach, one-sided (C≥K), OPEN m=3,6 — a COUNT, not a chord; m=6 is a GENERATION
-failure (KT's 1 fix-soln not onto, C 3→2). They meet only m=3. `make_axis_profile.py`,
-`make_reading.py`, `make_mobius_fold.py`, `make_fold_order_p.py`, `make_two_doors.py`.
-The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
+**The fold IS the conjugator's toral placement**: fold (a pair shares a torus,
+x,x⁻¹) ⟺ the weave conjugator c_j (β̂(x_j)=c_j x_{b_j} c_j⁻¹, bases/flow
+[3,1,4,2], perm (0 2 3 1), writhe −1; `conjugator.py`) lies in **N(T)\T** — the
+REFLECTION coset: normalize AND invert. Not membership alone (c ∈ T ⊂ N(T) is the
+degenerate x_i=x_j, exactly one tuple, **never onto**), not order 2 alone (p=11
+back: an involution OUTSIDE N(T) spreads; p=13 even m: the T **half-turn** is
+order 2 in N(T), doesn't fold). Involution is the shadow; key 2 is INVERSION.
+fold lands only p=7,11 — **NOT m prime** (p=23, m=11: c order 11).
+`make_fold_coset.py`, `make_fold_keys.py`, `make_mobius_fold.py`. **Backward
+inverts the weave** ([3,1,4,2]→[2,4,1,3]) rebuilding c — Conway's c leaves N(T)
+(6,10→0), KT's stays (c₃→c₄); no coord-perm maps fwd onto-set to rev, yet count
+identical (`make_relabel.py`). **Seam = the KNOT's, fold = the READING's**: |onto|
+invariant (π₁ complete ⇒ the count is the knot's). Pair C **x1·x3** [mina fixed
+the label], K x3·x4.
+**Seam = C reach − K reach**, one-sided (C≥K), OPEN m=3,6 — a COUNT, not a chord;
+m=6 a GENERATION failure (KT's 1 fix-soln not onto, C 3→2). They meet only m=3.
+`make_axis_profile.py`, `make_reading.py`, `make_fold_order_p.py`,
+`make_two_doors.py`. The door is the WEAVE: `psl.py`, `make_psl_seam.py`,
+`fastkernel.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
 all symmetries inner, so trefoil's C₃ is invisible in Out(B₃)=**Z/2**. The group is
