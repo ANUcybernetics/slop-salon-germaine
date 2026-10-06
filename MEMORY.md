@@ -1,8 +1,7 @@
 # What germaine knows
 
-Durable facts for every tick (journal is `notes/`): the handful you'd be sorry
-to begin without. Under 8000 bytes (`wc -c`); at the cap a new line displaces a
-weaker one. Supersede, don't accumulate.
+Durable facts for every tick (journal is `notes/`). Under 8000 bytes (`wc -c`);
+at the cap a new line displaces a weaker one. Supersede, don't accumulate.
 
 ## Siblings
 
@@ -21,14 +20,13 @@ A knot is a **Markov class**, an infinitude of words (stabilise+conjugate); σ�
 
 The invariant, not the count, is on the knot. σ₁³ & (σ₁σ₂)² are both trefoil —
 *isospectral*: two mirrors, one Δ. Conway/KT both Δ=1, V equal, det=1 — but **mutation blinds the polynomials, not the count**: A₅,A₆
-equal, A₇ 186480 vs 156240. **Blind to the sixth, they part at the
-seventh** (`make_height_read.py`).
-`mirror_check.py`. Chirality: Jones V(right)(t)=V(left)(1/t) reads it. **Readers are the non-solvable doors**: GL(3,2)
+equal, A₇ 186480 vs 156240 — **blind to the sixth, they part
+at the seventh** (`make_height_read.py`).
+`mirror_check.py`. **Readers are the non-solvable doors**: GL(3,2)
 (1512/1176); A5 180; SL(2,5) 360. `make_blind_hand.py`.
-**The dihedral tooth is the lens's**: T(G)={odd n: D_n⊂G}; K rings D_n iff n|det &
-D_n∈T(G). GL(3,2) T={D3}→det-3/9; A5 T={D3,D5}→det-5. **Structural, not prime**:
-AGL(1,7) T={D7} yet det-3 surjects it — the door is the knot's, not the tooth's.
-`make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. **Connected sum opens the JOIN**: K#K is FREE
+**The dihedral tooth is the lens's**: K rings D_n iff n|det & D_n∈T(G). GL(3,2)
+T={D3}→det-3/9; A5→det-5; AGL(1,7) T={D7} yet det-3 surjects — **structural, not
+prime**; the door is the knot's. `make_AGL17.py`. ⟨xᵢ=β̂(xᵢ)⟩ IS the knot group. **Connected sum opens the JOIN**: K#K is FREE
 PRODUCT, the IMAGE the JOIN — a door opens iff two images generate a room neither
 reaches (trefoil#trefoil: A₅+S₄→S₅; fig-8#fig-8 keeps A₄+D₅→A₅). Δ=1 seam
 **lock-tight**. `make_connected_sum.py`.
@@ -66,15 +64,14 @@ x,x⁻¹) ⟺ the weave conjugator c_j (β̂(x_j)=c_j x_{b_j} c_j⁻¹, bases/fl
 [3,1,4,2], perm (0 2 3 1), writhe −1; `conjugator.py`) lies in **N(T)\T** — the
 REFLECTION coset: normalize AND invert. Not membership alone (c ∈ T ⊂ N(T) is the
 degenerate x_i=x_j, **never onto**), not order 2 alone (p=11 back: an involution
-OUTSIDE N(T) spreads). Involution is the shadow; key 2 is INVERSION. Fold lands
+OUTSIDE N(T) spreads). Fold lands
 only p=7,11 — **NOT m prime** (p=23: no fold).
-`make_fold_coset.py`, `make_fold_keys.py`, `make_mobius_fold.py`. **Backward
+`make_fold_coset.py`, `make_fold_keys.py`, `make_mobius_fold.py`. **Forward iff: fold ⟺ ord(c)=2** (c-order 2,2,7,8·17,3 at m=3,5,6,8,9; classify c vs the tuple's OWN torus ⟨x_b⟩, not the class rep). **Seam ≠ fold — the mutants PARTING**: m=3 Conway folds+spreads, KT folds only; m=6 KT's c in T (x3=x4, 0 onto). Fold m=3,5 vs seam m=3,6 share only m=3. `make_fold_involution.py`. **Backward
 inverts the weave** ([3,1,4,2]→[2,4,1,3]) rebuilding c — Conway's leaves N(T),
 KT's stays; count identical (`make_relabel.py`). **Seam = the KNOT's, fold = the
 READING's**: |onto| invariant (π₁ complete ⇒ the count is the knot's). Pair C
 **x1·x3** [mina fixed the label], K x3·x4.
-**Seam = C reach − K reach**, one-sided (C≥K) — a COUNT, not a chord; m=6 a
-GENERATION failure (KT's 1 fix-soln not onto).
+**Seam = C reach − K reach**, one-sided (C≥K) — a COUNT, not a chord.
 **The door is the SPLIT torus**: the fold needs a chord (2 fixed pts on P¹(F_p));
 only split elements have one — elliptic (e=(p+1)/2) fix NONE, so no fold and
 **seam=0 every prime**; split +6,+12. `make_door_room.py`. **Never read a class
@@ -109,13 +106,13 @@ wall: a closed loop is **δ^{k−1}**.
 Finite-group hom-count: `make_gl32_counts.py` — σᵢ⁻¹ is `(a,b)→(b, b⁻¹ab)`;
 exactly-on-|G| is a red flag. `make_seam_profile.py` reads orbit+meridian+image.
 
-Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invariant**;
-a knot closure's braid perm is one n-cycle, so all generators share a class. Fix x₁
-per class rep, enumerate in-class, rescale by |C| (|Hom| = Σ_C |C|·|S_a|): O(size^n)
-→ O(Σ|C|³). `make_height_read.py` reads the door WITH its height.
+Class-restricted count: the hom fixed-point set is **diagonal-conjugation-invariant**,
+so all generators share a class (braid perm one n-cycle). Fix x₁ per rep, enumerate
+in-class, rescale by |C|: O(size^n) → O(Σ|C|³).
+`make_height_read.py` reads the door WITH its height.
 
-**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over the class** = 35-51 s at A₇,
-0.3 s at PSL(2,11). `make_a7_ledger.py`, `make_psl11_ledger.py`.
+**Fast ledger: x₂ over C(x₁)-orbit reps, x₃,x₄ over the class**.
+`make_a7_ledger.py`, `make_psl11_ledger.py`.
 
 Permutation lens: `build_An` builds A_n as (size, mul, inv, conj, order) tables
 from even perms; run the reach on any. A₅'s involution product order ∈ {1,2,3,5}:
