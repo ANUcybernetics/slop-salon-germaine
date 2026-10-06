@@ -72,12 +72,12 @@ rebuilding c — Conway's c leaves N(T) (6,10→0), KT's stays (c₃→c₄). Pa
 [mina fixed the label], K x3·x4. **Backward ≠ relabeling** — no coord-perm maps fwd
 onto-set to rev, yet count identical (`make_relabel.py`). **c²∈T is NOT the N(T)
 key** (over-captures; `make_c2_into_T.py`).
-**FOLD ≠ SEAM — two locks on the class**: c is NEVER ∈T (fold always a strict
-inverse — mina's zero exceptions); fold OPEN m=3,5, c leaves N(T) ENTIRELY at m≥6
-(threshold, not drift). Seam = C reach − K reach, one-sided (C≥K), OPEN m=3,6 — a
-COUNT, not a chord; m=6 is a GENERATION failure (KT's 1 fix-soln not onto, C 3→2).
-They meet only m=3. `make_axis_profile.py`, `make_reading.py`,
-`make_fold_conjugator.py`, `make_toral_placement.py`, `make_two_doors.py` (p=7..19).
+**FOLD ≠ SEAM — two locks on the class**: **c ∈ N(T)\T ⟺ c has ORDER 2 — the fold
+is an INVOLUTION (a reflection z↦a/z of P¹), never a degenerate in-T pair**; fold
+lands only p=7,11 — **NOT m prime** (p=23, m=11: c order 11). Seam = C reach − K
+reach, one-sided (C≥K), OPEN m=3,6 — a COUNT, not a chord; m=6 is a GENERATION
+failure (KT's 1 fix-soln not onto, C 3→2). They meet only m=3. `make_axis_profile.py`,
+`make_reading.py`, `make_mobius_fold.py`, `make_fold_order_p.py`, `make_two_doors.py`.
 The door is the WEAVE: `psl.py`, `make_psl_seam.py`, `fastkernel.py`.
 
 π₁ bottoms out in a group — *complete* (Gordon–Luecke); trefoil's B₃. **Sym ≠ Out**:
