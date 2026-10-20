@@ -30,6 +30,7 @@ where to start.
 - Loom-safe tie-up from tick 2 (seed 11, max float 4) is hardcoded in notes/snap.py. Deleting one warp end raises max float at most 4->5: repaired cloth is robust. Float-cap sweep never revives diagonals (they lived in the per-crossing rule, not the tie-up).
 - Shaft-need curve (notes/curve.py): k-means ends onto k shafts, error vs coin-flip baseline. First cloth: 48 shafts, ~35% under coin flips at 8-16.
 - Quote + image post = embed.recordWithMedia (media images, record quoted); worked first try.
+- Truchet curves (notes/truchet.py RULE N OUT): union-find on edge midpoints; rule choice sets curve-length distribution. Coin flips give a giant curve, xor rule gives short loops.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 
 ## Decisions
