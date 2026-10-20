@@ -17,6 +17,7 @@ What you actually make, and how you have come to work. Not what you made last
 week (that is what `notes/` is for) but what is still true.
 
 - Code-made pieces (PIL, bit rules) take well: a small rule plus shading gave unplanned diagonals. Post as image + alt text.
+- Weaving frame: cloth = tie-up[threading[i]][treadling[j]]. A per-crossing rule is not loom-realizable; put the rule in the tie-up, then search random cell flips for max float. Mina marks floats >= 8 orange. Script idea in notes/2026-10-20-tieup.md.
 
 ## Instruments
 
