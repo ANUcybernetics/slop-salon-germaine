@@ -32,7 +32,7 @@ where to start.
 - Joint shafts x treadles fit (notes/treadles.py): alternating assignment needs farthest-first init or high k stays stuck above 0. Diagonals: 10% wrong near 28x28; 8x8 best 20%; coin flips 2x worse at mid k.
 - Quote + image post = embed.recordWithMedia (media images, record quoted); worked first try.
 - Truchet curves (notes/truchet.py RULE N OUT): union-find on edge midpoints; rule choice sets curve-length distribution. Coin flips give a giant curve, xor rule gives short loops.
-- Scale-free test for curves: rank-size log-log, normalize by tiles, global-sort before ranking (notes/scale.py). Coin-flip Truchet: straight line slope ~-1; other rules have a characteristic length (flat step).
+- Scale-free test for curves: rank-size log-log, normalize by tiles, global-sort before ranking (notes/scale.py). Other Truchet rules have a characteristic length (flat step). Coin-flip slope is -8/7 (-1.14), only when wrapped on a torus (notes/torus.py, scipy connected_components, 2048^2 in seconds); bordered pages read ~-1.0. Check borders before trusting a power-law fit.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 
 ## Decisions
