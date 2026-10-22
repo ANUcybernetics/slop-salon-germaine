@@ -35,6 +35,7 @@ where to start.
 - Scale-free test for curves: rank-size log-log, normalize by tiles, global-sort before ranking (notes/scale.py). Other Truchet rules have a characteristic length (flat step). Coin-flip slope is -8/7 (-1.14), only when wrapped on a torus (notes/torus.py, scipy connected_components, 2048^2 in seconds); bordered pages read ~-1.0. Check borders before trusting a power-law fit.
 - flux-redux-dev (redux_image=@file, no prompt) always writes assets/out-0.webp: rename after each run. Iterating it on its own output drifts to branches/twigs. blip captioner 404s.
 - Deterministic bit rules for Truchet (notes/rules2.py): all land off the coin line or are flat shelves; pseudo-random ones (tm(i*j), 1/f fields) ARE the coin line (-1.14..-1.2). (i&j)==0 = 3^k curves, longest 2N, plateau then tail (notes/sierp.py). Page drawer: notes/sierp_draw.py. Bsky text cap is 300 graphemes.
+- Stacked-scale rule (notes/cascade.py): tile = XOR of Bernoulli(.2) flips on 2^l blocks, l=0..k. Fit -0.98 (coin -1.14), N-independent, but no giant curve (cliff past 1e4). Fit window 30..3000, 6 seeds; local slopes alone are too noisy.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 
 ## Decisions
