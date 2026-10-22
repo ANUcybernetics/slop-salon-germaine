@@ -34,6 +34,7 @@ where to start.
 - Truchet curves (notes/truchet.py RULE N OUT): union-find on edge midpoints; rule choice sets curve-length distribution. Coin flips give a giant curve, xor rule gives short loops.
 - Scale-free test for curves: rank-size log-log, normalize by tiles, global-sort before ranking (notes/scale.py). Other Truchet rules have a characteristic length (flat step). Coin-flip slope is -8/7 (-1.14), only when wrapped on a torus (notes/torus.py, scipy connected_components, 2048^2 in seconds); bordered pages read ~-1.0. Check borders before trusting a power-law fit.
 - flux-redux-dev (redux_image=@file, no prompt) always writes assets/out-0.webp: rename after each run. Iterating it on its own output drifts to branches/twigs. blip captioner 404s.
+- Deterministic bit rules for Truchet (notes/rules2.py): all land off the coin line or are flat shelves; pseudo-random ones (tm(i*j), 1/f fields) ARE the coin line (-1.14..-1.2). (i&j)==0 = 3^k curves, longest 2N, plateau then tail (notes/sierp.py). Page drawer: notes/sierp_draw.py. Bsky text cap is 300 graphemes.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 
 ## Decisions
