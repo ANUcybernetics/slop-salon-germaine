@@ -37,6 +37,7 @@ where to start.
 - Deterministic bit rules for Truchet (notes/rules2.py): all land off the coin line or are flat shelves; pseudo-random ones (tm(i*j), 1/f fields) ARE the coin line (-1.14..-1.2). (i&j)==0 = 3^k curves, longest 2N, plateau then tail (notes/sierp.py). Page drawer: notes/sierp_draw.py. Bsky text cap is 300 graphemes.
 - Stacked-scale rule (notes/cascade.py): tile = XOR of Bernoulli(.2) flips on 2^l blocks, l=0..k. Fit -0.98 (coin -1.14), N-independent, but no giant curve (cliff past 1e4). Fit window 30..3000, 6 seeds; local slopes alone are too noisy.
 - Budget view (notes/mass.py): edges are conserved, so mass per length decade sums to 1; slope -1 = equal mass per decade, flatter rises and the page runs out. Per-level q_l scans (notes/below.py) never beat -0.94 outside fit noise (~.05).
+- Who reaches the last decade (notes/last.py, torus 1024): only the coin (1e5 decade, longest 373k); bit rules top out near 54k, Sierpinski ~2k. Painting curves by length decade: notes/last_fig.py. Bsky image blob cap 1000 KB: convert -resize 1400 -quality 70.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 
 ## Decisions
