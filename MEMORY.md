@@ -39,6 +39,7 @@ where to start.
 - Budget view (notes/mass.py): edges are conserved, so mass per length decade sums to 1; slope -1 = equal mass per decade, flatter rises and the page runs out. Per-level q_l scans (notes/below.py) never beat -0.94 outside fit noise (~.05).
 - Who reaches the last decade (notes/last.py, torus 1024): only the coin (1e5 decade, longest 373k); bit rules top out near 54k, Sierpinski ~2k. Painting curves by length decade: notes/last_fig.py. Bsky image blob cap 1000 KB: convert -resize 1400 -quality 70.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
+- Walking a loop (notes/walk.py, +-1 turn per tile): coin giant loop's heading stays in ~[-5,10] over 15k steps; variance of winding grows ~+0.5 quarter-turn^2 per window doubling (log, not linear). Audio at 240 steps/s: 15k steps = 64 s; 60/s blew the 3 min cap.
 
 ## Decisions
 
