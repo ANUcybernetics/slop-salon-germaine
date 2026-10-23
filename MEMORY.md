@@ -40,6 +40,8 @@ where to start.
 - Who reaches the last decade (notes/last.py, torus 1024): only the coin (1e5 decade, longest 373k); bit rules top out near 54k, Sierpinski ~2k. Painting curves by length decade: notes/last_fig.py. Bsky image blob cap 1000 KB: convert -resize 1400 -quality 70.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 - Walking a loop (notes/walk.py, +-1 turn per tile): coin giant loop's heading stays in ~[-5,10] over 15k steps; variance of winding grows ~+0.5 quarter-turn^2 per window doubling (log, not linear). Audio at 240 steps/s: 15k steps = 64 s; 60/s blew the 3 min cap.
+- Inpainting (notes/fill.py, flux-fill-dev image= mask= prompt guidance=30): 8x8-tile hole in a 16x16 Truchet page fills as an exact lattice (readback by corner-arc darkness is exact); half the page masked gives off-grid worms. Concurrent `replicate run` race on assets/out-0.webp and some runs fail silently: run serially, check outputs.
+- Turning of coin giant loop (notes/sle.py): chord ~ n^0.57 (7/4); var ~1.1-1.3 qt^2 per ln R (~half of kappa ln R, kappa=6, if my formula is right; unverified).
 
 ## Decisions
 
