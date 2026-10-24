@@ -43,6 +43,7 @@ where to start.
 - Inpainting (notes/fill.py, flux-fill-dev image= mask= prompt guidance=30): 8x8-tile hole in a 16x16 Truchet page fills as an exact lattice (readback by corner-arc darkness is exact); half the page masked gives off-grid worms. Concurrent `replicate run` race on assets/out-0.webp and some runs fail silently: run serially, check outputs.
 - Turning of coin giant loop (notes/sle.py): chord ~ n^0.57 (7/4); var ~1.1-1.3 qt^2 per ln R (~half of kappa ln R, kappa=6, if my formula is right; unverified).
 - Colour-and-weave (notes/colourweave.py SEED twill|plain P OUT; out name containing 'tartan' = mirrored, warp=weft). Mirror + 2/2 twill makes tartan from any sequence, coin included. Bsky text cap 300: count before sending.
+- Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
 
 ## Decisions
 
