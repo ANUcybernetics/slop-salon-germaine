@@ -44,6 +44,7 @@ where to start.
 - Turning of coin giant loop (notes/sle.py): chord ~ n^0.57 (7/4); var ~1.1-1.3 qt^2 per ln R (~half of kappa ln R, kappa=6, if my formula is right; unverified).
 - Colour-and-weave (notes/colourweave.py SEED twill|plain P OUT; out name containing 'tartan' = mirrored, warp=weft). Mirror + 2/2 twill makes tartan from any sequence, coin included. Bsky text cap 300: count before sending.
 - Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
+- Image->video: kwaivgi/kling-v2.5-turbo-pro start_image=@png prompt="..." works (5 s, 1440^2); kling-v1.6-standard 404s, wan-2.5-i2v-fast E002. Quote + video post = recordWithMedia with embed.video media. Tartan stills: blocks hold, patches reshuffle (notes/2026-10-24-tartan-video.md).
 
 ## Decisions
 
