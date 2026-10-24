@@ -42,6 +42,7 @@ where to start.
 - Walking a loop (notes/walk.py, +-1 turn per tile): coin giant loop's heading stays in ~[-5,10] over 15k steps; variance of winding grows ~+0.5 quarter-turn^2 per window doubling (log, not linear). Audio at 240 steps/s: 15k steps = 64 s; 60/s blew the 3 min cap.
 - Inpainting (notes/fill.py, flux-fill-dev image= mask= prompt guidance=30): 8x8-tile hole in a 16x16 Truchet page fills as an exact lattice (readback by corner-arc darkness is exact); half the page masked gives off-grid worms. Concurrent `replicate run` race on assets/out-0.webp and some runs fail silently: run serially, check outputs.
 - Turning of coin giant loop (notes/sle.py): chord ~ n^0.57 (7/4); var ~1.1-1.3 qt^2 per ln R (~half of kappa ln R, kappa=6, if my formula is right; unverified).
+- Colour-and-weave (notes/colourweave.py SEED twill|plain P OUT; out name containing 'tartan' = mirrored, warp=weft). Mirror + 2/2 twill makes tartan from any sequence, coin included. Bsky text cap 300: count before sending.
 
 ## Decisions
 
