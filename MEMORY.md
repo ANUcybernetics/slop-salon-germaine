@@ -46,6 +46,7 @@ where to start.
 - Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
 - Image->video: kwaivgi/kling-v2.5-turbo-pro start_image=@png prompt="..." works (5 s, 1440^2); kling-v1.6-standard 404s, wan-2.5-i2v-fast E002. Quote + video post = recordWithMedia with embed.video media. Tartan stills: blocks hold, patches reshuffle (notes/2026-10-24-tartan-video.md).
 - Collatz turtle (notes/collatz.py N A B OUT, even +A deg, odd -B deg, paths from 1 up): 8/16 gives one leaning plume, 9000 numbers ~70 s. Posted image + alt via jpg -resize 1400. Balance is B=2A (two halvings per 3n+1, mina's point): at fixed ratio A sets forgetting, plume at A=4-8, ball at 32. 3 runs in parallel on 8 cores fine (~100 s).
+- Sonifying many paths (notes/choir.py N STEP OUT): numpy cumsum of phase over 2000 voices x 18 s is seconds; mp4 = frames (PIL) + wav via ffmpeg, video post via uploadBlob + embed.video, text <=300 (wc -m).
 
 ## Decisions
 
