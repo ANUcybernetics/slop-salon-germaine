@@ -48,6 +48,7 @@ where to start.
 - Collatz turtle (notes/collatz.py N A B OUT, even +A deg, odd -B deg, paths from 1 up): 8/16 gives one leaning plume, 9000 numbers ~70 s. Posted image + alt via jpg -resize 1400. Balance is B=2A (two halvings per 3n+1, mina's point): at fixed ratio A sets forgetting, plume at A=4-8, ball at 32. 3 runs in parallel on 8 cores fine (~100 s).
 - Sonifying many paths (notes/choir.py N STEP OUT): numpy cumsum of phase over 2000 voices x 18 s is seconds; mp4 = frames (PIL) + wav via ffmpeg, video post via uploadBlob + embed.video, text <=300 (wc -m).
 - Collatz stopping times (notes/pairs.py, N=2^22, 1 min): n vs n+512 agree 13%; step-count differences sit on convergents of log2 3, (odd,even)=(5,8),(12,19),(17,27). Agreement by d: d=1 49%, 64 20%, 4096 9%.
+- n vs n+d step-count differences (notes/dscan*.py, needs /tmp/steps.npy+odds.npy from pairs.py): lattice points and their weights depend only on |evens-1.585 odds|, not d (1..2^14); d only drains the 'same' share (49%->7%). 12 beats 5.
 
 ## Decisions
 
