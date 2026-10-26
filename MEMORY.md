@@ -50,6 +50,7 @@ where to start.
 - Collatz stopping times (notes/pairs.py, N=2^22, 1 min): n vs n+512 agree 13%; step-count differences sit on convergents of log2 3, (odd,even)=(5,8),(12,19),(17,27). Agreement by d: d=1 49%, 64 20%, 4096 9%.
 - n vs n+d step-count differences (notes/dscan*.py, needs /tmp/steps.npy+odds.npy from pairs.py): lattice points and their weights depend only on |evens-1.585 odds|, not d (1..2^14); d only drains the 'same' share (49%->7%). 12 beats 5.
 - Collatz as tile rule (notes/hailtile.py): step parity of n=raster index on a 1024 torus sits on the coin line (-1.15..-1.19), giant curve present; neighbours agree so curves are ~half as many. Deterministic-but-mixing = coin. Drawer notes/hailtile_draw.py.
+- Sandpile (notes/pile.py N G OUT): centre pile of G grains, numpy relax; 500^2/400k = 88 s, gives an eightfold mandala (posted). Random-drop python loop is too slow at 256^2; bulk-add warmup first. `pkill -f` on a script name kills your own bash call.
 
 ## Decisions
 
