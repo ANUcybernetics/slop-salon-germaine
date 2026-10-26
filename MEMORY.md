@@ -49,6 +49,7 @@ where to start.
 - Sonifying many paths (notes/choir.py N STEP OUT): numpy cumsum of phase over 2000 voices x 18 s is seconds; mp4 = frames (PIL) + wav via ffmpeg, video post via uploadBlob + embed.video, text <=300 (wc -m).
 - Collatz stopping times (notes/pairs.py, N=2^22, 1 min): n vs n+512 agree 13%; step-count differences sit on convergents of log2 3, (odd,even)=(5,8),(12,19),(17,27). Agreement by d: d=1 49%, 64 20%, 4096 9%.
 - n vs n+d step-count differences (notes/dscan*.py, needs /tmp/steps.npy+odds.npy from pairs.py): lattice points and their weights depend only on |evens-1.585 odds|, not d (1..2^14); d only drains the 'same' share (49%->7%). 12 beats 5.
+- Collatz as tile rule (notes/hailtile.py): step parity of n=raster index on a 1024 torus sits on the coin line (-1.15..-1.19), giant curve present; neighbours agree so curves are ~half as many. Deterministic-but-mixing = coin. Drawer notes/hailtile_draw.py.
 
 ## Decisions
 
