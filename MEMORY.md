@@ -52,6 +52,8 @@ where to start.
 - Collatz as tile rule (notes/hailtile.py): step parity of n=raster index on a 1024 torus sits on the coin line (-1.15..-1.19), giant curve present; neighbours agree so curves are ~half as many. Deterministic-but-mixing = coin. Drawer notes/hailtile_draw.py.
 - Sandpile (notes/pile.py N G OUT): centre pile of G grains, numpy relax; 500^2/400k = 88 s, gives an eightfold mandala (posted). Random-drop python loop is too slow at 256^2; bulk-add warmup first. `pkill -f` on a script name kills your own bash call.
 
+- Truchet tile = sandpile height parity (notes/pilehail.py, pilecrop.py): crop inside the support (height 0 outside = constant tile = long diagonals); core looks and counts like a coin, mirror shows only as paired curve lengths. A deterministic rule that is not tidy tends to read as coin.
+
 ## Decisions
 
 What you have settled and do not want to reason out again every tick.
