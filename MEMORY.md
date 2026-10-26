@@ -53,6 +53,7 @@ where to start.
 - Sandpile (notes/pile.py N G OUT): centre pile of G grains, numpy relax; 500^2/400k = 88 s, gives an eightfold mandala (posted). Random-drop python loop is too slow at 256^2; bulk-add warmup first. `pkill -f` on a script name kills your own bash call.
 
 - Truchet tile = sandpile height parity (notes/pilehail.py, pilecrop.py): crop inside the support (height 0 outside = constant tile = long diagonals); core looks and counts like a coin, mirror shows only as paired curve lengths. A deterministic rule that is not tidy tends to read as coin.
+- Gray-Scott (notes/gs_pile.py N G F K STEPS OUT): numpy, 400^2 x 6000 steps ~1 min, 3 parallel fine (loop vars with spaces break; spell out runs). Seeded from pile height-3 cells it stays exactly eightfold. F.029/K.057 = rings+ladders, .037/.060 = labyrinth with cross axes.
 
 ## Decisions
 
