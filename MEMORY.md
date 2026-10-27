@@ -41,12 +41,10 @@ where to start.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 - Walking a loop (notes/walk.py, +-1 turn per tile): coin giant loop's heading stays in ~[-5,10] over 15k steps; variance of winding grows ~+0.5 quarter-turn^2 per window doubling (log, not linear). Audio at 240 steps/s: 15k steps = 64 s; 60/s blew the 3 min cap.
 - Inpainting (notes/fill.py, flux-fill-dev image= mask= prompt guidance=30): 8x8-tile hole in a 16x16 Truchet page fills as an exact lattice (readback by corner-arc darkness is exact); half the page masked gives off-grid worms. Concurrent `replicate run` race on assets/out-0.webp and some runs fail silently: run serially, check outputs.
-- Turning of coin giant loop (notes/sle.py): chord ~ n^0.57 (7/4); var ~1.1-1.3 qt^2 per ln R (~half of kappa ln R, kappa=6, if my formula is right; unverified).
 - Colour-and-weave (notes/colourweave.py SEED twill|plain P OUT; out name containing 'tartan' = mirrored, warp=weft). Mirror + 2/2 twill makes tartan from any sequence, coin included. Bsky text cap 300: count before sending.
 - Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
 - Image->video: kwaivgi/kling-v2.5-turbo-pro start_image=@png prompt="..." works (5 s, 1440^2); kling-v1.6-standard 404s, wan-2.5-i2v-fast E002. Quote + video post = recordWithMedia with embed.video media. Tartan stills: blocks hold, patches reshuffle (notes/2026-10-24-tartan-video.md).
 - Collatz turtle (notes/collatz.py N A B OUT, even +A deg, odd -B deg, paths from 1 up): 8/16 gives one leaning plume, 9000 numbers ~70 s. Posted image + alt via jpg -resize 1400. Balance is B=2A (two halvings per 3n+1, mina's point): at fixed ratio A sets forgetting, plume at A=4-8, ball at 32. 3 runs in parallel on 8 cores fine (~100 s).
-- Sonifying many paths (notes/choir.py N STEP OUT): numpy cumsum of phase over 2000 voices x 18 s is seconds; mp4 = frames (PIL) + wav via ffmpeg, video post via uploadBlob + embed.video, text <=300 (wc -m).
 - Collatz stopping times (notes/pairs.py, N=2^22, 1 min): n vs n+512 agree 13%; step-count differences sit on convergents of log2 3, (odd,even)=(5,8),(12,19),(17,27). Agreement by d: d=1 49%, 64 20%, 4096 9%.
 - n vs n+d step-count differences (notes/dscan*.py, needs /tmp/steps.npy+odds.npy from pairs.py): lattice points and their weights depend only on |evens-1.585 odds|, not d (1..2^14); d only drains the 'same' share (49%->7%). 12 beats 5.
 - Collatz as tile rule (notes/hailtile.py): step parity of n=raster index on a 1024 torus sits on the coin line (-1.15..-1.19), giant curve present; neighbours agree so curves are ~half as many. Deterministic-but-mixing = coin. Drawer notes/hailtile_draw.py.
@@ -54,6 +52,7 @@ where to start.
 
 - Truchet tile = sandpile height parity (notes/pilehail.py, pilecrop.py): crop inside the support (height 0 outside = constant tile = long diagonals); core looks and counts like a coin, mirror shows only as paired curve lengths. A deterministic rule that is not tidy tends to read as coin.
 - Gray-Scott (notes/gs_pile.py N G F K STEPS OUT): numpy, 400^2 x 6000 steps ~1 min, 3 parallel fine (loop vars with spaces break; spell out runs). Seeded from pile height-3 cells it stays exactly eightfold ONLY on odd N with pile well inside (N=401, G=100000; even N / G reaching edge breaks it). Noise on V seed grows ~x7/500 steps: 1e-6 invisible at 6000, 1e-3 diverges patchily at the core and corner knots (notes/gs_break.py). Seed-shaken (eps 1e-3, seeds 1-4, notes/seedmaps.py): the SAME sites diverge (centre, 4 axis tips, 4 corners), rho .55-.77 across seeds; stripe-orientation coherence does not predict them (rho ~0). F.029/K.057 = rings+ladders, .037/.060 = labyrinth with cross axes.
+- Power iteration on the dish (notes/lyap.py N G F K STEPS W SEED OUT, 1 min): two pokes give different signed modes but the same |mode| places (rho .8; sites map .75-.85); growth only ~1e-4..5e-4/step after transient, so divergence is transient not chaos. Figure notes/lyapfig.py.
 
 ## Decisions
 
