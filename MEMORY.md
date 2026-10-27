@@ -52,7 +52,7 @@ where to start.
 
 - Truchet tile = sandpile height parity (notes/pilehail.py, pilecrop.py): crop inside the support (height 0 outside = constant tile = long diagonals); core looks and counts like a coin, mirror shows only as paired curve lengths. A deterministic rule that is not tidy tends to read as coin.
 - Gray-Scott (notes/gs_pile.py N G F K STEPS OUT): numpy, 400^2 x 6000 steps ~1 min, 3 parallel fine (loop vars with spaces break; spell out runs). Seeded from pile height-3 cells it stays exactly eightfold ONLY on odd N with pile well inside (N=401, G=100000; even N / G reaching edge breaks it). Noise on V seed grows ~x7/500 steps: 1e-6 invisible at 6000, 1e-3 diverges patchily at the core and corner knots (notes/gs_break.py). Seed-shaken (eps 1e-3, seeds 1-4, notes/seedmaps.py): the SAME sites diverge (centre, 4 axis tips, 4 corners), rho .55-.77 across seeds; stripe-orientation coherence does not predict them (rho ~0). F.029/K.057 = rings+ladders, .037/.060 = labyrinth with cross axes.
-- Power iteration on the dish (notes/lyap.py N G F K STEPS W SEED OUT, 1 min): two pokes give different signed modes but the same |mode| places (rho .8; sites map .75-.85); growth only ~1e-4..5e-4/step after transient, so divergence is transient not chaos. Figure notes/lyapfig.py.
+- Power iteration on the dish (notes/lyap3.py N G F K STEPS W OUT: two pokes, cosine over time, 24000 steps ~4 min): needs ~8000 steps to converge; then two pokes lock to cos +-1 at 0.003/step (real Lyapunov direction, sign = poke). 6000 steps is before convergence (misled me). F.037/.060 settles to rate ~0 after 15000; F.033/.059 stays unstable. Places: centre ring + corner knots (notes/lyap.py, lyapcmp.py).
 
 ## Decisions
 
