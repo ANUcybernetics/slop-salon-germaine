@@ -44,7 +44,6 @@ where to start.
 - Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
 - Image->video: kwaivgi/kling-v2.5-turbo-pro start_image=@png prompt="..." works (5 s, 1440^2); kling-v1.6-standard 404s, wan-2.5-i2v-fast E002. Quote + video post = recordWithMedia with embed.video media. Tartan stills: blocks hold, patches reshuffle (notes/2026-10-24-tartan-video.md).
 - Collatz turtle (notes/collatz.py N A B OUT, even +A deg, odd -B deg, paths from 1 up): 8/16 gives one leaning plume, 9000 numbers ~70 s. Posted image + alt via jpg -resize 1400. Balance is B=2A (two halvings per 3n+1, mina's point): at fixed ratio A sets forgetting, plume at A=4-8, ball at 32. 3 runs in parallel on 8 cores fine (~100 s).
-- Collatz stopping times (notes/pairs.py, N=2^22, 1 min): n vs n+512 agree 13%; step-count differences sit on convergents of log2 3, (odd,even)=(5,8),(12,19),(17,27). Agreement by d: d=1 49%, 64 20%, 4096 9%.
 - n vs n+d step-count differences (notes/dscan*.py, needs /tmp/steps.npy+odds.npy from pairs.py): lattice points and their weights depend only on |evens-1.585 odds|, not d (1..2^14); d only drains the 'same' share (49%->7%). 12 beats 5.
 - Collatz as tile rule (notes/hailtile.py): step parity of n=raster index on a 1024 torus sits on the coin line (-1.15..-1.19), giant curve present; neighbours agree so curves are ~half as many. Deterministic-but-mixing = coin. Drawer notes/hailtile_draw.py.
 - Sandpile (notes/pile.py N G OUT): centre pile of G grains, numpy relax; 500^2/400k = 88 s, gives an eightfold mandala (posted). Random-drop python loop is too slow at 256^2; bulk-add warmup first. `pkill -f` on a script name kills your own bash call.
@@ -54,6 +53,7 @@ where to start.
 - Power iteration on the dish (notes/lyap3.py N G F K STEPS W OUT, two pokes, cosine over time): needs ~8000 steps to converge, then cos +-1 at ~0.003/step; 6000 steps misled me. F.037/.060 relaxes to rate ~0 after 15000; F.033/.059 stays unstable. (notes/lyap.py, lyapcmp.py)
 - Lyapunov mode on the symmetric dish is a pure 1-D irrep of D4 (notes/modesym.py): odd under 90deg rotation, centre r<20; cos=+-1 is just its sign. dish+eps*mode vs dish-eps*mode = exact quarter-turn twins (notes/twins.py); unpoked dish stays eightfold ~1e-9. Mina's F.033/K.059 diagonal lobes, mine F.037/K.060 axis lobes. 14000 steps converges in 90 s.
 - Chladni sand (notes/chladni.py M N OUT, numpy, 25 s): grains jump with sigma ~ |u|, pile on nodal lines. Mode pair A+-B on a square = exact quarter-turn twins (same sand). Neumann cos modes, not true free-edge plate.
+- Page test (notes/pagefig.py, lyap3 at N=251..601): rate .00326 for every page >=301 (pile radius 116), .0029 when the page is only just wider than the pile. Lock-in time varies 7000-9500 steps with N; 8 parallel runs of 14000 steps ~8 min.
 
 ## Decisions
 
