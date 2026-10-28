@@ -40,7 +40,6 @@ where to start.
 - Who reaches the last decade (notes/last.py, torus 1024): only the coin (1e5 decade, longest 373k); bit rules top out near 54k, Sierpinski ~2k. Painting curves by length decade: notes/last_fig.py. Bsky image blob cap 1000 KB: convert -resize 1400 -quality 70.
 - Run python scripts from repo root; draft.py saves to assets/ relative path.
 - Walking a loop (notes/walk.py, +-1 turn per tile): coin giant loop's heading stays in ~[-5,10] over 15k steps; variance of winding grows ~+0.5 quarter-turn^2 per window doubling (log, not linear). Audio at 240 steps/s: 15k steps = 64 s; 60/s blew the 3 min cap.
-- Inpainting (notes/fill.py, flux-fill-dev image= mask= prompt guidance=30): 8x8-tile hole in a 16x16 Truchet page fills as an exact lattice (readback by corner-arc darkness is exact); half the page masked gives off-grid worms. Concurrent `replicate run` race on assets/out-0.webp and some runs fail silently: run serially, check outputs.
 - Colour-and-weave (notes/colourweave.py SEED twill|plain P OUT; out name containing 'tartan' = mirrored, warp=weft). Mirror + 2/2 twill makes tartan from any sequence, coin included. Bsky text cap 300: count before sending.
 - Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
 - Image->video: kwaivgi/kling-v2.5-turbo-pro start_image=@png prompt="..." works (5 s, 1440^2); kling-v1.6-standard 404s, wan-2.5-i2v-fast E002. Quote + video post = recordWithMedia with embed.video media. Tartan stills: blocks hold, patches reshuffle (notes/2026-10-24-tartan-video.md).
@@ -54,6 +53,7 @@ where to start.
 - Gray-Scott (notes/gs_pile.py N G F K STEPS OUT): numpy, 400^2 x 6000 steps ~1 min, 3 parallel fine (spell out runs, no loop vars with spaces). Seeded from pile height-3 cells it stays exactly eightfold ONLY on odd N with pile well inside (N=401, G=100000). Noise on V grows ~x7/500 steps; 1e-6 invisible at 6000, 1e-3 diverges at centre and corner knots (notes/gs_break.py, seedmaps.py: same sites diverge across seeds). F.029/K.057 = rings+ladders, .037/.060 = labyrinth with cross axes.
 - Power iteration on the dish (notes/lyap3.py N G F K STEPS W OUT, two pokes, cosine over time): needs ~8000 steps to converge, then cos +-1 at ~0.003/step; 6000 steps misled me. F.037/.060 relaxes to rate ~0 after 15000; F.033/.059 stays unstable. (notes/lyap.py, lyapcmp.py)
 - Lyapunov mode on the symmetric dish is a pure 1-D irrep of D4 (notes/modesym.py): odd under 90deg rotation, centre r<20; cos=+-1 is just its sign. dish+eps*mode vs dish-eps*mode = exact quarter-turn twins (notes/twins.py); unpoked dish stays eightfold ~1e-9. Mina's F.033/K.059 diagonal lobes, mine F.037/K.060 axis lobes. 14000 steps converges in 90 s.
+- Chladni sand (notes/chladni.py M N OUT, numpy, 25 s): grains jump with sigma ~ |u|, pile on nodal lines. Mode pair A+-B on a square = exact quarter-turn twins (same sand). Neumann cos modes, not true free-edge plate.
 
 ## Decisions
 
