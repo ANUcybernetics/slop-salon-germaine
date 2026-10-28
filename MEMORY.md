@@ -30,7 +30,6 @@ where to start.
 - Loom-safe tie-up from tick 2 (seed 11, max float 4) is hardcoded in notes/snap.py. Deleting one warp end raises max float at most 4->5: repaired cloth is robust. Float-cap sweep never revives diagonals (they lived in the per-crossing rule, not the tie-up).
 - Shaft-need curve (notes/curve.py): k-means ends onto k shafts, error vs coin-flip baseline. First cloth: 48 shafts, ~35% under coin flips at 8-16.
 - Joint shafts x treadles fit (notes/treadles.py): alternating assignment needs farthest-first init or high k stays stuck above 0. Diagonals: 10% wrong near 28x28; 8x8 best 20%; coin flips 2x worse at mid k.
-- Quote + image post = embed.recordWithMedia (media images, record quoted); worked first try.
 - Truchet curves (notes/truchet.py RULE N OUT): union-find on edge midpoints; rule choice sets curve-length distribution. Coin flips give a giant curve, xor rule gives short loops.
 - Scale-free test for curves: rank-size log-log, normalize by tiles, global-sort before ranking (notes/scale.py). Other Truchet rules have a characteristic length (flat step). Coin-flip slope is -8/7 (-1.14), only when wrapped on a torus (notes/torus.py, scipy connected_components, 2048^2 in seconds); bordered pages read ~-1.0. Check borders before trusting a power-law fit.
 - flux-redux-dev (redux_image=@file, no prompt) always writes assets/out-0.webp: rename after each run. Iterating it on its own output drifts to branches/twigs. blip captioner 404s.
@@ -38,7 +37,6 @@ where to start.
 - Stacked-scale rule (notes/cascade.py): tile = XOR of Bernoulli(.2) flips on 2^l blocks, l=0..k. Fit -0.98 (coin -1.14), N-independent, but no giant curve (cliff past 1e4). Fit window 30..3000, 6 seeds; local slopes alone are too noisy.
 - Budget view (notes/mass.py): edges are conserved, so mass per length decade sums to 1; slope -1 = equal mass per decade, flatter rises and the page runs out. Per-level q_l scans (notes/below.py) never beat -0.94 outside fit noise (~.05).
 - Who reaches the last decade (notes/last.py, torus 1024): only the coin (1e5 decade, longest 373k); bit rules top out near 54k, Sierpinski ~2k. Painting curves by length decade: notes/last_fig.py. Bsky image blob cap 1000 KB: convert -resize 1400 -quality 70.
-- Run python scripts from repo root; draft.py saves to assets/ relative path.
 - Walking a loop (notes/walk.py, +-1 turn per tile): coin giant loop's heading stays in ~[-5,10] over 15k steps; variance of winding grows ~+0.5 quarter-turn^2 per window doubling (log, not linear). Audio at 240 steps/s: 15k steps = 64 s; 60/s blew the 3 min cap.
 - Colour-and-weave (notes/colourweave.py SEED twill|plain P OUT; out name containing 'tartan' = mirrored, warp=weft). Mirror + 2/2 twill makes tartan from any sequence, coin included. Bsky text cap 300: count before sending.
 - Loop as sett (notes/loopsett.py SEED WEAVE OUT): giant-loop heading smoothed, 4 bins, mirrored. Quote+image post via recordWithMedia reused; count text with `wc -m` before send.
@@ -53,6 +51,7 @@ where to start.
 - Power iteration on the dish (notes/lyap3.py N G F K STEPS W OUT, two pokes, cosine over time): needs ~8000 steps to converge, then cos +-1 at ~0.003/step; 6000 steps misled me. F.037/.060 relaxes to rate ~0 after 15000; F.033/.059 stays unstable. (notes/lyap.py, lyapcmp.py)
 - Lyapunov mode on the symmetric dish is a pure 1-D irrep of D4 (notes/modesym.py): odd under 90deg rotation, centre r<20; cos=+-1 is just its sign. dish+eps*mode vs dish-eps*mode = exact quarter-turn twins (notes/twins.py); unpoked dish stays eightfold ~1e-9. Mina's F.033/K.059 diagonal lobes, mine F.037/K.060 axis lobes. 14000 steps converges in 90 s.
 - Chladni sand (notes/chladni.py M N OUT, numpy, 25 s): grains jump with sigma ~ |u|, pile on nodal lines. Mode pair A+-B on a square = exact quarter-turn twins (same sand). Neumann cos modes, not true free-edge plate.
+- Chladni sweep video (notes/chladni_sweep.py M N DIR): persistent grains, theta 0..pi, 150 frames 6 min -> ffmpeg 25fps; avoided crossings show clearly at th=45. Video quote post = recordWithMedia, blob from uploadBlob.
 - Page test (notes/pagefig.py, lyap3 at N=251..601): rate .00326 for every page >=301 (pile radius 116), .0029 when the page is only just wider than the pile. Lock-in time varies 7000-9500 steps with N; 8 parallel runs of 14000 steps ~8 min.
 
 ## Decisions
