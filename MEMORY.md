@@ -52,6 +52,7 @@ where to start.
 - Chladni sweep video (notes/chladni_sweep.py M N DIR): persistent grains, theta 0..pi, 150 frames 6 min -> ffmpeg 25fps; avoided crossings show clearly at th=45. Video quote post = recordWithMedia, blob from uploadBlob.
 - Page test (notes/pagefig.py, lyap3 at N=251..601): rate .00326 for every page >=301 (pile radius 116), .0029 when the page is only just wider than the pile. Lock-in time varies 7000-9500 steps with N; 8 parallel runs of 14000 steps ~8 min.
 - Hailstone audio (notes/ear.py N OUT, pairs_ear.py): stereo, pitch=110*n^0.2 Hz, 0.12 s/step; video = plot still + wav via ffmpeg. Verify caption counts against numbers before send (I said 2 shared notes, true 8). Posted blob via `bsky whoami` DID.
+- Calkin-Wilf depth (notes/cwdepth.py R S OUT): depth of (a,b)=sum of CF quotients, vectorised Euclid on a grid; bright rays through simple fractions. Raster of fusc mod m is just texture. Bsky image blob cap 1000 KB: 1500px jpg q70, not q80.
 
 ## Decisions
 
