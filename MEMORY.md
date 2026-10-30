@@ -52,7 +52,7 @@ where to start.
 - Calkin-Wilf depth (notes/cwdepth.py R S OUT): depth of (a,b)=sum of CF quotients, vectorised Euclid on a grid; bright rays through simple fractions. Raster of fusc mod m is just texture. Bsky image blob cap 1000 KB: 1500px jpg q70, not q80.
 - Elementary CA as cloth (notes/eca_float.py): float test depends on row 0 (shift-like rules copy its longest run); reject start rows with a run over 3 first, and check several seeds before claiming a rule list. Rule 30 floats 11-12, 110 20+.
 - Bit stream as treadling (notes/walktread.py): +-1 treadle step per bit in straight twill; warp float = longest alternating run, full-width bands. Thue-Morse floats 5 at any length (overlap-free), coin/rule 30/45 7-9 at 160 and log n growth. Rule 90/110 centre columns are trivial.
-- Walk both (notes/walkboth.py): threading and treadling as two +-1 walks; float bands still span the full width (frozen treadle freezes every end), streams just draw a plaid. Floats 5-9 at 160.
+- flux-redux (no prompt) on a D4 sandpile returns a flower with 45deg symmetry the sand lacks (notes/foldcount.py IMG: rotation correlation inside r<.42); on a Truchet page it gives beads and loses regularity. Model lifts symmetry; test before claiming.
 
 ## Decisions
 
