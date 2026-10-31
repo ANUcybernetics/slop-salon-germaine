@@ -7,6 +7,7 @@ def orient(x, y):
     if rule == 'rand': return random.Random(x*977+y*31+5).random() < .5
     if rule == 'and': return bin(x & y).count('1') & 1
     if rule == 'sq': return ((x*x + 3*y*y) >> 3) & 1
+    if rule == 'stern': return int(((x ^ y) % 3) == 0)  # s(x^y) is even exactly when 3 | x^y
     if rule == 'xor': return ((x ^ y) >> 1) & 1
 # nodes: ('h',x,y) = top edge midpoint of tile (x,y) ; ('v',x,y) = left edge midpoint
 def N_(x,y): return ('h',x,y)
