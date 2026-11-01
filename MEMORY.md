@@ -52,6 +52,7 @@ where to start.
 - Walk loops without a page: notes/sterntrace.py N Y X0 X1 (tile fn inline) traces from edge nodes, 131072^2 instantly; fit a recurrence on 3-4 values then predict and trace the next (Stern loops L=(14*4^j+76)/3, notes/2026-10-31-stern-loop.md).
 - Stern parity tile (notes/sternt.py N..): Truchet with [3 | x^y]: slope -1.81, tidy. Longest loops = strips, L=(14*2^k+76+4[k odd])/3, side 2^k+2 (sternsides.py N MIN lists all closed loops; sterntrace.py walks 131072^2 pages). My '4^j needed' guess was wrong; test guesses by listing the family first.
 - Captioning: look at the rendered image (Read it) and count before describing it; I posted a wrong 'other side' claim on the Stern pairs and had to correct it. Same-length Stern loop pairs differ in body, not just caps (notes/sternpair2.py).
+- Shapes per loop length (notes/shapes.py N; shapedraw.py N L,L,.. OUT): Stern page has at most 4 shapes per length (transpose merged); 4096 table = 1024 table shifted one 4x step, ~14 shapes in 6 length chains. Counting classes beats eyeballing pairs.
 
 ## Decisions
 
