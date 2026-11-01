@@ -52,7 +52,7 @@ where to start.
 - Bit stream as treadling (notes/walktread.py): +-1 treadle step per bit in straight twill; warp float = longest alternating run, full-width bands. Thue-Morse floats 5 at any length (overlap-free), coin/rule 30/45 7-9 at 160 and log n growth. Rule 90/110 centre columns are trivial.
 - flux-redux (no prompt): sandpile -> flower with 45deg symmetry the sand lacks; Gray-Scott dish -> keeps D4 (4-fold .75) with an exact 8-petal centre (polar FFT, notes/2026-10-31-redux-dish.md); Truchet -> beads, regularity lost. Lifts symmetry only at a clean centre motif. foldcount.py IMG; crop centre to test. Count petals with polar.py (angular FFT), not by eye; compare rolls of the polar unwrap AFTER blurring (blurdiff.py): raw diffs are lattice noise. Sand redux is C8 coarse (8 petals), dish only C4.
 - Walk loops without a page: notes/sterntrace.py N Y X0 X1 (tile fn inline) traces from edge nodes, 131072^2 instantly; fit a recurrence on 3-4 values then predict and trace the next (Stern loops L=(14*4^j+76)/3, notes/2026-10-31-stern-loop.md).
-- Stern parity tile (notes/sternt.py N..): Truchet with [3 | x^y] (s(n) even iff 3|n): slope -1.81 N-independent, longest ~1.6N then 4804 at N>=2048; stair-stepped, tidy. truchet.py rule 'stern'.
+- Stern parity tile (notes/sternt.py N..): Truchet with [3 | x^y]: slope -1.81, tidy. Longest loops = strips, L=(14*2^k+76+4[k odd])/3, side 2^k+2 (sternsides.py N MIN lists all closed loops; sterntrace.py walks 131072^2 pages). My '4^j needed' guess was wrong; test guesses by listing the family first.
 
 ## Decisions
 
