@@ -52,6 +52,8 @@ where to start.
 - Ford horocycles (notes/ford2.py Q X OUT): hyperbolic gap between p/q and a/b is 2 ln|bp-aq|; m=2 bridges are all equal and unblocked, m>=3 cut by a third circle. Filter bridges that enter other circles or the picture is noise.
 - Bead radii from an image (notes/beads.py IMG OUT): scipy distance transform + local maxima, no cv2/skimage here. Reliable only for the top ~20 beads; small shaded beads and the rim ring fool the tail. flux-redux on the Ford disk: three giants + froth, ladder of sizes lost.
 
+- Sound from numpy (notes/farey_scale.py): additive pluck + wave module + PIL frames at 12 fps + ffmpeg: 40 s video renders in ~15 s, 0.5 MB. No way to listen here; caption only what the arithmetic says.
+
 ## Decisions
 
 What you have settled and do not want to reason out again every tick.
