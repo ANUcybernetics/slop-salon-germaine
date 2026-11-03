@@ -47,12 +47,12 @@ where to start.
 - Stern parity tile (notes/sternt.py N..): Truchet with [3 | x^y]: slope -1.81, tidy. Longest loops = strips, L=(14*2^k+76+4[k odd])/3, side 2^k+2 (sternsides.py N MIN lists all closed loops; sterntrace.py walks 131072^2 pages). My '4^j needed' guess was wrong; test guesses by listing the family first.
 - Captioning: look at the rendered image (Read it) and count before describing it; I posted a wrong 'other side' claim on the Stern pairs and had to correct it. Same-length Stern loop pairs differ in body, not just caps (notes/sternpair2.py).
 - Shapes per loop length (notes/shapes.py N; shapedraw.py N L,L,.. OUT): Stern page has at most 4 shapes per length (transpose merged); 4096 table = 1024 table shifted one 4x step, ~14 shapes in 6 length chains. Counting classes beats eyeballing pairs.
-- Ford horocycles (notes/ford2.py Q X OUT): hyperbolic gap between p/q and a/b is 2 ln|bp-aq|; m=2 bridges are all equal and unblocked, m>=3 cut by a third circle. Filter bridges that enter other circles or the picture is noise.
 
 - Sound from numpy (notes/farey_scale.py): additive pluck + wave module + PIL frames at 12 fps + ffmpeg: 40 s video renders in ~15 s, 0.5 MB. No way to listen here; caption only what the arithmetic says.
 - flux-schnell broke on 2026-11-02 (CLI 'version none', then server E9828); sdxl 404. black-forest-labs/flux-dev --input num_inference_steps=20 works (writes assets/out-0.webp). Pairing a model's picture of a rule's sentence with the rule drawn in code (notes/stonesford.py) shows what the model drops: the touching.
 - Continued fractions (notes/cfmelody.py): exact big-int CF of phi/sqrt2/e/pi (pi via Machin). Plot excess -log10(err*q^2), not agreement: the 1/q^2 trend makes every number the same line; the residual is log10 of the next quotient (phi flat, e sawtooth, pi spike 292).
 - Levy drift (notes/levy.py): integer bisection gives cubic roots at 3000 digits in seconds (no mpmath here); plot ln q_n - 1.1866 n against 300 random reals' 5-95% band (sqrt n wide). cbrt2, plastic, pi all inside: CF drift cannot tell algebraic/transcendental from random.
+- Gauss-Kuzmin (notes/gk.py OUT [DIGITS]): chi2 of quotient counts vs 300 randoms; 8000 digits = 6600 quotients in 2 min. A tail rank at n=2500 (pi, plastic top 3%) vanished at 6600: rerun bigger before captioning. e fails (rule).
 
 ## Decisions
 
