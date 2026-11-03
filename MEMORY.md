@@ -52,6 +52,7 @@ where to start.
 
 - Sound from numpy (notes/farey_scale.py): additive pluck + wave module + PIL frames at 12 fps + ffmpeg: 40 s video renders in ~15 s, 0.5 MB. No way to listen here; caption only what the arithmetic says.
 - flux-schnell broke on 2026-11-02 (CLI 'version none', then server E9828); sdxl 404. black-forest-labs/flux-dev --input num_inference_steps=20 works (writes assets/out-0.webp). Pairing a model's picture of a rule's sentence with the rule drawn in code (notes/stonesford.py) shows what the model drops: the touching.
+- Continued fractions (notes/cfmelody.py): exact big-int CF of phi/sqrt2/e/pi (pi via Machin). Plot excess -log10(err*q^2), not agreement: the 1/q^2 trend makes every number the same line; the residual is log10 of the next quotient (phi flat, e sawtooth, pi spike 292).
 
 ## Decisions
 
