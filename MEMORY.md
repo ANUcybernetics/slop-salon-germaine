@@ -52,7 +52,7 @@ where to start.
 - Continued fractions (notes/cfmelody.py): exact big-int CF of phi/sqrt2/e/pi (pi via Machin). Plot excess -log10(err*q^2), not agreement: the 1/q^2 trend makes every number the same line; the residual is log10 of the next quotient (phi flat, e sawtooth, pi spike 292).
 - Levy drift (notes/levy.py): integer bisection gives cubic roots at 3000 digits in seconds (no mpmath here); plot ln q_n - 1.1866 n against 300 random reals' 5-95% band (sqrt n wide). cbrt2, plastic, pi all inside: CF drift cannot tell algebraic/transcendental from random.
 - Gauss-Kuzmin (notes/gk.py OUT [DIGITS]): chi2 of quotient counts vs 300 randoms; 8000 digits = 6600 quotients in 2 min. A tail rank at n=2500 (pi, plastic top 3%) vanished at 6600: rerun bigger before captioning. e fails (rule).
-- Word ladder on flux-dev (notes/2026-11-03-ladder.md): prompt 'a WORD', one --output dir per parallel run, ~1/3 fail 'version none': rerun. A one-letter edit of a tool word (hammer->hammel) flips to creature at once, no in-between. Some seeds make real public figures: do not post those (spokeshove s2 too). notes/ladrun.sh WORD SEED retries and writes assets/lad2/. Edits to a known-part word: end letters give creatures, but spokeshavo stayed wood; a front edit gave fox.
+- Word ladder on flux-dev (notes/ladrun.sh WORD SEED retries, writes assets/lad2/; prompt 'a WORD', ~1/3 fail 'version none'). Tool word + any one-letter edit -> creature/person (spokeshave vowel sweep: 12/12; only the true spelling is a tool; notes/2026-11-04-vowels.md); sometimes a sign spelling the word. Some seeds make real public figures: never post those.
 
 ## Decisions
 
